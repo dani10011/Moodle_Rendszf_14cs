@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "zpCXPK2JXV+fyYcQFyp3S0CyCsBm/l14q/BmM/ZwJQw=",
+  "Hash": "KBMWhg9yyTELrSWeVJpc/u6i1B+MUQmKVGf4bYoVTzo=",
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Moodle.API\\wwwroot",
+      "Source": "Moodle.API",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "RelativePath": "frontend.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\frontend.css"
+    },
+    {
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "RelativePath": "frontend.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\frontend.html"
+    },
+    {
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "RelativePath": "frontend.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\frontend.js"
+    }
+  ]
 }
