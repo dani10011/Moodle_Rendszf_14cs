@@ -23,6 +23,12 @@ h1{
 }
 #bodycucc{
     background-color: rgb( 255,255,255,0.9);
-    border-radius: 50%;
+    border-radius: 10%;
     
+}
+#button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }

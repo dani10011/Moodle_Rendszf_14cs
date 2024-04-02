@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moodle.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7def0b1eeb57aae31b3bfe91d23b1e2e31ffd3a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moodle.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moodle.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
