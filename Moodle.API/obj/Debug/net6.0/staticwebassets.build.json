@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KBMWhg9yyTELrSWeVJpc/u6i1B+MUQmKVGf4bYoVTzo=",
+  "Hash": "a2nj38ZN/ys4/0b6pOTj5sKXSNjOXqnd5l9JMkP7Eb0=",
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "RelativePath": "bejelentkezeshatter.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bejelentkezeshatter.jfif"
+    },
     {
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
       "SourceId": "Moodle.API",
