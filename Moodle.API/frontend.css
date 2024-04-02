@@ -1,0 +1,22 @@
+ /* Beállítjuk a margin-t és a padding-et 0-ra */
+ body {
+    margin: 150px;
+    padding: 0;
+    background-image: url(C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\bejelentkezeshatter.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+#bejelentkezes{
+    
+    font-size:20px;
+			font-family:"Times New Roman", Times, serif;
+			font-weight: bold;
+			color:red;
+            text-align: center;
+}
