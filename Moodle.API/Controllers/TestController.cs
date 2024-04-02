@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using System.IO;
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Moodle.API.Controllers
 {
@@ -36,7 +39,9 @@ namespace Moodle.API.Controllers
         [HttpGet("szamteszt")]
         public IActionResult Szamteszt()
         {
-            return Ok($"Sikeresen ossze lett kotve a front és backend");
+            string jsonString = "{\"Response_text\":\"sikeres json atadas\"}";
+            string json = JsonSerializer.Serialize(jsonString);
+            return this.Content(json, "application/json");
         }
     }
 }
