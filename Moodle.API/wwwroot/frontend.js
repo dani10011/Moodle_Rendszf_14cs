@@ -2,7 +2,7 @@
 function bejelentkezes(){
 
     
-    const url = "http://localhost:7090/api/Test";
+    const url = "https://localhost:7090/api/Test/szamteszt";
 
 fetch(url)
     .then(response => {
