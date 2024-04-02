@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Moodle.API"
   ],
-  "SelectedNode": "\\C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs",
+  "SelectedNode": "\\Moodle.API\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

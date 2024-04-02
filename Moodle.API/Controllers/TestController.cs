@@ -24,5 +24,11 @@ namespace Moodle.API.Controllers
             var json = System.IO.File.ReadAllText(filepath);
             return Content(json, "application/json");
         }
+
+        [HttpGet("valami/{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok($"Requested data with ID {id}");
+        }
     }
 }
