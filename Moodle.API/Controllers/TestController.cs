@@ -30,5 +30,13 @@ namespace Moodle.API.Controllers
         {
             return Ok($"Requested data with ID {id}");
         }
+
+
+
+        [HttpGet("szamteszt")]
+        public IActionResult Szamteszt()
+        {
+            return Ok($"Sikeresen ossze lett kotve a front és backend");
+        }
     }
 }
