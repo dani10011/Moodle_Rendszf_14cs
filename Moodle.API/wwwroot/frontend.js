@@ -1,7 +1,10 @@
 
 function bejelentkezes(){
+    window.location.href='mainPage.html'
 
-    
+}
+
+function atvitel(){
     const url = "https://localhost:7090/api/Test/szamteszt";
 
 fetch(url)
