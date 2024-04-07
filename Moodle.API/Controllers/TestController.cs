@@ -39,7 +39,7 @@ namespace Moodle.API.Controllers
         [HttpGet("szamteszt")]
         public IActionResult Szamteszt()
         {
-            string jsonString = "{\"Response_text\":\"sikeres json atadas\"}";
+            string jsonString = "sikeres json atadas";
             string json = JsonSerializer.Serialize(jsonString);
             return this.Content(json, "application/json");
         }
