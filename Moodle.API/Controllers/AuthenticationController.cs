@@ -9,9 +9,15 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        
+        public class Authentication
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
+
+        }
+
         [HttpPost("login")]
-        public IActionResult PostData([FromBody] Core.Authentication data)
+        public IActionResult PostData([FromBody] Authentication data)
         {
 
             // Now you can access data.Field1 and data.Field2

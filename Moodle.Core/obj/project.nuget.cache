@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "cq+yqASIx/+Hc/LM8D3xK6AouysA5OzRrFLDXhIelNE6dW/DhjhW5zNAOwkpW6cmKjyw7c6ozbOGq8sktwUxbg==",
-  "success": false,
+  "dgSpecHash": "P+V/SPmEy/2R/MdT2EbsqIvv+b6NX5gU5q0Zw8+5peqA7TPFvtTTPPO80bdwwVL+cyUomSuekM6kf/pV2dTQXQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bendi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -12,21 +12,5 @@
     "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Cycle detected. \r\n  Moodle.Core -> Moodle.API -> Moodle.Core.",
-      "libraryId": "Moodle.Core",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

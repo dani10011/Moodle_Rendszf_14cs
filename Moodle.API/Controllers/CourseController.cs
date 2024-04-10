@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Moodle.Core.Course;
 
 namespace Moodle.API.Controllers
 {
@@ -18,7 +17,7 @@ namespace Moodle.API.Controllers
         //saját kurzusok current userből
         //szűrés
         //degree megfelelő-e
-
+        /*
         [HttpGet]
         public IActionResult GetCoursesByID(string neptun) 
         {
@@ -37,5 +36,6 @@ namespace Moodle.API.Controllers
             string jsonString = json.ToString();
             return Ok("");
         }
+        */
     }
 }
