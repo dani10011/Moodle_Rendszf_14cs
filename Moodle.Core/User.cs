@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Moodle.Core
 {
-    internal class User
+    public class User
     {
-
+        public string? Name { get; set; }
+        public string? Neptun_code { get; set; }
+        public string? Degree { get; set; }
+        public virtual List<Course>? Courses { get; set; }
     }
 }
