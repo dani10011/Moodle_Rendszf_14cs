@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "EW3OJ9xzdJsBatXfCAW34D44uVEgOID8sqpBmvnZJyUxfxE6Xr6n1anj7S+yhgga6bvVI96kxWv4YAmh3S4UmA==",
-  "success": true,
+  "dgSpecHash": "UYF2DY3lfrsIRmheEqh4p025MEMVBZbEmp3qkJFSohOeP8bLrNCCWb6Uuc1jOANx0c5jhtNSF5il8YtsL298eA==",
+  "success": false,
   "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\Moodle.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\okros\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -12,5 +12,21 @@
     "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Moodle.API -> Moodle.Core -> Moodle.API.",
+      "libraryId": "Moodle.API",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

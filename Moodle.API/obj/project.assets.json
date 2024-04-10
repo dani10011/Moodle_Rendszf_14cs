@@ -101,6 +101,19 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Moodle.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Moodle.API": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Moodle.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Moodle.Core.dll": {}
+        }
       }
     }
   },
@@ -472,10 +485,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Moodle.Core/1.0.0": {
+      "type": "project",
+      "path": "../Moodle.Core/Moodle.Core.csproj",
+      "msbuildProject": "../Moodle.Core/Moodle.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Moodle.Core >= 1.0.0",
       "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
@@ -512,7 +531,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Core\\Moodle.Core.csproj": {
+              "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Core\\Moodle.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -556,5 +579,22 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Moodle.API -> Moodle.Core -> Moodle.API.",
+      "libraryId": "Moodle.API",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

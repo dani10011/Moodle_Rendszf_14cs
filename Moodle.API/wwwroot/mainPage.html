@@ -2,17 +2,18 @@
 <html>
 <head>
     <title>Page Title</title>
-    
+    <script src="test.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
 
 <h1>Api teszt</h1>
-<button type="button" onclick="lekeresteszt()">Proba</button>
+<button type="button" onclick="atvitel()">Összes kurzus listázása</button>
 <p id="proba"></p>
-<button type="button" onclick="lekeresteszt()">KLIKK</button>
+<p id="tanszekszur"><label >Tanszék, amire szűrni szeretnénk: <input id="tansz" type="text"; size="40"; maxlength="40"; name="tansz";autofocus>
+<button type="button" onclick="tanszszures()">Szűrés</button>
 <p id="proba2"></p>
-<script src="frontend.js"></script>
+<div id="dataDisplay"></div>
 
 </body>
 </html>

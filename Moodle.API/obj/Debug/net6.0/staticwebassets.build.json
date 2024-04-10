@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/UHvdLE2q33maUMC/7Cc1a+Pa9ITntt0UZvp0eMM0Uc=",
+  "Hash": "K3uOOhaPCp/u7YimtFO4HfUKaOSHV8NQFjGfad+KmVA=",
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\mainPage.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\test.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+      "BasePath": "_content/Moodle.API",
+      "RelativePath": "test.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\test.js"
     }
   ]
 }
