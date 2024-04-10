@@ -1,14 +1,21 @@
 
 function bejelentkezes(){
-    var felhasznalomezo = document.getElementById('felhasznalonev');
-    var felhasznalonev = felhasznalomezo.value;
-    var jelszomezo = document.getElementById('jelszo');
-    var jelszo = jelszomezo.value;
-    console.log(felhasznalonev);
-    console.log(jelszo);
+  
+        var felhasznalomezo = document.getElementById('felhasznalonev');
+        var felhasznalonev = felhasznalomezo.value;
+        var jelszomezo = document.getElementById('jelszo');
+        var jelszo = jelszomezo.value;
+        
+        console.log(felhasznalonev);
+        console.log(jelszo);
+    
+        // Submit the form
+        document.getElementById('loginForm').submit();
+    
+    
 
-    window.location.href='mainPage.html'
-
+    //window.location.href='mainPage.html'
+    
 }
 
 function atvitel(){

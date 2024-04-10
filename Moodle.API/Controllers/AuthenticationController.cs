@@ -6,6 +6,8 @@ using static Moodle.Core.Authentication;
 
 namespace Moodle.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class AuthenticationController : ControllerBase
     {
         
