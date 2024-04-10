@@ -9,28 +9,29 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        public class Authentication
+        
+        public class LoginData
         {
             public string Username { get; set; }
             public string Password { get; set; }
-
         }
 
-        [HttpPost("login")]
-        public IActionResult PostData([FromBody] Authentication data)
+        [HttpPost("login")] // Change to match the Javascript request
+        public async Task<IActionResult> Login([FromBody] LoginData loginData)
         {
+            if (loginData == null)
+            {
+                return BadRequest("Invalid request body");
+            }
 
-            // Now you can access data.Field1 and data.Field2
+            // Simulate user validation (replace with your actual logic)
+            if (loginData.Username == "user" && loginData.Password == "password")
+            {
+                return Ok("Login successful!");
+            }
 
-            // Do something with the data...
-
-            //teszt
-            string jsonString = "sikeres json atadas ujra!!!!!";
-            string json = JsonSerializer.Serialize(jsonString);
-            return this.Content(json, "application/json");
-            //
-
-            //return Ok(); // Return a 200 OK response
+            return Unauthorized("Invalid credentials");
         }
+        
     }
 }
