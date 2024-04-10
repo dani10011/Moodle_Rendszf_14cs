@@ -17,25 +17,25 @@
 <h1 style="text-align: center;">Kérlek jelentkezz be!</h1>
 <br>
 <p id="bejelentkezes">
-<form action="/AuthenticationController/login" method="post">
+<form id="loginForm" action="/api/Authentication/login" method="post">
     <label>Felhasználói név: <input type="text" id="felhasznalonev" name="felhasznalonev"></label>
     <label>Jelszó: <input type="password" id="jelszo" name="jelszo"></label>
-    <input type="submit" value="Submit">
+    <br>
+        <div id="button-container">
+            <button type="button" onclick="bejelentkezes()">Save</button>
+        </div>
 </form>
 </p>
 
-		<!--<p id="bejelentkezes"><label >Felhasználói név: <input id="felhasznalonev" type="text"; size="40"; maxlength="40";
+		
+		
+	</div>
+        <!--<p id="bejelentkezes"><label >Felhasználói név: <input id="felhasznalonev" type="text"; size="40"; maxlength="40";
 		name="felhnev";autofocus>
 		</label></p>
 		<p id="bejelentkezes"><label >Jelszó:<input id="jelszo" type="password" size="40"; maxlength="40"; 
 		name="jelszo">
 		</label></p>-->
-		<br>
-        <div id="button-container">
-            <button type="button" onclick="bejelentkezes()">Save</button>
-        </div>
-	</div>
-        
 
 </body>
 </html>

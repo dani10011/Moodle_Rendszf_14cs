@@ -99,7 +99,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj": {
+                "projectPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

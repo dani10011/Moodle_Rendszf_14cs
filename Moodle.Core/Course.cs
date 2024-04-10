@@ -8,11 +8,11 @@ namespace Moodle.Core
 {
     public class Course
     {
-        public string Name { get; set; }
-        public string Code { get; set; }
-        public string Department { get; set; }
-        public int Credit { get; set; }
-        public List<string> ApprovedDegrees { get; set; }
-        public List<string> EnrolledStudents { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+        public string department { get; set; }
+        public int credit { get; set; }
+        public List<string> approved_degrees { get; set; }
+        public List<string> enrolled_students { get; set; }
     }
 }

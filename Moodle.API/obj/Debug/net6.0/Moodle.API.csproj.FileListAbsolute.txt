@@ -163,6 +163,11 @@ D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.API\obj\Debug\net
 D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.API\obj\Debug\net6.0\Moodle.API.genruntimeconfig.cache
 D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.API\obj\Debug\net6.0\ref\Moodle.API.dll
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+<<<<<<< HEAD
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Moodle.Core.dll
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Moodle.Core.pdb
+=======
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Moodle.Core.dll
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\Moodle.Core.pdb
+>>>>>>> bf1fe097e013e948e782eca5aafc08146cf10abc

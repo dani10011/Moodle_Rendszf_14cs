@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "Z487BZLuzdeQTvHcvoHPgPylQxsGx4VWh2pf9eAv08M2NolwS5VCvINvOIYttUXoSsjBPJreOgBciJiWIQdinw==",
-  "success": true,
+  "dgSpecHash": "7nm5+mk0YNYklR4DT2BIvZlVSK7jA5u+dQ5u57VDA/9ADtTKOvard0TtMxpCsNoF0e5t/Ieg1jdWqd+ABREW4A==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bendi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -18,6 +18,15 @@
       "level": "Warning",
       "warningLevel": 1,
       "message": "Problem reading the cache file C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Moodle.API -> Moodle.Core -> Moodle.API.",
+      "libraryId": "Moodle.API",
+      "targetGraphs": [
+        "net6.0"
+      ]
     }
   ]
 }

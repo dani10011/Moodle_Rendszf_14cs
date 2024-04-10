@@ -105,6 +105,9 @@
       "Moodle.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Moodle.API": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Moodle.Core.dll": {}
         },
@@ -577,6 +580,15 @@
       "level": "Warning",
       "warningLevel": 1,
       "message": "Problem reading the cache file C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Moodle.API -> Moodle.Core -> Moodle.API.",
+      "libraryId": "Moodle.API",
+      "targetGraphs": [
+        "net6.0"
+      ]
     }
   ]
 }

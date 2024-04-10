@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Moodle.API\Moodle.API.csproj" />
+  </ItemGroup>
+
 </Project>
