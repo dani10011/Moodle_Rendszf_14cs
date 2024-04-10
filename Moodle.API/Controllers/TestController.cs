@@ -14,7 +14,7 @@ namespace Moodle.API.Controllers
         {
             _environment = environment;
         }
-        [HttpGet]
+        [HttpGet("probajson")]
         public IActionResult GetJsonFile()
         {
             var filepath = Path.Combine(_environment.ContentRootPath, "moodle-test.json");
@@ -35,13 +35,13 @@ namespace Moodle.API.Controllers
         }
 
 
-
+        /*
         [HttpGet("szamteszt")]
         public IActionResult Szamteszt()
         {
-            string jsonString = "sikeres json atadas";
+            string jsonString = "sikeres json atadas ujra!!!!!";
             string json = JsonSerializer.Serialize(jsonString);
             return this.Content(json, "application/json");
-        }
+        }*/
     }
 }
