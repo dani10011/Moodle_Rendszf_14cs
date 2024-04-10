@@ -35,13 +35,13 @@ namespace Moodle.API.Controllers
         }
 
 
-        /*
+        
         [HttpGet("szamteszt")]
         public IActionResult Szamteszt()
         {
             string jsonString = "sikeres json atadas ujra!!!!!";
             string json = JsonSerializer.Serialize(jsonString);
             return this.Content(json, "application/json");
-        }*/
+        }
     }
 }
