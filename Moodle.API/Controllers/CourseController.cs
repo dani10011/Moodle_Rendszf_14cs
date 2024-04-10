@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Moodle.Core.Course;
 
 namespace Moodle.API.Controllers
 {
@@ -6,14 +8,33 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        Dictionary<string, string> courses = new Dictionary<string, string>();
-        public CourseController() 
+        private readonly IWebHostEnvironment _environment;
+
+        public CourseController(IWebHostEnvironment environment)
         {
-            
+            _environment = environment;
         }
+
+        //saját kurzusok current userből
+        //szűrés
+        //degree megfelelő-e
+
         [HttpGet]
-        public IActionResult GetCourses()
+        public IActionResult GetCoursesByID(string neptun) 
         {
+            var filePath = Path.GetRelativePath(_environment.ContentRootPath, "\\Moodle.Core\\Jsons\\course.json");
+            //string jsonString = file.ReadAllText(@"..\\Moodle.Core\\Jsons\\course.json");
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            var json = System.IO.File.ReadAllText(filePath);
+
+            List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
+
+            string jsonString = json.ToString();
             return Ok("");
         }
     }

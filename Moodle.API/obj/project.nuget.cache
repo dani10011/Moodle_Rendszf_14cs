@@ -1,23 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "JnBe4LHFI+C2gjGBYxHt6WE0t49Oedz7T0NZMjS4iEVqSH8J5Kex5o9HieiVQpWgAl7sHHxARnIEfEKbqPsFdQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
+  "dgSpecHash": "UYF2DY3lfrsIRmheEqh4p025MEMVBZbEmp3qkJFSohOeP8bLrNCCWb6Uuc1jOANx0c5jhtNSF5il8YtsL298eA==",
+  "success": false,
+  "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\Moodle.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\okros\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\okros\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Moodle.API -> Moodle.Core -> Moodle.API.",
+      "libraryId": "Moodle.API",
+      "targetGraphs": [
+        "net6.0"
+      ]
     }
   ]
 }
