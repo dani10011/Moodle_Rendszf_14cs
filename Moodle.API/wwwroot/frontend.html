@@ -17,17 +17,10 @@
 <h1 style="text-align: center;">Kérlek jelentkezz be!</h1>
 <br>
 <p id="bejelentkezes">
-    <form id="loginForm" action="/api/Authentication/login" method="post">
-        <label>Felhasználói név: <input type="text" id="felhasznalonev" name="felhasznalonev"></label>
-        <label>Jelszó: <input type="password" id="jelszo" name="jelszo"></label>
-        <br>
-        <div id="button-container">
-            <button type="button" onclick="bejelentkezes()">Save</button>
-        </div>
-    </form>
+    
 
 
-    <h2>Login Form</h2>
+    
 
     <form id="myForm">
         <label for="username">Username:</label><br>
@@ -59,6 +52,7 @@
             } else {
                 const message = await response.text();
                 alert(message);
+                window.location.href='mainPage.html'
             }
         }
     </script>
@@ -68,12 +62,7 @@
 		
 		
 	</div>
-        <!--<p id="bejelentkezes"><label >Felhasználói név: <input id="felhasznalonev" type="text"; size="40"; maxlength="40";
-		name="felhnev";autofocus>
-		</label></p>
-		<p id="bejelentkezes"><label >Jelszó:<input id="jelszo" type="password" size="40"; maxlength="40"; 
-		name="jelszo">
-		</label></p>-->
+    
 
 </body>
 </html>

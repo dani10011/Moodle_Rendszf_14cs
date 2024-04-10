@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "PackagePath": "staticwebassets\\bejelentkezeshatter.jfif"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "PackagePath": "staticwebassets\\frontend.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "PackagePath": "staticwebassets\\frontend.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
+      "PackagePath": "staticwebassets\\frontend.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage.html",
+      "PackagePath": "staticwebassets\\mainPage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\test.js",
+      "PackagePath": "staticwebassets\\test.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Moodle.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Moodle.API.props",
+      "PackagePath": "build\\Moodle.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Moodle.API.props",
+      "PackagePath": "buildMultiTargeting\\Moodle.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Moodle.API.props",
+      "PackagePath": "buildTransitive\\Moodle.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
