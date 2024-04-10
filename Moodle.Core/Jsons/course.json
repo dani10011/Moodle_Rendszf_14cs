@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Rendszerfejlesztés haladó módszerei",
+    "code": "VEMISAB223RF",
+    "department": "VIRT",
+    "credit": 6,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "B7FY4E",
+      "H8UOA6"
+    ]
+  },
+  {
+    "name": "Haladó programozási technikák II.",
+    "code": "VEMISAB254HF",
+    "department": "VIRT",
+    "credit": 4,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "B7FY4E",
+      "H8UOA6"
+    ]
+  },
+  {
+    "name": "Mesterséges intelligencia alapjai",
+    "code": "VEMISAB254MV",
+    "department": "VIRT",
+    "credit": 4,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "B7FY4E",
+      "H8UOA6"
+    ]
+  },
+  {
+    "name": "Rendszertesztelés",
+    "code": "VEMISAB154RF",
+    "department": "VIRT",
+    "credit": 4,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "B7FY4E",
+      "H8UOA6"
+    ]
+  },
+  {
+    "name": "Mobil robotika",
+    "code": "VEMIVIB254MV",
+    "department": "VIRT",
+    "credit": 4,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "H8UOA6"
+    ]
+  },
+  {
+    "name": "Adatbázis-kezelő rendszerek II.",
+    "code": "VEMIVIB233FA",
+    "department": "VIRT",
+    "credit": 4,
+    "approved_degrees": [
+      "MIK-A01",
+      "MIK-A02",
+      "MIK-A03"
+    ],
+    "enrolled_students": [
+      "CT3QB5",
+      "B7FY4E",
+      "H8UOA6"
+    ]
+  }
+]
