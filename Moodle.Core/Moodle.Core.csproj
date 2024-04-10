@@ -8,7 +8,6 @@
 
   <ItemGroup>
 	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	<ProjectReference Include="..\Moodle.API\Moodle.API.csproj" />
   </ItemGroup>
 
 </Project>

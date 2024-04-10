@@ -1,16 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P+V/SPmEy/2R/MdT2EbsqIvv+b6NX5gU5q0Zw8+5peqA7TPFvtTTPPO80bdwwVL+cyUomSuekM6kf/pV2dTQXQ==",
+  "dgSpecHash": "CV30Ob/3p5BehU0JRTtg5qbtbZjXFYZirJc4N32WQOBVxQ793LQz/nMNp0wMc5I0A+X/6nVpHsUA8ASrKgNrUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
+  "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Core\\Moodle.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Bendi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\Bendi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\okros\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
