@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "VioaXFMJ08t9NyphWEDK4a4sycn0mlGqMynSOZ9M/CE=",
+=======
+  "Hash": "K3uOOhaPCp/u7YimtFO4HfUKaOSHV8NQFjGfad+KmVA=",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
@@ -10,22 +14,35 @@
     {
       "Name": "Moodle.API\\wwwroot",
       "Source": "Moodle.API",
+<<<<<<< HEAD
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "bejelentkezeshatter.jfif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -34,15 +51,24 @@
       "OriginalItemSpec": "wwwroot\\bejelentkezeshatter.jfif"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\frontend.css",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -51,15 +77,24 @@
       "OriginalItemSpec": "wwwroot\\frontend.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\frontend.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -68,15 +103,24 @@
       "OriginalItemSpec": "wwwroot\\frontend.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\frontend.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -85,15 +129,24 @@
       "OriginalItemSpec": "wwwroot\\frontend.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\mainPage.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "mainPage.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -102,15 +155,24 @@
       "OriginalItemSpec": "wwwroot\\mainPage.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\test.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\test.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "BasePath": "_content/Moodle.API",
       "RelativePath": "test.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",

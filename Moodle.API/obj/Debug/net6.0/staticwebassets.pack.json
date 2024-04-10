@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
       "PackagePath": "staticwebassets\\bejelentkezeshatter.jfif"
     },
@@ -22,6 +23,29 @@
     },
     {
       "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\test.js",
+=======
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "PackagePath": "staticwebassets\\bejelentkezeshatter.jfif"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "PackagePath": "staticwebassets\\frontend.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "PackagePath": "staticwebassets\\frontend.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
+      "PackagePath": "staticwebassets\\frontend.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage.html",
+      "PackagePath": "staticwebassets\\mainPage.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\test.js",
+>>>>>>> 452f67d39abc5bd5ca557663fc47073f3db7c3b2
       "PackagePath": "staticwebassets\\test.js"
     },
     {
