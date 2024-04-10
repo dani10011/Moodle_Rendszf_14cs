@@ -437,24 +437,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\okros\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Bendi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\Moodle.API.csproj",
+      "projectUniqueName": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
       "projectName": "Moodle.API",
-      "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\Moodle.API.csproj",
-      "packagesPath": "C:\\Users\\okros\\.nuget\\packages\\",
-      "outputPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\obj\\",
+      "projectPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
+      "packagesPath": "C:\\Users\\Bendi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\okros\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Bendi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -462,7 +457,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -505,7 +499,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
