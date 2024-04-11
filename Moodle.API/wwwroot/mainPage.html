@@ -17,42 +17,69 @@
 <p id="proba2"></p>
 <div id="dataDisplay"></div>
 
+
+
 <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">Dropdown</button>
     <div id="myDropdown" class="dropdown-content">
-      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-      <a href="#about">About</a>
-      <a href="#base">Base</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-      <a href="#custom">Custom</a>
-      <a href="#support">Support</a>
-      <a href="#tools">Tools</a>
+      <input type="text" placeholder="Milyen karra szeretne szűrni?" id="myInput" onkeyup="filterFunction()">
     </div>
   </div>
-  
+
   <script>
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  function filterFunction() {
-    const input = document.getElementById("myInput");
-    const filter = input.value.toUpperCase();
-    const div = document.getElementById("myDropdown");
-    const a = div.getElementsByTagName("a");
-    for (let i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
+    const dropdown = document.getElementById("myDropdown");
+    async function fetchData() {
+      const response = await fetch("https://api.example.com/data"); // Replace with your API endpoint
+      const data = await response.json();
+
+
+
+      const url = "https://localhost:7090/api/Test/probajson";
+    fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data); 
+    const dataDisplay = document.getElementById("dataDisplay");
+    dataDisplay.innerHTML = '';
+    data.forEach(item => {
+         
+
+      const nameElement = document.createElement("p");
+      nameElement.textContent = "name: " + item.name;
+    
+      const ageElement = document.createElement("p");
+      ageElement.textContent = "code: " + item.code;
+    
+      const departmentElement = document.createElement("p");
+      departmentElement.textContent = "department: " + item.department;
+
+      const creditElement = document.createElement("p");
+      creditElement.textContent = "credit: " + item.credit;
+    
+      const option = document.createElement("option");
+        option.text = item.name+' ('+item.code+', '+item.department+', '+item.credit+ 'kredit)';
+        dropdown.appendChild(option);
+
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+    
+    
+      for (const item of data) {
+        
       }
     }
-  }
-  </script>
+    
+    fetchData();
+    </script>
+ 
   </div>
 </body>
 </html>
