@@ -15,6 +15,8 @@
         <td><button type="button" onclick="atvitel()">Összes kurzus listázása</button></td>
         <td><button type="button" onclick="sajatlista()">Saját kurzusok listázása</button></td>
         <td><select id="departmentList"></select></td>
+        <td><select id="studentList"></select></td>
+        
     </tr>
 </Table>
 
@@ -30,7 +32,7 @@
 
 
 
-<script>
+<script> //Szak alapján történő szűréshez
             async function fetchData() {
               const url = "https://localhost:7090/api/Test/probajson";
 
@@ -44,16 +46,16 @@
                 console.log(data); 
 
                 const departmentList = document.getElementById("departmentList");
-                departmentList.innerHTML = '';  // Clear any previous options
+                departmentList.innerHTML = ''; 
 
-                // Extract unique departments
+                //
                 const uniqueDepartments = new Set();
                 
                 data.forEach(item => {
                   uniqueDepartments.add(item.department);
                 });
                 
-                // Create options for each department
+                
                 for (const department of uniqueDepartments) {
                   const option = document.createElement("option");
                   option.text = department;
@@ -62,7 +64,7 @@
 
                 
 
-                // Display all items (optional)
+                // Minden elem kiiratása
                 data.forEach(item => {
                   const nameElement = document.createElement("p");
                   nameElement.textContent = "name: " + item.name;
@@ -84,12 +86,12 @@
                 departmentList.addEventListener("change", function() {
                   const selectedDepartment = this.value;
                   const dataDisplay = document.getElementById("dataDisplay");
-                  dataDisplay.innerHTML = ''; // Clear previous content
+                  dataDisplay.innerHTML = ''; 
 
-                  // Filter data based on selected department
+                  
                   const filteredData = data.filter(item => item.department === selectedDepartment);
 
-                  // Display filtered data (optional)
+                  // Szűrt elemek kilistázása
                   filteredData.forEach(item => {
                     const nameElement = document.createElement("p");
                     nameElement.textContent = "name: " + item.name;
@@ -115,7 +117,55 @@
 
             fetchData();
 </script>
-    
+ 
+
+<script>
+async function fetchData() {
+  const url = "https://localhost:7090/api/Test/probajson";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+
+    console.log(data); 
+
+    const dataDisplay = document.getElementById("dataDisplay");
+    dataDisplay.innerHTML = ''; // Clear any previous content
+
+    const studentlist = document.getElementById("studentList");
+    studentlist.innerHTML = '';  // Clear any previous options
+
+    data.forEach(item => {
+      const nameElement = document.createElement("p");
+      nameElement.textContent = "name: " + item.name;
+      dataDisplay.appendChild(nameElement);  // Display data (optional)
+
+      const ageElement = document.createElement("p");
+      ageElement.textContent = "code: " + item.code;
+      dataDisplay.appendChild(ageElement);  // Display data (optional)
+
+      const departmentElement = document.createElement("p");
+      departmentElement.textContent = "department: " + item.department;
+      dataDisplay.appendChild(departmentElement);  // Display data (optional)
+
+      const creditElement = document.createElement("p");
+      creditElement.textContent = "credit: " + item.credit;
+      dataDisplay.appendChild(creditElement);  // Display data (optional)
+
+      const option = document.createElement("option");
+      option.text = item.name+' ('+item.code+', '+item.department+', '+item.credit+ 'kredit)';
+      studentlist.appendChild(option);
+    });
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+}
+
+fetchData();
+</script>
  
   </div>
 </body>
