@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Moodle.Core;
+
 
 namespace Moodle.API.Controllers
 {
@@ -7,22 +9,12 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        private readonly IWebHostEnvironment _environment;
 
-        public CourseController(IWebHostEnvironment environment)
+        [HttpGet("courseid")]
+        public IActionResult GetCoursesByID(string neptun)
         {
-            _environment = environment;
-        }
-
-        //saját kurzusok current userből
-        //szűrés
-        //degree megfelelő-e
-        /*
-        [HttpGet]
-        public IActionResult GetCoursesByID(string neptun) 
-        {
-            var filePath = Path.GetRelativePath(_environment.ContentRootPath, "\\Moodle.Core\\Jsons\\course.json");
-            //string jsonString = file.ReadAllText(@"..\\Moodle.Core\\Jsons\\course.json");
+            var basePath = System.IO.Directory.GetCurrentDirectory();
+            var filePath = System.IO.Path.Combine(basePath, "..", "\\Moodle.Core\\Jsons\\course.json");
 
             if (!System.IO.File.Exists(filePath))
             {
@@ -33,9 +25,33 @@ namespace Moodle.API.Controllers
 
             List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
 
-            string jsonString = json.ToString();
-            return Ok("");
+            List<Course> filteredCourses = courses.Where(c => c.enrolled_students.Contains(neptun)).ToList();
+
+            string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
+
+            return this.Content(newJson, "application/json");
         }
-        */
+
+        [HttpGet("accepted")]
+        public IActionResult CheckAcceptedDegrees(string degree)
+        {
+            var basePath = System.IO.Directory.GetCurrentDirectory();
+            var filePath = System.IO.Path.Combine(basePath, "..", "\\Moodle.Core\\Jsons\\course.json");
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            var json = System.IO.File.ReadAllText(filePath);
+
+            List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
+
+            List<Course> filteredCourses = courses.Where(c => c.approved_degrees.Contains(degree)).ToList();
+
+            string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
+
+            return this.Content(newJson, "application/json");
+        }
     }
 }
