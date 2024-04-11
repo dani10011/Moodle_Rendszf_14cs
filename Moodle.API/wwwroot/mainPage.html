@@ -2,96 +2,119 @@
 <html>
 <head>
     <title>Page Title</title>
-    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="frontend.css?v=1.0">
     <script src="test.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
 
 <div class="mainPage">
-<h1>Api teszt</h1>
+<h1>Kurzus kezelő</h1>
 <Table>
     <tr>
         <td><button type="button" onclick="atvitel()">Összes kurzus listázása</button></td>
         <td><button type="button" onclick="sajatlista()">Saját kurzusok listázása</button></td>
+        <td><select id="departmentList"></select></td>
     </tr>
 </Table>
 
-<p id="proba"></p>
-<button type="button" onclick="tanszszures()">Szűrés</button>
-<p id="proba2"></p>
+
+
 <div id="dataDisplay"></div>
 
 
 
   
-  <select id="departmentList"></select>
-  
-  
-  <script>
-  async function fetchData() {
-    const url = "https://localhost:7090/api/Test/probajson";
-  
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-  
-      console.log(data); 
-  
-      const departmentList = document.getElementById("departmentList");
-      departmentList.innerHTML = '';  // Clear any previous options
-  
-      // Extract unique departments
-      const uniqueDepartments = new Set();
-      data.forEach(item => {
-        uniqueDepartments.add(item.department);
-      });
-  
-      // Create options for each department
-      for (const department of uniqueDepartments) {
-        const option = document.createElement("option");
-        option.text = department;
-        departmentList.appendChild(option);
-      }
-  
-      departmentList.addEventListener("change", function() {
-        const selectedDepartment = this.value;
-        const proba = document.getElementById("proba");
-        proba.innerHTML = ''; // Clear previous content
-  
-        // Filter data based on selected department
-        const filteredData = data.filter(item => item.department === selectedDepartment);
-  
-        // Display filtered data (optional)
-        filteredData.forEach(item => {
-          proba.innerHTML = '';
-          const nameElement = document.createElement("p");
-          nameElement.textContent = "name: " + item.name;
-          proba.appendChild(nameElement);
-  
-          const ageElement = document.createElement("p");
-          ageElement.textContent = "code: " + item.code;
-          proba.appendChild(ageElement);
-  
-          const departmentElement = document.createElement("p");
-          departmentElement.textContent = "department: " + item.department;
-          proba.appendChild(departmentElement);
-  
-          const creditElement = document.createElement("p");
-          creditElement.textContent = "credit: " + item.credit;
-          proba.appendChild(creditElement);
-        });
-      });
-    } catch (error) {
-      console.error('There was a problem with the fetch operation:', error);
-    }
-  }
-  
-  fetchData();
-  </script>
+
+ 
+
+
+
+<script>
+            async function fetchData() {
+              const url = "https://localhost:7090/api/Test/probajson";
+
+              try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+
+                console.log(data); 
+
+                const departmentList = document.getElementById("departmentList");
+                departmentList.innerHTML = '';  // Clear any previous options
+
+                // Extract unique departments
+                const uniqueDepartments = new Set();
+                
+                data.forEach(item => {
+                  uniqueDepartments.add(item.department);
+                });
+                
+                // Create options for each department
+                for (const department of uniqueDepartments) {
+                  const option = document.createElement("option");
+                  option.text = department;
+                  departmentList.appendChild(option);
+                }
+
+                
+
+                // Display all items (optional)
+                data.forEach(item => {
+                  const nameElement = document.createElement("p");
+                  nameElement.textContent = "name: " + item.name;
+                  dataDisplay.appendChild(nameElement);
+
+                  const ageElement = document.createElement("p");
+                  ageElement.textContent = "code: " + item.code;
+                  dataDisplay.appendChild(ageElement);
+
+                  const departmentElement = document.createElement("p");
+                  departmentElement.textContent = "department: " + item.department;
+                  dataDisplay.appendChild(departmentElement);
+
+                  const creditElement = document.createElement("p");
+                  creditElement.textContent = "credit: " + item.credit;
+                  dataDisplay.appendChild(creditElement);
+                });
+
+                departmentList.addEventListener("change", function() {
+                  const selectedDepartment = this.value;
+                  const dataDisplay = document.getElementById("dataDisplay");
+                  dataDisplay.innerHTML = ''; // Clear previous content
+
+                  // Filter data based on selected department
+                  const filteredData = data.filter(item => item.department === selectedDepartment);
+
+                  // Display filtered data (optional)
+                  filteredData.forEach(item => {
+                    const nameElement = document.createElement("p");
+                    nameElement.textContent = "name: " + item.name;
+                    dataDisplay.appendChild(nameElement);
+
+                    const ageElement = document.createElement("p");
+                    ageElement.textContent = "code: " + item.code;
+                    dataDisplay.appendChild(ageElement);
+
+                    const departmentElement = document.createElement("p");
+                    departmentElement.textContent = "department: " + item.department;
+                    dataDisplay.appendChild(departmentElement);
+
+                    const creditElement = document.createElement("p");
+                    creditElement.textContent = "credit: " + item.credit;
+                    dataDisplay.appendChild(creditElement);
+                  });
+                });
+              } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+              }
+            }
+
+            fetchData();
+</script>
     
  
   </div>
