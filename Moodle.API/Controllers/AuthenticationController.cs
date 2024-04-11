@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Moodle.Core;
+using Newtonsoft.Json;
 using System.Text.Json;
 
 
@@ -24,10 +26,19 @@ namespace Moodle.API.Controllers
                 return BadRequest("Invalid request body");
             }
 
-            // Simulate user validation (replace with your actual logic)
-            if (loginData.Username == "user" && loginData.Password == "password")
+
+            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+            string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/LoginInfo.json");
+
+            string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+            List<Login> users = JsonConvert.DeserializeObject<List<Login>>(jsonData);
+            
+            foreach (Login login in users)
             {
-                return Ok("Login successful!");
+                if(login.username == loginData.Username && login.password == loginData.Password)
+                {
+                    return Ok("Login successful!");
+                }
             }
 
             return Unauthorized("Invalid credentials");
