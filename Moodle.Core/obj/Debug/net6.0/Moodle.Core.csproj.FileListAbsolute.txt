@@ -22,3 +22,16 @@ D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.Core\obj\Debug\ne
 D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.Core\obj\Debug\net6.0\refint\Moodle.Core.dll
 D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.Core\obj\Debug\net6.0\Moodle.Core.pdb
 D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.Core\obj\Debug\net6.0\ref\Moodle.Core.dll
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\bin\Debug\net6.0\Moodle.Core.deps.json
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\bin\Debug\net6.0\Moodle.Core.dll
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\bin\Debug\net6.0\Moodle.Core.pdb
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.AssemblyInfo.cs
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.sourcelink.json
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.dll
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\refint\Moodle.Core.dll
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.pdb
+C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\ref\Moodle.Core.dll
