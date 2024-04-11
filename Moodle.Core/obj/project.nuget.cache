@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CV30Ob/3p5BehU0JRTtg5qbtbZjXFYZirJc4N32WQOBVxQ793LQz/nMNp0wMc5I0A+X/6nVpHsUA8ASrKgNrUQ==",
+  "dgSpecHash": "onQ2SZF9DhStfV/LFMZpPlp6NqG2jsKAIn0gF1ia9vs+sx9WN+x2g7nDtyi88ZbA0oOP/vvf8446xJ/pcZjsXQ==",
   "success": true,
-  "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Core\\Moodle.Core.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\okros\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
