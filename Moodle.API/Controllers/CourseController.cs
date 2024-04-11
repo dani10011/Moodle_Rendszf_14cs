@@ -10,7 +10,7 @@ namespace Moodle.API.Controllers
     public class CourseController : ControllerBase
     {
 
-        [HttpGet]
+        [HttpGet("courseid")]
         public IActionResult GetCoursesByID(string neptun)
         {
             var basePath = System.IO.Directory.GetCurrentDirectory();
@@ -32,7 +32,7 @@ namespace Moodle.API.Controllers
             return this.Content(newJson, "application/json");
         }
 
-        [HttpGet]
+        [HttpGet("accepted")]
         public IActionResult CheckAcceptedDegrees(string degree)
         {
             var basePath = System.IO.Directory.GetCurrentDirectory();
