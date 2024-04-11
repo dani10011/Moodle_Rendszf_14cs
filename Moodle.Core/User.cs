@@ -8,9 +8,9 @@ namespace Moodle.Core
 {
     public class User
     {
-        public string? Name { get; set; }
-        public string? Neptun_code { get; set; }
-        public string? Degree { get; set; }
-        public virtual List<Course>? Courses { get; set; }
+        public string Name { get; set; }
+        public string Neptun_code { get; set; }
+        public string Degree { get; set; }
+        public List<string> Course_codes { get; set; }
     }
 }
