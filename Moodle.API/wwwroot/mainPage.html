@@ -10,49 +10,90 @@
 
 <div class="mainPage">
 <h1>Api teszt</h1>
-<button type="button" onclick="atvitel()">Összes kurzus listázása</button>
+<Table>
+    <tr>
+        <td><button type="button" onclick="atvitel()">Összes kurzus listázása</button></td>
+        <td><button type="button" onclick="sajatlista()">Saját kurzusok listázása</button></td>
+    </tr>
+</Table>
+
 <p id="proba"></p>
-<p id="tanszekszur"><label >Tanszék, amire szűrni szeretnénk: <input id="tansz" type="text"; size="40"; maxlength="40"; name="tansz";autofocus>
 <button type="button" onclick="tanszszures()">Szűrés</button>
 <p id="proba2"></p>
 <div id="dataDisplay"></div>
 
-<div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
-      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-      <a href="#about">About</a>
-      <a href="#base">Base</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-      <a href="#custom">Custom</a>
-      <a href="#support">Support</a>
-      <a href="#tools">Tools</a>
-    </div>
-  </div>
+
+
+  
+  <select id="departmentList"></select>
+  
   
   <script>
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+  async function fetchData() {
+    const url = "https://localhost:7090/api/Test/probajson";
   
-  function filterFunction() {
-    const input = document.getElementById("myInput");
-    const filter = input.value.toUpperCase();
-    const div = document.getElementById("myDropdown");
-    const a = div.getElementsByTagName("a");
-    for (let i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
+      const data = await response.json();
+  
+      console.log(data); 
+  
+      const departmentList = document.getElementById("departmentList");
+      departmentList.innerHTML = '';  // Clear any previous options
+  
+      // Extract unique departments
+      const uniqueDepartments = new Set();
+      data.forEach(item => {
+        uniqueDepartments.add(item.department);
+      });
+  
+      // Create options for each department
+      for (const department of uniqueDepartments) {
+        const option = document.createElement("option");
+        option.text = department;
+        departmentList.appendChild(option);
+      }
+  
+      departmentList.addEventListener("change", function() {
+        const selectedDepartment = this.value;
+        const proba = document.getElementById("proba");
+        proba.innerHTML = ''; // Clear previous content
+  
+        // Filter data based on selected department
+        const filteredData = data.filter(item => item.department === selectedDepartment);
+  
+        // Display filtered data (optional)
+        filteredData.forEach(item => {
+          proba.innerHTML = '';
+          const nameElement = document.createElement("p");
+          nameElement.textContent = "name: " + item.name;
+          proba.appendChild(nameElement);
+  
+          const ageElement = document.createElement("p");
+          ageElement.textContent = "code: " + item.code;
+          proba.appendChild(ageElement);
+  
+          const departmentElement = document.createElement("p");
+          departmentElement.textContent = "department: " + item.department;
+          proba.appendChild(departmentElement);
+  
+          const creditElement = document.createElement("p");
+          creditElement.textContent = "credit: " + item.credit;
+          proba.appendChild(creditElement);
+        });
+      });
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
     }
   }
+  
+  fetchData();
   </script>
+    
+ 
   </div>
 </body>
 </html>
