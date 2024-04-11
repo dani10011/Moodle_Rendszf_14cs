@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Jsons\course.json" />
+    <None Remove="Jsons\CurrentUser.json" />
+    <None Remove="Jsons\degrees.json" />
+    <None Remove="Jsons\LoginInfo.json" />
+    <None Remove="Jsons\Users.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Jsons\course.json" />
+    <EmbeddedResource Include="Jsons\CurrentUser.json" />
+    <EmbeddedResource Include="Jsons\degrees.json" />
+    <EmbeddedResource Include="Jsons\LoginInfo.json" />
+    <EmbeddedResource Include="Jsons\Users.json" />
+  </ItemGroup>
+
+  <ItemGroup>
 	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 

@@ -10,6 +10,22 @@ namespace Moodle.API.Controllers
     public class CourseController : ControllerBase
     {
 
+        [HttpGet("allcourses")]
+        public IActionResult GetAllCourses()
+        {
+            var basePath = System.IO.Directory.GetCurrentDirectory();
+            var filePath = System.IO.Path.Combine(basePath, "..", "\\Moodle.Core\\Jsons\\course.json");
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            var json = System.IO.File.ReadAllText(filePath);
+
+            return this.Content(json, "application/json");
+        }
+
         [HttpGet("courseid")]
         public IActionResult GetCoursesByID(string neptun)
         {
