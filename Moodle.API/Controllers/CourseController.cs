@@ -10,7 +10,23 @@ namespace Moodle.API.Controllers
     public class CourseController : ControllerBase
     {
 
-        [HttpGet]
+        [HttpGet("allcourses")]
+        public IActionResult GetAllCourses()
+        {
+            var basePath = System.IO.Directory.GetCurrentDirectory();
+            var filePath = System.IO.Path.Combine(basePath, "..", "\\Moodle.Core\\Jsons\\course.json");
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            var json = System.IO.File.ReadAllText(filePath);
+
+            return this.Content(json, "application/json");
+        }
+
+        [HttpGet("courseid")]
         public IActionResult GetCoursesByID(string neptun)
         {
             var basePath = System.IO.Directory.GetCurrentDirectory();
@@ -32,7 +48,7 @@ namespace Moodle.API.Controllers
             return this.Content(newJson, "application/json");
         }
 
-        [HttpGet]
+        [HttpGet("accepted")]
         public IActionResult CheckAcceptedDegrees(string degree)
         {
             var basePath = System.IO.Directory.GetCurrentDirectory();
