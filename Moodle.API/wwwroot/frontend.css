@@ -7,6 +7,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
+    justify-content: center;
+    text-align: center;
+}
+.bejelentkezo{
+  font-size:28px;
+			font-family:"Times New Roman", Times, serif;
+			font-weight: bold;
+			color:#6FA4E5;
+            text-align: center;
+}
+#username{
+  margin: auto;
+
+  width: 50%;
+
+}
+#password{
+  margin: auto;
+  width: 50%;
 }
 h1{
 
@@ -16,18 +36,42 @@ h1{
 .mainPage{
     background: aquamarine;
 }
-#bejelentkezes{
-    
-    font-size:20px;
-			font-family:"Times New Roman", Times, serif;
-			font-weight: bold;
-			color:red;
-            text-align: center;
+
+.egyediRow{
+  margin: auto;
+  background-color: rgb( 255,255,255,0.99);
+  border-radius: 10%;
+  width: 90%;
+  height: 85vh;
+  justify-content: center;
+  display: flex;
 }
 #bodycucc{
     background-color: rgb( 255,255,255,0.9);
     border-radius: 10%;
     
+}
+.gomb{
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it inline */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Add cursor pointer */
+  border-radius: 8px; /* Rounded corners */
+  transition-duration: 0.4s; /* Smooth transition */
+}
+
+.gomb:hover {
+  background-color:  #006400; /* Darker green */
+  color: white; /* White text */
+}
+#buttonDiv{
+  padding: 3%;
 }
 #button-container{
     display: flex;
@@ -83,7 +127,15 @@ h1{
     text-decoration: none;
     display: block;
   }
-  
+  #myform{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
   .dropdown a:hover {background-color: #ddd;}
-  
+  #formDiv{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
   .show {display: block;}

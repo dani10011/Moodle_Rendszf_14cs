@@ -119,52 +119,58 @@
 </script>
  
 
+
+
 <script>
-async function fetchData() {
-  const url = "https://localhost:7090/api/Course/allcourses";
+          async function fetchData() {
+            const url = "https://localhost:7090/api/Course/allcourses";
 
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
+            try {
+              const response = await fetch(url);
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              const data = await response.json();
 
-    console.log(data); 
+              console.log(data); 
 
-    const dataDisplay = document.getElementById("dataDisplay");
-    dataDisplay.innerHTML = ''; // Clear any previous content
+              const studentList = document.getElementById("studentList");
+              studentList.innerHTML = '';  // Clear any previous options
 
-    const studentlist = document.getElementById("studentList");
-    studentlist.innerHTML = '';  // Clear any previous options
+              // Create options for each course
+              data.forEach(course => {
+                const option = document.createElement("option");
+                option.text = course.name + ' (' + course.code + ')';
+                option.value = course; // Store entire course object in value
+                studentList.appendChild(option);
+              });
 
-    data.forEach(item => {
-      const nameElement = document.createElement("p");
-      nameElement.textContent = "name: " + item.name;
-      dataDisplay.appendChild(nameElement);  // Display data (optional)
+              studentList.addEventListener("change", function() {
+                const selectedCourse = this.value; // Get the entire course object
+                const dataDisplay = document.getElementById("dataDisplay");
+                dataDisplay.innerHTML = ''; // Clear previous content
 
-      const ageElement = document.createElement("p");
-      ageElement.textContent = "code: " + item.code;
-      dataDisplay.appendChild(ageElement);  // Display data (optional)
+                // Check if a course is selected
+                if (selectedCourse) {
+                  const enrolledStudents = selectedCourse.enrolled_students;
+                  dataDisplay.textContent = "Enrolled Students:";
 
-      const departmentElement = document.createElement("p");
-      departmentElement.textContent = "department: " + item.department;
-      dataDisplay.appendChild(departmentElement);  // Display data (optional)
+                  // Display enrolled students (optional)
+                  enrolledStudents.forEach(student => {
+                    const studentElement = document.createElement("p");
+                    studentElement.textContent = student;
+                    dataDisplay.appendChild(studentElement);
+                  });
+                } else {
+                  dataDisplay.textContent = "Please select a course.";
+                }
+              });
+            } catch (error) {
+              console.error('There was a problem with the fetch operation:', error);
+            }
+          }
 
-      const creditElement = document.createElement("p");
-      creditElement.textContent = "credit: " + item.credit;
-      dataDisplay.appendChild(creditElement);  // Display data (optional)
-
-      const option = document.createElement("option");
-      option.text = item.name+' ('+item.code+', '+item.department+', '+item.credit+ 'kredit)';
-      studentlist.appendChild(option);
-    });
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
-}
-
-fetchData();
+          fetchData();
 </script>
  
   </div>
