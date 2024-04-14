@@ -24,7 +24,6 @@ C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Mood
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\scopedcss\bundle\Moodle.API.styles.css
-C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.csproj.CopyComplete
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.dll
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\refint\Moodle.API.dll
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.pdb
@@ -107,3 +106,10 @@ C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.genruntimeconfig.cache
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\ref\Moodle.API.dll
 C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\bin\Debug\net6.0\CurrentUser.json
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.sourcelink.json
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets\msbuild.Moodle.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Moodle.API.props
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Moodle.API.props
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Moodle.API.props
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.API\obj\Debug\net6.0\Moodle.API.csproj.Up2Date
