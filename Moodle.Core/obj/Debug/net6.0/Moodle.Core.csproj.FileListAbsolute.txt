@@ -35,3 +35,4 @@ C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodl
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\refint\Moodle.Core.dll
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.pdb
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\ref\Moodle.Core.dll
+C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.Core.sourcelink.json
