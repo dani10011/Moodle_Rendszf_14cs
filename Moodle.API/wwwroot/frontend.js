@@ -16,7 +16,7 @@ function bejelentkezes(){
 
 
 
-function atvitel(){
+function osszLista(){
     const url = "https://localhost:7090/api/Course/allcourses";
     fetch(url)
   .then(response => {
@@ -26,29 +26,17 @@ function atvitel(){
     return response.json();
   })
   .then(data => {
-    console.log(data); // Log the content of the JSON file to the console
+    //console.log(data); // Logolja a Json file tartalmát a konzolra (TESZTELÉSHEZ)
     const dataDisplay = document.getElementById("dataDisplay");
     dataDisplay.innerHTML = '';
+    const ul = document.createElement('ul');
     data.forEach(item => {
-         
-      const nameElement = document.createElement("p");
-      nameElement.textContent = "name: " + item.name;
-    
-      const ageElement = document.createElement("p");
-      ageElement.textContent = "code: " + item.code;
-    
-      const departmentElement = document.createElement("p");
-      departmentElement.textContent = "department: " + item.department;
-
-      const creditElement = document.createElement("p");
-      creditElement.textContent = "credit: " + item.credit;
-    
-      dataDisplay.appendChild(nameElement);
-      dataDisplay.appendChild(ageElement);
-      dataDisplay.appendChild(departmentElement);
-      dataDisplay.appendChild(creditElement);
+      const li = document.createElement('li'); // elemenként egy li
+      li.textContent = `Név: ${item.name}, kód: ${item.code}, tanszék: ${item.department}, kredit: ${item.credit}`;
+      ul.appendChild(li); 
 
     });
+    dataDisplay.appendChild(ul);
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);

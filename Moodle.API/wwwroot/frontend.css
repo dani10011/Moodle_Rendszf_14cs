@@ -18,9 +18,7 @@
 			color:#6FA4E5;
             text-align: center;
 }
-#dataDisplay{
-  
-}
+
 .funkcioGomb {
   background-color: #4CAF50; 
   border: none; 
@@ -194,3 +192,39 @@
     display: flex;
   }
   .show {display: block;}
+
+
+  #dataDisplay{
+    text-align: center;
+  }
+
+/*Lista formázása:*/
+.dataDisplay ul {
+  padding-bottom: 20%;
+  list-style-type: none; 
+  margin: auto;
+}
+
+
+.dataDisplay li {
+  width: 60%;
+  padding: 10px; 
+  margin: auto;
+  margin-bottom: 5px; 
+  background-color: #f0f0f0; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.dataDisplay li:hover {
+  background-color: #e0e0e0; 
+  cursor: pointer; 
+}
+
+
+.dataDisplay li p {
+  margin: 0; 
+  font-size: 16px; 
+  color: #333; 
+}
