@@ -1,178 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="frontend.css?v=1.0">
-    <script src="test.js"></script>
-    <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="frontend.css?v=1.0">
+  <script src="frontend.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <meta charset="UTF-8">
 </head>
+
 <body>
+  <div style="height: 100%;">
+    <div id="tablazat">
+      <div class="mainPage">
 
-<div class="mainPage">
-<h1>Kurzus kezelő</h1>
-<Table>
-    <tr>
-        <td><button type="button" onclick="atvitel()">Összes kurzus listázása</button></td>
-        <td><button type="button" onclick="sajatlista()">Saját kurzusok listázása</button></td>
-        <td><select id="departmentList"></select></td>
-        <td><select id="studentList"></select></td>
-        
-    </tr>
-</Table>
+        <Table id="tablazat1">
+          <tr> <!-- Add a table row -->
+            <td style="text-align: left; width: 30%; background-color: rgb( 255,255,255,0.99);">
+              <div id="gombok">
+                <h1 id="mainCim"
+                  style="font-size: 60px; margin-top: 0; margin-left: 0;font-family:'Press Start 2P', cursive;color: orange;">
+                  Kurzus kezelő</h1> <!-- Add margin-top: 0 and margin-left: 0 -->
 
+                <div class="row"><button class="funkcioGomb" type="button" onclick="atvitel()">Összes kurzus
+                    listázása</button></div>
+                <div class="row"><button class="funkcioGomb" type="button" onclick="sajatlista()">Saját kurzusok
+                    listázása</button></div>
+                <div class="row"><select class="funkcioGomb" id="departmentList"></select></div>
+                <div class="row"><select class="funkcioGomb" id="studentList"></select></div>
+              </div>
+            </td>
+            <td>
 
-
-<div id="dataDisplay"></div>
-
-
-
-  
-
- 
-
-
-
-<script> //Szak alapján történő szűréshez
-            async function fetchData() {
-              const url = "https://localhost:7090/api/Course/allcourses";
-
-              try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                  throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-
-                console.log(data); 
-
-                const departmentList = document.getElementById("departmentList");
-                departmentList.innerHTML = ''; 
-
-                //
-                const uniqueDepartments = new Set();
-                
-                data.forEach(item => {
-                  uniqueDepartments.add(item.department);
-                });
-                
-                
-                for (const department of uniqueDepartments) {
-                  const option = document.createElement("option");
-                  option.text = department;
-                  departmentList.appendChild(option);
-                }
-
-                
-
-                // Minden elem kiiratása
-                data.forEach(item => {
-                  const nameElement = document.createElement("p");
-                  nameElement.textContent = "name: " + item.name;
-                  dataDisplay.appendChild(nameElement);
-
-                  const ageElement = document.createElement("p");
-                  ageElement.textContent = "code: " + item.code;
-                  dataDisplay.appendChild(ageElement);
-
-                  const departmentElement = document.createElement("p");
-                  departmentElement.textContent = "department: " + item.department;
-                  dataDisplay.appendChild(departmentElement);
-
-                  const creditElement = document.createElement("p");
-                  creditElement.textContent = "credit: " + item.credit;
-                  dataDisplay.appendChild(creditElement);
-                });
-
-                departmentList.addEventListener("change", function() {
-                  const selectedDepartment = this.value;
-                  const dataDisplay = document.getElementById("dataDisplay");
-                  dataDisplay.innerHTML = ''; 
-
-                  
-                  const filteredData = data.filter(item => item.department === selectedDepartment);
-
-                  // Szűrt elemek kilistázása
-                  filteredData.forEach(item => {
-                    const nameElement = document.createElement("p");
-                    nameElement.textContent = "name: " + item.name;
-                    dataDisplay.appendChild(nameElement);
-
-                    const ageElement = document.createElement("p");
-                    ageElement.textContent = "code: " + item.code;
-                    dataDisplay.appendChild(ageElement);
-
-                    const departmentElement = document.createElement("p");
-                    departmentElement.textContent = "department: " + item.department;
-                    dataDisplay.appendChild(departmentElement);
-
-                    const creditElement = document.createElement("p");
-                    creditElement.textContent = "credit: " + item.credit;
-                    dataDisplay.appendChild(creditElement);
-                  });
-                });
-              } catch (error) {
-                console.error('There was a problem with the fetch operation:', error);
-              }
-            }
-
-            fetchData();
-</script>
- 
+              <div id="dataDisplay" class="dataDisplay"></div>
 
 
 
-<script>
-          async function fetchData() {
-            const url = "https://localhost:7090/api/Course/allcourses";
 
-            try {
-              const response = await fetch(url);
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              const data = await response.json();
 
-              console.log(data); 
+    <script>
+      fetchDataTanszek();
+      fetchDataResztvevoListazas();
+    </script>
 
-              const studentList = document.getElementById("studentList");
-              studentList.innerHTML = '';  // Clear any previous options
-
-              // Create options for each course
-              data.forEach(course => {
-                const option = document.createElement("option");
-                option.text = course.name + ' (' + course.code + ')';
-                option.value = course; // Store entire course object in value
-                studentList.appendChild(option);
-              });
-
-              studentList.addEventListener("change", function() {
-                const selectedCourse = this.value; // Get the entire course object
-                const dataDisplay = document.getElementById("dataDisplay");
-                dataDisplay.innerHTML = ''; // Clear previous content
-
-                // Check if a course is selected
-                if (selectedCourse) {
-                  const enrolledStudents = selectedCourse.enrolled_students;
-                  dataDisplay.textContent = "Enrolled Students:";
-
-                  // Display enrolled students (optional)
-                  enrolledStudents.forEach(student => {
-                    const studentElement = document.createElement("p");
-                    studentElement.textContent = student;
-                    dataDisplay.appendChild(studentElement);
-                  });
-                } else {
-                  dataDisplay.textContent = "Please select a course.";
-                }
-              });
-            } catch (error) {
-              console.error('There was a problem with the fetch operation:', error);
-            }
-          }
-
-          fetchData();
-</script>
- 
+  </div>
   </div>
 </body>
+
 </html>

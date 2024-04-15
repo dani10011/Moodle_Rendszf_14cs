@@ -8,12 +8,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
-    <script>src = "frontend.js"</script>
+    
     <meta charset="UTF-8">
     <style>
 
     </style>
-    <script src="test.js"></script>
+    <script src="frontend.js"></script>
 </head>
 
 <body>
@@ -23,11 +23,12 @@
         <div class="row">
             <div class="col-sd-6">
                 <div class="egyediRow">
-                
-                    <div class="d-flex justify-content-center align-items-center" style="width: 100%;">
-                        <h1 style="text-align: center; font-family:'Press Start 2P', cursive;color: orange;">Kérlek jelentkezz be!
+                 <div class="d-flex justify-content-center align-items-center" style="width: 100%;">
+                        <h1 id="kezdocim" style="text-align: center;margin-top: 15%; margin-bottom: 5%; margin-bottom: 10%;font-family:'Press Start 2P', cursive;color: orange;">Kérlek jelentkezz be!
                         </h1>
-                    </div>
+                        </div>
+               
+                
                     <div id="formDiv">
                         <form id="myForm">
                             <div class="container">
@@ -43,14 +44,14 @@
                                                 for="password">Jelszó:</label><br>
                                             <input type="password" id="password" name="password" class="password">
                                         </div>
-
+                                        <div id="buttonDiv">
+                                            <input type="button" value="BEJELENTKEZÉS" class="gomb" onclick="bejelentkezes()">
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                            <div id="buttonDiv">
-                                <input type="button" value="Submit" class="gomb" onclick="bejelentkezes()">
-                            </div>
+                            
                         </form>
                     </div>
 
@@ -60,32 +61,7 @@
     </div>
 
 
-    <script>
-        async function bejelentkezes() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            const loginData = {
-                Username: username,
-                Password: password
-            };
-
-            const response = await fetch('https://localhost:7090/api/Authentication/login', {
-                method: 'POST',
-                body: JSON.stringify(loginData),
-                headers: { 'Content-Type': 'application/json' }
-            });
-
-            if (!response.ok) {
-                const message = await response.text();
-                alert(message);
-            } else {
-                const message = await response.text();
-                alert(message);
-                window.location.href = 'mainPage.html'
-            }
-        }
-    </script>
+    
 
 
 

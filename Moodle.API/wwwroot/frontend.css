@@ -1,13 +1,13 @@
 
- 
+
  body {
-    margin: 150px;
+  
+    height: 100%;
     padding: 0;
     background-image: url(bejelentkezeshatter.jfif);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    
+    background-attachment:fixed;
     justify-content: center;
     text-align: center;
 }
@@ -17,6 +17,43 @@
 			font-weight: bold;
 			color:#6FA4E5;
             text-align: center;
+}
+#dataDisplay{
+  
+}
+.funkcioGomb {
+  background-color: #4CAF50; 
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 10px; 
+  transition-duration: 0.4s; 
+}
+
+.funkcioGomb:hover {
+  background-color: #45a049; 
+  color: white; 
+}
+
+
+.funkcioGomb select {
+  padding: 10px; 
+  font-size: 16px; 
+  border: none; 
+  border-radius: 5px; 
+  background-color: #f1f1f1; 
+  outline: none; 
+}
+
+
+.funkcioGomb .row {
+  margin-bottom: 10px; 
 }
 #username{
   margin: auto;
@@ -28,23 +65,20 @@
   margin: auto;
   width: 50%;
 }
-h1{
-
+#kezdocim{
     font-size: 50px;
     margin-bottom: 80px;
 }
-.mainPage{
-    background: aquamarine;
-}
+
 
 .egyediRow{
   margin: auto;
-  background-color: rgb( 255,255,255,0.99);
+  background-color: rgb( 255,255,255,0.9);
   border-radius: 10%;
   width: 90%;
   height: 85vh;
   justify-content: center;
-  display: flex;
+  
 }
 #bodycucc{
     background-color: rgb( 255,255,255,0.9);
@@ -52,34 +86,54 @@ h1{
     
 }
 .gomb{
-  background-color: #4CAF50; /* Green background */
-  border: none; /* Remove border */
-  color: white; /* White text */
-  padding: 15px 32px; /* Padding */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make it inline */
-  font-size: 16px; /* Font size */
-  margin: 4px 2px; /* Margin */
-  cursor: pointer; /* Add cursor pointer */
-  border-radius: 8px; /* Rounded corners */
-  transition-duration: 0.4s; /* Smooth transition */
+  background-color: #4CAF50; 
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition-duration: 0.4s; 
+  margin-top: 5%;
 }
 
 .gomb:hover {
-  background-color:  #006400; /* Darker green */
-  color: white; /* White text */
+  background-color:  #006400; 
+  color: white; 
 }
 #buttonDiv{
   padding: 3%;
+  margin-top: 5%;
 }
 #button-container{
-    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
+#tablazat{
 
+ 
+  text-align: center;
+  width: 100%;
+}
+#tablazat1{
+  
+  
+  width: 99%;
+}
+#gombok{
+  text-align: center;
+ padding-bottom: 60%;
+  
+}
+#mainCim{
+  padding-top: 20%;
+  padding-bottom: 30%;
+}
 .dropbtn {
     background-color: #04AA6D;
     color: white;
@@ -88,6 +142,7 @@ h1{
     border: none;
     cursor: pointer;
   }
+
   
   .dropbtn:hover, .dropbtn:focus {
     background-color: #3e8e41;
