@@ -9,47 +9,78 @@ namespace Moodle.Data
 {
     public class DBInit
     {
-        private readonly MoodleDbContext _context;
-        public DBInit(MoodleDbContext context)
+        private readonly MoodleDbContext context;
+        public DBInit(MoodleDbContext _context)
         {
-            _context = context;
+            context = _context;
         }
         public async Task Init()
         {
-            if (!_context.Users.Any())
+            
+            if (!context.Users.Any())
             {
-                await _context.Users.AddAsync(new User());
-                await _context.SaveChangesAsync();
+                List<User> users = new List<User>
+                {
+                    new User { },
+                    new User { }
+                };
+                context.Users.AddRange(users);
+                await context.SaveChangesAsync();
             }
 
-            if (!_context.Courses.Any())
+            if (!context.Courses.Any())
             {
-
-                await _context.SaveChangesAsync();
+                List<Course> courses = new List<Course>
+                {
+                    new Course { },
+                    new Course { }
+                };
+                context.Courses.AddRange(courses);
+                await context.SaveChangesAsync();
             }
 
-            if (!_context.Degrees.Any())
+            if (!context.Degrees.Any())
             {
-
-                await _context.SaveChangesAsync();
+                List<Degree> degrees = new List<Degree>
+                {
+                    new Degree { },
+                    new Degree { }
+                };
+                context.Degrees.AddRange(degrees);
+                await context.SaveChangesAsync();
             }
 
-            if (!_context.ApprovedDegrees.Any())
+            if (!context.ApprovedDegrees.Any())
             {
-
-                await _context.SaveChangesAsync();
+                List<ApprovedDegree> approvedDegrees = new List<ApprovedDegree>
+                {
+                    new ApprovedDegree { },
+                    new ApprovedDegree { }
+                };
+                context.ApprovedDegrees.AddRange(approvedDegrees);
+                await context.SaveChangesAsync();
             }
 
-            if (!_context.MyCourses.Any())
+            if (!context.MyCourses.Any())
             {
-
-                await _context.SaveChangesAsync();
+                List<MyCourse> myCourses = new List<MyCourse>
+                {
+                    new MyCourse { },
+                    new MyCourse { }
+                };
+                context.MyCourses.AddRange(myCourses);
+                await context.SaveChangesAsync();
             }
 
-            if (!_context.Events.Any())
+            if (!context.Events.Any())
             {
-
-                await _context.SaveChangesAsync();
+                List<Event> events = new List<Event>
+                {
+                    new Event { },
+                    new Event { }
+                };
+                context.Events.AddRange(events);
+                await context.SaveChangesAsync();
             }
             
         }

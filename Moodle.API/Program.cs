@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Moodle.Data;
 
 namespace Moodle.API
 {
@@ -22,6 +23,13 @@ namespace Moodle.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetService<MoodleDbContext>();
+                scope.ServiceProvider.GetService<DBInit>().Init();
+            }
+            app.Services.CreateScope().ServiceProvider.GetService<MoodleDbContext>();
 
             app.UseHttpsRedirection();
 
