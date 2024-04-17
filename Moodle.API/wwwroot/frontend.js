@@ -56,37 +56,11 @@ function osszLista() {
       data.forEach(item => {
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+
         li.addEventListener('click', () => {
-          const div = document.createElement('div');
-
-          dataDisplay.innerHTML = '';
-
-          const esemenyek = document.createElement('button');
-          esemenyek.textContent = 'Események';
-          esemenyek.id = 'esemenyekLista';
-          dataDisplay.appendChild(esemenyek);
-          esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
-            console.log("proba");
-          });
-
-          dataDisplay.appendChild(div);
-
-          const hallgatok = document.createElement('button');
-          hallgatok.id = 'hallgatokLista';
-          hallgatok.textContent = 'Hallgatók';
-          dataDisplay.appendChild(hallgatok);
-
-          dataDisplay.appendChild(div);
-
-          const vissza = document.createElement('button');
-          vissza.textContent = 'Vissza';
-          vissza.id = 'vissza';
-          dataDisplay.appendChild(vissza);
-          vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
-            osszLista();
-          });
-
+          hallgatoEsemeny(dataDisplay);
         });
+
         ul.appendChild(li);
 
       });
@@ -116,8 +90,10 @@ function sajatlista() {
       data.forEach(item => {
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+        li.addEventListener('click', () => {
+          hallgatoEsemeny(dataDisplay);
+        });
         ul.appendChild(li);
-
       });
       dataDisplay.appendChild(ul);
     })
@@ -199,6 +175,9 @@ async function fetchDataTanszek() {
         filteredData.forEach(item => {
           const li = document.createElement('li'); // elemenként egy li
           li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+          li.addEventListener('click', () => {
+            hallgatoEsemeny(dataDisplay);
+          });
           ul.appendChild(li);
         });
         dataDisplay.appendChild(ul);
@@ -211,8 +190,33 @@ async function fetchDataTanszek() {
 }
 
 
-async function fetchDataResztvevoListazas() {
+
+
+
+
+async function fetchDataResztvevoListazas(jelenlegiKurzus) {
   const url = "https://localhost:7090/api/Course/allcourses";
+/*
+
+  var kurzus = jelenlegiKurzus;
+
+  const response = await fetch('https://localhost:7090/api/Authentication/vmi', {
+    method: 'POST',
+    body: JSON.stringify(loginData),
+    headers: { 'Content-Type': 'application/json' }
+  });
+
+  if (!response.ok) {
+    const message = await response.text();
+    alert(message);
+  } else {
+    const message = await response.text();
+    alert(message);
+    window.location.href = 'mainPage.html'
+  }
+*/
+
+
 
   try {
     const response = await fetch(url);
@@ -276,4 +280,37 @@ function filterFunction() {
       a[i].style.display = "none";
     }
   }
+}
+
+
+
+function hallgatoEsemeny(dataDisplay) {
+  const div = document.createElement('div');
+
+  dataDisplay.innerHTML = '';
+
+  const esemenyek = document.createElement('button');
+  esemenyek.textContent = 'Események';
+  esemenyek.id = 'esemenyekLista';
+  dataDisplay.appendChild(esemenyek);
+  esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
+    console.log("proba");
+  });
+
+  dataDisplay.appendChild(div);
+
+  const hallgatok = document.createElement('button');
+  hallgatok.id = 'hallgatokLista';
+  hallgatok.textContent = 'Hallgatók';
+  dataDisplay.appendChild(hallgatok);
+
+  dataDisplay.appendChild(div);
+
+  const vissza = document.createElement('button');
+  vissza.textContent = 'Vissza';
+  vissza.id = 'vissza';
+  dataDisplay.appendChild(vissza);
+  vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+    osszLista();
+  });
 }
