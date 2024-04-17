@@ -1,280 +1,303 @@
+body {
 
-
- body {
-  
-    height: 100%;
-    padding: 0;
-    background-image: url(bejelentkezeshatter.jfif);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    justify-content: center;
-    text-align: center;
+  height: 100%;
+  padding: 0;
+  background-image: url(bejelentkezeshatter.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  text-align: center;
 }
-.bejelentkezo{
-  font-size:28px;
-			font-family:"Times New Roman", Times, serif;
-			font-weight: bold;
-			color:#6FA4E5;
-            text-align: center;
+
+.bejelentkezo {
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #6FA4E5;
+  text-align: center;
 }
 
 .funkcioGomb {
-  background-color: #4CAF50; 
-  border: none; 
-  color: white; 
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 10px; 
-  transition-duration: 0.4s; 
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition-duration: 0.4s;
 }
 
 .funkcioGomb:hover {
-  background-color: #45a049; 
-  color: white; 
+  background-color: #45a049;
+  color: white;
 }
 
 
 .funkcioGomb select {
-  padding: 10px; 
-  font-size: 16px; 
-  border: none; 
-  border-radius: 5px; 
-  background-color: #f1f1f1; 
-  outline: none; 
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  outline: none;
 }
 
 
 .funkcioGomb .row {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
-#username{
+
+#username {
   margin: auto;
 
   width: 50%;
 
 }
-#password{
+
+#password {
   margin: auto;
   width: 50%;
 }
-#kezdocim{
-    font-size: 50px;
-    margin-bottom: 80px;
+
+#kezdocim {
+  font-size: 50px;
+  margin-bottom: 80px;
 }
 
 
-.egyediRow{
+.egyediRow {
   margin: auto;
-  background-color: rgb( 255,255,255,0.9);
+  background-color: rgb(255, 255, 255, 0.9);
   border-radius: 10%;
   width: 90%;
   height: 85vh;
   justify-content: center;
-  
+
 }
-#bodycucc{
-    background-color: rgb( 255,255,255,0.9);
-    border-radius: 10%;
-    
+
+#bodycucc {
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 10%;
+
 }
-.gomb{
-  background-color: #4CAF50; 
-  border: none; 
-  color: white; 
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 8px; 
-  transition-duration: 0.4s; 
+
+.gomb {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
   margin-top: 5%;
 }
 
 .gomb:hover {
-  background-color:  #006400; 
-  color: white; 
+  background-color: #006400;
+  color: white;
 }
-#buttonDiv{
+
+#buttonDiv {
   padding: 3%;
   margin-top: 5%;
 }
-#button-container{
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-#tablazat{
 
- 
+#button-container {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#tablazat {
+
+
   text-align: center;
   width: 100%;
 }
-#tablazat1{
-  
-  
+
+#tablazat1 {
+
+
   width: 99%;
 }
-#gombok{
+
+#gombok {
   text-align: center;
- padding-bottom: 60%;
-  
+  padding-bottom: 60%;
+
 }
-#mainCim{
+
+#mainCim {
   padding-top: 20%;
   padding-bottom: 30%;
 }
+
 .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-  }
-  
-  #myInput {
-    box-sizing: border-box;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myInput:focus {outline: 3px solid #ddd;}
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    overflow: auto;
-    border: 1px solid #ddd;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  #myform{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .dropdown a:hover {background-color: #ddd;}
-  #formDiv{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .show {display: block;}
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
 
-  #dataDisplay{
-    text-align: center;
-  }
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#myform {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+#formDiv {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.show {
+  display: block;
+}
+
+
+#dataDisplay {
+  text-align: center;
+}
 
 /*Lista formázása:*/
 .dataDisplay ul {
   padding-bottom: 20%;
-  list-style-type: none; 
+  list-style-type: none;
   margin: auto;
 }
 
 
 .dataDisplay li {
   width: 60%;
-  padding: 10px; 
+  padding: 10px;
   margin: auto;
-  margin-bottom: 5px; 
-  background-color: #f0f0f0; 
-  border-radius: 5px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 .dataDisplay li:hover {
-  background-color: #e0e0e0; 
-  cursor: pointer; 
+  background-color: #e0e0e0;
+  cursor: pointer;
 }
 
 
 .dataDisplay li p {
-  margin: 0; 
-  font-size: 16px; 
-  color: #333; 
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
 
-#esemenyekLista{
-  background-color: #4CAF50; 
+/*Listaelemek (Események, hallgatók)*/
+#esemenyekLista {
+  background-color: #4CAF50;
   width: 50%;
-  border: none; 
-  color: white; 
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 8px; 
-  transition-duration: 0.4s; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
   margin-bottom: 5%;
 }
 
-#hallgatokLista{
-  background-color: #4CAF50; 
+#hallgatokLista {
+  background-color: #4CAF50;
   width: 50%;
-  border: none; 
-  color: white; 
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 8px; 
-  transition-duration: 0.4s; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
   margin-bottom: 5%;
 }
 
-#vissza{
-  background-color: #4CAF50; 
+#vissza {
+  background-color: #4CAF50;
   width: 50%;
-  border: none; 
-  color: white; 
-  padding: 15px 32px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 8px; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
   transition-duration: 0.4s;
 }

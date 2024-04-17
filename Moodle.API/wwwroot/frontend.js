@@ -59,33 +59,33 @@ function osszLista() {
         li.addEventListener('click', () => {
           const div = document.createElement('div');
 
-          dataDisplay.innerHTML='';
-          
-          const esemenyek = document.createElement('button'); 
+          dataDisplay.innerHTML = '';
+
+          const esemenyek = document.createElement('button');
           esemenyek.textContent = 'Események';
-          esemenyek.id='esemenyekLista';
+          esemenyek.id = 'esemenyekLista';
           dataDisplay.appendChild(esemenyek);
           esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
-            console.log("proba"); 
+            console.log("proba");
           });
-          
+
           dataDisplay.appendChild(div);
 
-          const hallgatok = document.createElement('button'); 
-          hallgatok.id='hallgatokLista';
+          const hallgatok = document.createElement('button');
+          hallgatok.id = 'hallgatokLista';
           hallgatok.textContent = 'Hallgatók';
           dataDisplay.appendChild(hallgatok);
 
           dataDisplay.appendChild(div);
 
-          const vissza = document.createElement('button'); 
+          const vissza = document.createElement('button');
           vissza.textContent = 'Vissza';
-          vissza.id='vissza';
+          vissza.id = 'vissza';
           dataDisplay.appendChild(vissza);
           vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
-            osszLista(); 
+            osszLista();
           });
-          
+
         });
         ul.appendChild(li);
 
@@ -95,7 +95,7 @@ function osszLista() {
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
     });
-    
+
 }
 
 
@@ -169,12 +169,10 @@ async function fetchDataTanszek() {
     //
     const uniqueDepartments = new Set();
 
-    uniqueDepartments.add('Szűrés tanszék szerint');
+    uniqueDepartments.add('Összes kurzus listázása');
     data.forEach(item => {
       uniqueDepartments.add(item.department);
     });
-
-
 
     for (const department of uniqueDepartments) {
       const option = document.createElement("option");
@@ -182,11 +180,8 @@ async function fetchDataTanszek() {
       departmentList.appendChild(option);
     }
 
-
-
     // Minden elem kiiratása    
     osszLista();
-
 
     departmentList.addEventListener("change", function () {
       const selectedDepartment = this.value;
@@ -197,13 +192,18 @@ async function fetchDataTanszek() {
       const filteredData = data.filter(item => item.department === selectedDepartment);
 
       // Szűrt elemek kilistázása
+      if (selectedDepartment == 'Összes kurzus listázása') {
+        osszLista();
+      }
+      else {
+        filteredData.forEach(item => {
+          const li = document.createElement('li'); // elemenként egy li
+          li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+          ul.appendChild(li);
+        });
+        dataDisplay.appendChild(ul);
+      }
 
-      filteredData.forEach(item => {
-        const li = document.createElement('li'); // elemenként egy li
-        li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
-        ul.appendChild(li);
-      });
-      dataDisplay.appendChild(ul);
     });
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
