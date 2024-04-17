@@ -10,9 +10,5 @@ namespace Moodle.Data.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
-        //Navigation
-        public ICollection<User> Users { get; set; }
-        public ICollection<ApprovedDegree> ApprovedDegrees { get; set; }
     }
 }
