@@ -1,5 +1,5 @@
 
-function bejelentkezes(){
+/*function bejelentkezes(){
   
         var felhasznalomezo = document.getElementById('felhasznalonev');
         var felhasznalonev = felhasznalomezo.value;
@@ -11,82 +11,7 @@ function bejelentkezes(){
     
         // Submit the form
         document.getElementById('loginForm').submit();   
-}
-
-
-
-
-function osszLista(){
-    const url = "https://localhost:7090/api/Course/allcourses";
-    fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    //console.log(data); // Logolja a Json file tartalmát a konzolra (TESZTELÉSHEZ)
-    const dataDisplay = document.getElementById("dataDisplay");
-    dataDisplay.innerHTML = '';
-    const ul = document.createElement('ul');
-    data.forEach(item => {
-      const li = document.createElement('li'); // elemenként egy li
-      li.textContent = `Név: ${item.name}, kód: ${item.code}, tanszék: ${item.department}, kredit: ${item.credit}`;
-      ul.appendChild(li); 
-
-    });
-    dataDisplay.appendChild(ul);
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
-}
-
-
-
-function sajatlista(){
-  const url = "https://localhost:7090/api/Course/courseid";
-  fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data); // Log the content of the JSON file to the console
-    const dataDisplay = document.getElementById("dataDisplay");
-    dataDisplay.innerHTML = '';
-    data.forEach(item => {
-         
-      const nameElement = document.createElement("p");
-      nameElement.textContent = "name: " + item.name;
-    
-      const ageElement = document.createElement("p");
-      ageElement.textContent = "code: " + item.code;
-    
-      const departmentElement = document.createElement("p");
-      departmentElement.textContent = "department: " + item.department;
-
-      const creditElement = document.createElement("p");
-      creditElement.textContent = "credit: " + item.credit;
-    
-      dataDisplay.appendChild(nameElement);
-      dataDisplay.appendChild(ageElement);
-      dataDisplay.appendChild(departmentElement);
-      dataDisplay.appendChild(creditElement);
-
-    });
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
-
-}
-
-
-
+}*/
 
 
 async function bejelentkezes() {
@@ -94,26 +19,120 @@ async function bejelentkezes() {
   var password = document.getElementById("password").value;
 
   const loginData = {
-      Username: username,
-      Password: password
+    Username: username,
+    Password: password
   };
 
   const response = await fetch('https://localhost:7090/api/Authentication/login', {
-      method: 'POST',
-      body: JSON.stringify(loginData),
-      headers: { 'Content-Type': 'application/json' }
+    method: 'POST',
+    body: JSON.stringify(loginData),
+    headers: { 'Content-Type': 'application/json' }
   });
 
   if (!response.ok) {
-      const message = await response.text();
-      alert(message);
+    const message = await response.text();
+    alert(message);
   } else {
-      const message = await response.text();
-      alert(message);
-      window.location.href = 'mainPage.html'
+    const message = await response.text();
+    alert(message);
+    window.location.href = 'mainPage.html'
   }
 }
 
+function osszLista() {
+  const url = "https://localhost:7090/api/Course/allcourses";
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      //console.log(data); // Logolja a Json file tartalmát a konzolra (TESZTELÉSHEZ)
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+      data.forEach(item => {
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+        li.addEventListener('click', () => {
+          const div = document.createElement('div');
+
+          dataDisplay.innerHTML='';
+          
+          const esemenyek = document.createElement('button'); 
+          esemenyek.textContent = 'Események';
+          esemenyek.id='esemenyekLista';
+          dataDisplay.appendChild(esemenyek);
+          esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
+            console.log("proba"); 
+          });
+          
+          dataDisplay.appendChild(div);
+
+          const hallgatok = document.createElement('button'); 
+          hallgatok.id='hallgatokLista';
+          hallgatok.textContent = 'Hallgatók';
+          dataDisplay.appendChild(hallgatok);
+
+          dataDisplay.appendChild(div);
+
+          const vissza = document.createElement('button'); 
+          vissza.textContent = 'Vissza';
+          vissza.id='vissza';
+          dataDisplay.appendChild(vissza);
+          vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+            osszLista(); 
+          });
+          
+        });
+        ul.appendChild(li);
+
+      });
+      dataDisplay.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+    
+}
+
+
+
+function sajatlista() {
+  const url = "https://localhost:7090/api/Course/courseid";
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+      data.forEach(item => {
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+        ul.appendChild(li);
+
+      });
+      dataDisplay.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+
+}
+
+
+
+
+
+
+/*
 function lekeresteszt(){
     fetch('/probajson') // Assuming that your API endpoint is located at '/probajson'
   .then(response => {
@@ -129,7 +148,8 @@ function lekeresteszt(){
     console.error('There was a problem with the fetch operation:', error);
   });
 
-}
+}*/
+
 
 async function fetchDataTanszek() {
   const url = "https://localhost:7090/api/Course/allcourses";
@@ -149,9 +169,11 @@ async function fetchDataTanszek() {
     //
     const uniqueDepartments = new Set();
 
+    uniqueDepartments.add('Szűrés tanszék szerint');
     data.forEach(item => {
       uniqueDepartments.add(item.department);
     });
+
 
 
     for (const department of uniqueDepartments) {
@@ -162,51 +184,26 @@ async function fetchDataTanszek() {
 
 
 
-    // Minden elem kiiratása
-    data.forEach(item => {
-      const nameElement = document.createElement("p");
-      nameElement.textContent = "name: " + item.name;
-      dataDisplay.appendChild(nameElement);
+    // Minden elem kiiratása    
+    osszLista();
 
-      const ageElement = document.createElement("p");
-      ageElement.textContent = "code: " + item.code;
-      dataDisplay.appendChild(ageElement);
-
-      const departmentElement = document.createElement("p");
-      departmentElement.textContent = "department: " + item.department;
-      dataDisplay.appendChild(departmentElement);
-
-      const creditElement = document.createElement("p");
-      creditElement.textContent = "credit: " + item.credit;
-      dataDisplay.appendChild(creditElement);
-    });
 
     departmentList.addEventListener("change", function () {
       const selectedDepartment = this.value;
       const dataDisplay = document.getElementById("dataDisplay");
+      const ul = document.createElement('ul');
       dataDisplay.innerHTML = '';
-
 
       const filteredData = data.filter(item => item.department === selectedDepartment);
 
       // Szűrt elemek kilistázása
+
       filteredData.forEach(item => {
-        const nameElement = document.createElement("p");
-        nameElement.textContent = "name: " + item.name;
-        dataDisplay.appendChild(nameElement);
-
-        const ageElement = document.createElement("p");
-        ageElement.textContent = "code: " + item.code;
-        dataDisplay.appendChild(ageElement);
-
-        const departmentElement = document.createElement("p");
-        departmentElement.textContent = "department: " + item.department;
-        dataDisplay.appendChild(departmentElement);
-
-        const creditElement = document.createElement("p");
-        creditElement.textContent = "credit: " + item.credit;
-        dataDisplay.appendChild(creditElement);
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.name} (${item.code}, ${item.department}), kredit: ${item.credit}`;
+        ul.appendChild(li);
       });
+      dataDisplay.appendChild(ul);
     });
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);

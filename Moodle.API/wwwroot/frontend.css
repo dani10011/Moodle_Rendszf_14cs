@@ -228,3 +228,53 @@
   font-size: 16px; 
   color: #333; 
 }
+
+#esemenyekLista{
+  background-color: #4CAF50; 
+  width: 50%;
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition-duration: 0.4s; 
+  margin-bottom: 5%;
+}
+
+#hallgatokLista{
+  background-color: #4CAF50; 
+  width: 50%;
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition-duration: 0.4s; 
+  margin-bottom: 5%;
+}
+
+#vissza{
+  background-color: #4CAF50; 
+  width: 50%;
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition-duration: 0.4s;
+}
