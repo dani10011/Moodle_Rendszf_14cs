@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Moodle.Core;
+using Microsoft.EntityFrameworkCore;
+using Moodle.Data;
 
 
 namespace Moodle.API.Controllers
@@ -9,47 +11,72 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
+        private readonly MoodleDbContext context;
+        public CourseController(MoodleDbContext _context)
+        {
+            this.context = _context;
+        }
 
         [HttpGet("allcourses")]
-        public async Task<IActionResult> GetAllCourses()
+        public IActionResult GetAllCourses()
         {
+            var courses = context.Courses.ToList(); // Retrieve all courses from the database
 
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-            string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");
+            var json = JsonConvert.SerializeObject(courses, Formatting.Indented); // Serialize courses to JSON
 
-            string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+            return Content(json, "application/json"); // Return JSON content
 
-            var json = System.IO.File.ReadAllText(jsonFilePath);
 
-            return this.Content(json, "application/json");
+            //string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+            //string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");
+
+            //string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+
+            //var json = System.IO.File.ReadAllText(jsonFilePath);
+
+            //return this.Content(json, "application/json");
         }
 
         [HttpGet("courseid")]
-        public async Task<IActionResult> GetCoursesByID()
+        public IActionResult GetCoursesByID()
         {
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+            var myCourses = context.MyCourses.ToList();
 
-            //Aktualis felhasznalo neptunkodjanak lekerese
-            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-            string userJson = System.IO.File.ReadAllText(userData);
-            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
-            string neptun = currentUser["neptun_code"];
+            int id = 0;
 
-            //Kurzusok kigyujtese
-            string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");          
+            var courseIDs = myCourses.Where(c => c.User_Id.Equals(id)).ToList();
 
-            string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+            var courses = context.Courses.ToList();
 
-            var json = System.IO.File.ReadAllText(jsonFilePath);
+            var uCourses = courses.Where(c => c.Id.Equals(courses)).ToList();
 
-            List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
+            var json = JsonConvert.SerializeObject(uCourses, Formatting.Indented);
 
-            //szures neptunkod szerint
-            List<Course> filteredCourses = courses.Where(c => c.enrolled_students.Contains(neptun)).ToList();
+            return Content(json, "application/json");
 
-            string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
+            //string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
 
-            return this.Content(newJson, "application/json");
+            ////Aktualis felhasznalo neptunkodjanak lekerese
+            //string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
+            //string userJson = System.IO.File.ReadAllText(userData);
+            //dynamic currentUser = JsonConvert.DeserializeObject(userJson);
+            //string neptun = currentUser["neptun_code"];
+
+            ////Kurzusok kigyujtese
+            //string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");          
+
+            //string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+
+            //var json = System.IO.File.ReadAllText(jsonFilePath);
+
+            //List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
+
+            ////szures neptunkod szerint
+            //List<Course> filteredCourses = courses.Where(c => c.enrolled_students.Contains(neptun)).ToList();
+
+            //string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
+
+            //return this.Content(newJson, "application/json");
         }
 
         [HttpGet("accepted")]
