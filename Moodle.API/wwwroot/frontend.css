@@ -222,7 +222,7 @@ body {
 
 /*Lista formázása:*/
 .dataDisplay ul {
-  padding-bottom: 20%;
+  padding-bottom: 30%;
   list-style-type: none;
   margin: auto;
 }

@@ -21,8 +21,20 @@
       "PackagePath": "staticwebassets\\mainPage.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\test.js",
-      "PackagePath": "staticwebassets\\test.js"
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam.png",
+      "PackagePath": "staticwebassets\\reklam.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam2.png",
+      "PackagePath": "staticwebassets\\reklam2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
+      "PackagePath": "staticwebassets\\reklam_masolat.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",
+      "PackagePath": "staticwebassets\\teszt.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Moodle.API.Microsoft.AspNetCore.StaticWebAssets.props",
