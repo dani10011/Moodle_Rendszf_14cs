@@ -25,21 +25,21 @@ Rendszerfejlesztés Moodle feladat 14-es csoport (Kovács L. Bendegúz, Ökrös 
 	
 ## Belépési lehetőségek:
 
-**1. lehetőség**
+**1. Frits Márton**
 
-Felhasználónév: H8UOA6
+Felhasználónév: 2F84HR
 
-Jelszó: 1234
+Jelszó: kreatin
 
-**2. lehetőség**
+**2. Juhász Zoltán**
 
-Felhasználónév: B7FY4E
+Felhasználónév: OQNZ3B
 
-Jelszó: 1234
+Jelszó: java8
 
-**3. lehetőség**
+**3. Paul Atreides**
 
-Felhasználónév: CT3QB5
+Felhasználónév: AR4K1S
 
-Jelszó: 1234
+Jelszó: LisanAlGaib
 
