@@ -12,7 +12,7 @@ namespace Moodle.Data
     
     public class MoodleDbContext : DbContext
     {
-        //public MoodleDbContext() { }
+        public MoodleDbContext() { }
         public MoodleDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
