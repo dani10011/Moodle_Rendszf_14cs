@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Moodle.Core
 {
-    /*
-    public class Authentication
+    public class LoginData
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        
     }
-    */
 }

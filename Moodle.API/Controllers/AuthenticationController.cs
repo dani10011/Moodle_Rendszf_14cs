@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Moodle.Core;
+using Moodle.Data;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 
 namespace Moodle.API.Controllers
@@ -11,12 +14,14 @@ namespace Moodle.API.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        
-        public class LoginData
+        private readonly MoodleDbContext _context;
+
+        public AuthenticationController(MoodleDbContext context)
         {
-            public string Username { get; set; }
-            public string Password { get; set; }
+            _context = context;
         }
+        
+        
 
         [HttpPost("login")] // Change to match the Javascript request
         public async Task<IActionResult> Login([FromBody] LoginData loginData)
@@ -26,51 +31,54 @@ namespace Moodle.API.Controllers
                 return BadRequest("Invalid request body");
             }
 
-
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName;
             string loginInfoPath = Path.Combine(projectRoot, "Moodle.Core/Jsons/LoginInfo.json");
-
-            string loginInfoData = System.IO.File.ReadAllText(loginInfoPath);
-            List<Login> loginInfo = JsonConvert.DeserializeObject<List<Login>>(loginInfoData);
             
-            foreach (Login login in loginInfo)
+
+            var aktualis_felhasznalo = _context.Users.SingleOrDefault(p => p.UserName == loginData.Username);
+            if (aktualis_felhasznalo == null)
             {
-                if(login.username == loginData.Username && login.password == loginData.Password)
-                {
-                    //  Először kiveszi az összes felhasználó közül az aktuális felhasználót,
+                return Unauthorized("Invalid credentials");
+            }
+            else
+            {
+                
 
-                    string usersPath = Path.Combine(projectRoot, "Moodle.Core/Jsons/Users.json");
-
-                    var usersJson = System.IO.File.ReadAllText(usersPath);
-                    List<User> users = JsonConvert.DeserializeObject<List<User>>(usersJson);
-
-                    List<User> filteredUser = users.Where(c => c.Neptun_code.Contains(loginData.Username)).ToList();
-
-                    User currentUser = filteredUser[0];
-
-                    //  Utána belerakja a CurrentUser.json file-ba
+                if (loginData.Password == aktualis_felhasznalo.Password)
+                 {
+                    
 
                     string currentUserPath = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-
                     string currentUserJson = System.IO.File.ReadAllText(currentUserPath);
-
                     dynamic currentUserObj = Newtonsoft.Json.JsonConvert.DeserializeObject(currentUserJson);
 
-                    
-                    currentUserObj["name"] = currentUser.Name;
-                    currentUserObj["neptun_code"] = currentUser.Neptun_code;
-                    currentUserObj["degree"] = currentUser.Degree;
-                    
-                    
-                    string output = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserObj, Newtonsoft.Json.Formatting.Indented);
-                    System.IO.File.WriteAllText(currentUserPath, output);
+                    // Clear the file content
+                    System.IO.File.WriteAllText(currentUserPath, "");
 
-                    //
+                    // Define the attribute name and value
+                    string attributeName = "ID";
+                    int attributeValue = aktualis_felhasznalo.Id;
+
+                    // Create a new JObject with the single attribute
+                    JObject newJsonObject = new JObject(new JProperty(attributeName, attributeValue));
+
+                    // Save the new object to the file
+                    string jsonString = newJsonObject.ToString();
+
+                    
+
+                    //string output = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserObj, Newtonsoft.Json.Formatting.Indented);
+                    System.IO.File.WriteAllText(currentUserPath, jsonString);
+
                     return Ok("Login successful!");
+                 }
+                else
+                {
+                    return Unauthorized("Invalid credentials");
                 }
+                
             }
 
-            return Unauthorized("Invalid credentials");
         }
         
     }
