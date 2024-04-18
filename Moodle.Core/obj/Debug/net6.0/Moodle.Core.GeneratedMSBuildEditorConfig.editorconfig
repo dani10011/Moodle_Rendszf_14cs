@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Moodle.Core
-build_property.ProjectDir = C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.Core\
+build_property.ProjectDir = D:\Egyetem\Negyedik_felev\RendszerF\Moodle_rendszerf_14\Moodle.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
