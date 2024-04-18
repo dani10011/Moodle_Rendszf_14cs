@@ -14,7 +14,7 @@
 }*/
 
 
-async function bejelentkezes() {
+async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésére
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
@@ -23,13 +23,13 @@ async function bejelentkezes() {
     Password: password
   };
 
-  const response = await fetch('https://localhost:7090/api/Authentication/login', {
+  const response = await fetch('https://localhost:7090/api/Authentication/login', { //elküldi a felhasználónév jelszó párost, await megállítja a funkciót amíg válaszra vár
     method: 'POST',
     body: JSON.stringify(loginData),
     headers: { 'Content-Type': 'application/json' }
   });
 
-  if (!response.ok) {
+  if (!response.ok) { //ellenőrzi a login válaszát, ha Ok, átvisz a mainPage-re
     const message = await response.text();
     alert(message);
   } else {
@@ -41,16 +41,16 @@ async function bejelentkezes() {
 
 function osszLista() {
   const url = "https://localhost:7090/api/Course/allcourses";
-  fetch(url)
-    .then(response => {
+  fetch(url) //kérés küldése
+    .then(response => { //ellenőrzi a választ
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      return response.json();
+      return response.json(); //jsonné alakítja a választ, majd továbbadja a következő then-nek
     })
     .then(data => {
       //console.log(data); // Logolja a Json file tartalmát a konzolra (TESZTELÉSHEZ)
-      const dataDisplay = document.getElementById("dataDisplay");
+      const dataDisplay = document.getElementById("dataDisplay"); 
       dataDisplay.innerHTML = '';
       const ul = document.createElement('ul');
       data.forEach(item => {
@@ -74,7 +74,7 @@ function osszLista() {
 
 
 
-function sajatlista() {
+function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más függvényt hív meg
   const url = "https://localhost:7090/api/Course/courseid";
   fetch(url)
     .then(response => {
@@ -127,7 +127,7 @@ function lekeresteszt(){
 }*/
 
 
-async function fetchDataTanszek() {
+async function fetchDataTanszek() { //tanszék szerinti szűrés
   const url = "https://localhost:7090/api/Course/allcourses";
 
   try {
@@ -137,17 +137,17 @@ async function fetchDataTanszek() {
     }
     const data = await response.json();
 
-    console.log(data);
+    console.log(data); //idáig megkapjuk az összes kurzust
 
     const departmentList = document.getElementById("departmentList");
     departmentList.innerHTML = '';
 
-    //
+    
     const uniqueDepartments = new Set();
 
     uniqueDepartments.add('Összes kurzus listázása');
-    data.forEach(item => {
-      uniqueDepartments.add(item.department);
+    data.forEach(item => { //össze stanszéket hozzáadjuk
+      uniqueDepartments.add(item.department); 
     });
 
     for (const department of uniqueDepartments) {
@@ -284,7 +284,7 @@ function filterFunction() {
 
 
 
-function hallgatoEsemeny(dataDisplay) {
+function hallgatoEsemeny(dataDisplay) { //megjeleníti a menüt, miután a kurzusok vaalmielyikére kattintunk
   const div = document.createElement('div');
 
   dataDisplay.innerHTML = '';
@@ -313,4 +313,8 @@ function hallgatoEsemeny(dataDisplay) {
   vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
     osszLista();
   });
+}
+
+function kijelentkezes(){
+  window.location.href = 'frontend.html';
 }
