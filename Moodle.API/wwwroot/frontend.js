@@ -56,9 +56,9 @@ function osszLista() {
       data.forEach(item => {
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
-
+            
         li.addEventListener('click', () => {
-          hallgatoEsemeny();
+          hallgatoEsemeny(item.Id);
           const vissza = document.createElement('button');
           vissza.textContent = 'Vissza';
           vissza.id = 'vissza';
@@ -98,7 +98,7 @@ function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más f�
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
         li.addEventListener('click', () => {
-          hallgatoEsemeny();
+          hallgatoEsemeny(item.Id);
           const vissza = document.createElement('button');
           vissza.textContent = 'Vissza';
           vissza.id = 'vissza';
@@ -190,7 +190,7 @@ async function fetchDataTanszek() { //tanszék szerinti szűrés
           const li = document.createElement('li'); // elemenként egy li
           li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
           li.addEventListener('click', () => {
-            hallgatoEsemeny();
+            hallgatoEsemeny(item.Id);
             const vissza = document.createElement('button');
             vissza.textContent = 'Vissza';
             vissza.id = 'vissza';
@@ -236,7 +236,7 @@ function konkretDepartment(actualDepartment) {
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
 
         li.addEventListener('click', () => {
-          hallgatoEsemeny();
+          hallgatoEsemeny(item.Id);
           const vissza = document.createElement('button');
           vissza.textContent = 'Vissza';
           vissza.id = 'vissza';
@@ -354,7 +354,7 @@ function filterFunction() {
 
 
 
-function hallgatoEsemeny() { //megjeleníti a menüt, miután a kurzusok vaalmielyikére kattintunk
+function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok vaalmielyikére kattintunk
   const div = document.createElement('div');
 
   dataDisplay.innerHTML = '';
@@ -363,9 +363,7 @@ function hallgatoEsemeny() { //megjeleníti a menüt, miután a kurzusok vaalmie
   esemenyek.textContent = 'Események';
   esemenyek.id = 'esemenyekLista';
   dataDisplay.appendChild(esemenyek);
-  esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
-    console.log("proba");
-  });
+  
 
   dataDisplay.appendChild(div);
 
@@ -373,15 +371,53 @@ function hallgatoEsemeny() { //megjeleníti a menüt, miután a kurzusok vaalmie
   hallgatok.id = 'hallgatokLista';
   hallgatok.textContent = 'Hallgatók';
   dataDisplay.appendChild(hallgatok);
-
+  hallgatok.addEventListener('click', () => { //funkcio rendelése a gombhoz
+    hallgatoListazas(id);
+  });
   dataDisplay.appendChild(div);
 
 
 }
 
-function hallgatoListazas(){
-  
+async function hallgatoListazas(aktualisId) {
+  const Enrolled = {
+    id: aktualisId
+  };
+
+  try {
+    const response = await fetch('https://localhost:7090/api/Course/enrolled', {
+      method: 'POST',
+      body: JSON.stringify(Enrolled),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (!response.ok) {
+      const message = await response.json();
+      alert(message);
+    } else {
+      
+      const data = await response.json();
+      console.log(data);
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.Name} (${item.UserName})`;
+
+        
+
+        ul.appendChild(li);
+      });
+
+      dataDisplay.appendChild(ul);
+    }
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
 }
+
 
 
 function kurzusFelvetel(){

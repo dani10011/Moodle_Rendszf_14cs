@@ -128,20 +128,26 @@ namespace Moodle.API.Controllers
             //return this.Content(newJson, "application/json");
             //return Ok();
         }
+        public class Enrolled
+        {
+            public int id { get; set; }
+        }
 
         [HttpPost("enrolled")] // Change to match the Javascript request
-        public async Task<IActionResult> Enrolled([FromBody] int Course_Id)
+        public async Task<IActionResult> Enroll([FromBody] Enrolled Course_Id)
         {
-            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id).ToList();
+            
+            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id.id).ToList();
+            //Console.WriteLine(emberek.Count);
 
             List<User> kurzsra_jaro_emberek = new List<User>();
-
+            //Console.WriteLine(Course_Id.id);
             foreach (var ember in emberek)
             {
                 var szemely = context.Users.First(x => x.Id == ember.User_Id);
                 kurzsra_jaro_emberek.Add(szemely);
             }
-
+            //Console.WriteLine(kurzsra_jaro_emberek.Count);
 
             var json = JsonConvert.SerializeObject(kurzsra_jaro_emberek, Formatting.Indented);
 
