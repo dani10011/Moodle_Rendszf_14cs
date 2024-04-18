@@ -26,15 +26,6 @@ namespace Moodle.API.Controllers
 
             return Content(json, "application/json"); // Return JSON content
 
-
-            //string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-            //string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");
-
-            //string jsonData = System.IO.File.ReadAllText(jsonFilePath);
-
-            //var json = System.IO.File.ReadAllText(jsonFilePath);
-
-            //return this.Content(json, "application/json");
         }
 
         [HttpGet("courseid")]
@@ -48,11 +39,7 @@ namespace Moodle.API.Controllers
             dynamic currentUser = JsonConvert.DeserializeObject(userJson);
             int id = currentUser["ID"];
 
-            Console.WriteLine(id);
-
             var myCourses = context.MyCourses.ToList();
-
-            //var courseIDs = myCourses.Where(c => c.User_Id == id).ToList();
 
             var courses = context.Courses.ToList();
 
@@ -79,28 +66,43 @@ namespace Moodle.API.Controllers
 
             return Content(json, "application/json");
 
-            
-
-            ////Kurzusok kigyujtese
-            //string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");          
-
-            //string jsonData = System.IO.File.ReadAllText(jsonFilePath);
-
-            //var json = System.IO.File.ReadAllText(jsonFilePath);
-
-            //List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
-
-            ////szures neptunkod szerint
-            //List<Course> filteredCourses = courses.Where(c => c.enrolled_students.Contains(neptun)).ToList();
-
-            //string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
-
-            //return this.Content(newJson, "application/json");
         }
 
-        [HttpGet("accepted")]
-        public async Task<IActionResult> CheckAcceptedDegrees()
+        [HttpPost("accepted")]
+        public async Task<IActionResult> CheckAcceptedDegrees([FromBody] int courseID)
         {
+            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+
+            //Aktualis felhasznalo idjanak lekerese
+            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
+            string userJson = System.IO.File.ReadAllText(userData);
+            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
+            int id = currentUser["ID"];
+
+            var users = context.Users.ToList();
+
+            User user = users.Where(u => u.Id == id).FirstOrDefault();
+
+            List<MyCourse> courses = context.MyCourses.Where(c => c.Course_Id.Equals(courseID)).ToList();
+
+            bool ok = false;
+            foreach (var course in courses)
+            {
+                if (user.Degree_Id == courseID)
+                { 
+                    ok = true; 
+                    break; 
+                }
+            }
+            if (ok)
+            {
+                return Ok("Sikeres feliratkozás!");
+            }
+            else
+            {
+                return BadRequest("Nem megfelelő szakra jár!");
+            }
+
             //string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
 
             ////Aktualis felhasznalo degree-jenek lekerese
@@ -124,7 +126,26 @@ namespace Moodle.API.Controllers
             //string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
 
             //return this.Content(newJson, "application/json");
-            return Ok();
+            //return Ok();
+        }
+
+        [HttpPost("enrolled")] // Change to match the Javascript request
+        public async Task<IActionResult> Enrolled([FromBody] int Course_Id)
+        {
+            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id).ToList();
+
+            List<User> kurzsra_jaro_emberek = new List<User>();
+
+            foreach (var ember in emberek)
+            {
+                var szemely = context.Users.First(x => x.Id == ember.User_Id);
+                kurzsra_jaro_emberek.Add(szemely);
+            }
+
+
+            var json = JsonConvert.SerializeObject(kurzsra_jaro_emberek, Formatting.Indented);
+
+            return Content(json, "application/json");
         }
     }
 }
