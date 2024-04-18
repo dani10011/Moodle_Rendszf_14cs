@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moodle.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f2fde05333b393f2082773e70823fdc4752229a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+789f7c856f96ba538e0563a3e8cbd6f57f3cf72b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moodle.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moodle.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

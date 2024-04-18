@@ -9,7 +9,7 @@ namespace Moodle.Data.Entities
     public class ApprovedDegree
     {
         public int Id { get; set; }
-        public int CourseId { get; set; }
-        public int DegreeId { get; set; }
+        public int Course_Id { get; set; }
+        public int Degree_Id { get; set; }
     }
 }

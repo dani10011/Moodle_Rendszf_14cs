@@ -15,9 +15,11 @@ namespace Moodle.API
             var builder = WebApplication.CreateBuilder(args);
 
             //builder.Services.AddSqlServer<MoodleDbContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
-            //builder.Services.AddDbContext<MoodleDbContext>(options =>
-            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<MoodleDbContext>(options =>
+            options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
             //builder.Services.AddDbContext<MoodleDbContext>();
+
+            //builder.Services.AddSqlServer<MoodleDbContext>;
 
             // Add services to the container.
             builder.Services.AddControllers();
@@ -32,11 +34,11 @@ namespace Moodle.API
                 app.UseDeveloperExceptionPage();
             }
 
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //    //var context = scope.ServiceProvider.GetRequiredService<MoodleDbContext>();
-            //    scope.ServiceProvider.GetRequiredService<DBInit>().Init().Wait();
-            //}
+            using (var scope = app.Services.CreateScope())
+            {
+                //var context = scope.ServiceProvider.GetRequiredService<MoodleDbContext>();
+                scope.ServiceProvider.GetRequiredService<DBInit>().Init().Wait();
+            }
 
             app.Services.CreateScope().ServiceProvider.GetService<MoodleDbContext>();
 

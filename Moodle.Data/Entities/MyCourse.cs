@@ -9,7 +9,7 @@ namespace Moodle.Data.Entities
     public class MyCourse
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int CourseId { get; set; }
+        public int User_Id { get; set; }
+        public int Course_Id { get; set; }
     }
 }
