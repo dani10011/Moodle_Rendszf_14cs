@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Moodle.Core;
 using Moodle.Data;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 
 namespace Moodle.API.Controllers
@@ -50,11 +52,23 @@ namespace Moodle.API.Controllers
                     string currentUserJson = System.IO.File.ReadAllText(currentUserPath);
                     dynamic currentUserObj = Newtonsoft.Json.JsonConvert.DeserializeObject(currentUserJson);
 
+                    // Clear the file content
+                    System.IO.File.WriteAllText(currentUserPath, "");
 
-                    currentUserObj["ID"] = aktualis_felhasznalo.Id;
+                    // Define the attribute name and value
+                    string attributeName = "ID";
+                    int attributeValue = aktualis_felhasznalo.Id;
 
-                    string output = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserObj, Newtonsoft.Json.Formatting.Indented);
-                    System.IO.File.WriteAllText(currentUserPath, output);
+                    // Create a new JObject with the single attribute
+                    JObject newJsonObject = new JObject(new JProperty(attributeName, attributeValue));
+
+                    // Save the new object to the file
+                    string jsonString = newJsonObject.ToString();
+
+                    
+
+                    //string output = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserObj, Newtonsoft.Json.Formatting.Indented);
+                    System.IO.File.WriteAllText(currentUserPath, jsonString);
 
                     return Ok("Login successful!");
                  }
