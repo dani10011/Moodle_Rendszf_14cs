@@ -102,7 +102,7 @@ function osszLista() {
 
 
 function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más függvényt hív meg
-  const url = "https://localhost:7090/api/Course/courseid";
+    const url = "https://localhost:7090/api/Course/courseid?id=" + currentUserId;
   fetch(url)
     .then(response => {
       if (!response.ok) {

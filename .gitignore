@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Untrack files
+git rm --cached <file>
+
+# Remove files
+git rm <file>
+
 #sajat git Ignore-ok
 *.dll
 *.json

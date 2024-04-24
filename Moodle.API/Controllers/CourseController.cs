@@ -17,7 +17,7 @@ namespace Moodle.API.Controllers
             this.context = _context;
         }
 
-        [HttpGet("allcourses")]
+        [HttpGet("allcourses")] //összes kurzust visszaküldi a kliensnek
         public IActionResult GetAllCourses()
         {
             var courses = context.Courses.ToList(); // Retrieve all courses from the database
@@ -28,16 +28,9 @@ namespace Moodle.API.Controllers
 
         }
 
-        [HttpGet("courseid")]
-        public IActionResult GetCoursesByID()
+        [HttpGet("courseid")]   //saját kurzusokat kilistázza, egy kapott ID alapján
+        public IActionResult GetCoursesByID(int id)
         {
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-
-            //Aktualis felhasznalo idjanak lekerese
-            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-            string userJson = System.IO.File.ReadAllText(userData);
-            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
-            int id = currentUser["ID"];
 
             var myCourses = context.MyCourses.ToList();
 
