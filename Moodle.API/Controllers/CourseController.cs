@@ -103,30 +103,6 @@ namespace Moodle.API.Controllers
                 return BadRequest("Nem megfelelő szakra jár!");
             }
 
-            //string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-
-            ////Aktualis felhasznalo degree-jenek lekerese
-            //string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-            //string userJson = System.IO.File.ReadAllText(userData);
-            //dynamic currentUser = JsonConvert.DeserializeObject(userJson);
-            //string degree = currentUser["degree"];
-
-            ////Kurzusok kigyujtese
-            //string jsonFilePath = Path.Combine(projectRoot, "Moodle.Core/Jsons/course.json");
-
-            //string jsonData = System.IO.File.ReadAllText(jsonFilePath);
-
-            //var json = System.IO.File.ReadAllText(jsonFilePath);
-
-            //List<Course> courses = JsonConvert.DeserializeObject<List<Course>>(json);
-
-            ////szures degree szerint
-            //List<Course> filteredCourses = courses.Where(c => c.enrolled_students.Contains(degree)).ToList();
-
-            //string newJson = JsonConvert.SerializeObject(filteredCourses, Formatting.Indented);
-
-            //return this.Content(newJson, "application/json");
-            //return Ok();
         }
         public class Enrolled
         {

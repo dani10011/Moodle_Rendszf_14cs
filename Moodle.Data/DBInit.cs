@@ -1,4 +1,5 @@
-﻿using Moodle.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Moodle.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,24 @@ namespace Moodle.Data
         public DBInit(MoodleDbContext _context)
         {
             context = _context;
+        }
+
+        public async Task Wipe()
+        {
+            // Disable foreign key checks to avoid cascading deletes failing
+            await context.Database.ExecuteSqlRawAsync("PRAGMA foreign_keys = OFF;");
+
+            // Get a list of all tables using reflection
+            var tables = context.Model.GetEntityTypes().Select(et => et.GetTableName()).ToList();
+
+            // Delete data from each table
+            foreach (var table in tables)
+            {
+                await context.Database.ExecuteSqlRawAsync($"DELETE FROM {table}");
+            }
+
+            // Re-enable foreign key checks
+            await context.Database.ExecuteSqlRawAsync("PRAGMA foreign_keys = ON;");
         }
         public async Task Init()
         {
