@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Moodle.Data
 {
     public class DBInit
@@ -75,7 +76,11 @@ namespace Moodle.Data
                     new User { Id = 12, UserName = "GH2FG7", Name = "Horváth Ádám", Password = "HAdam101", Degree_Id = 12, Role = "tanár"}
 
                 };
-                context.Users.AddRange(users);
+
+                
+                List<User> hashedUsers = Hashing.HashAllUserPasswords(users);
+
+                context.Users.AddRange(hashedUsers);
                 await context.SaveChangesAsync();
             }
 

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Moodle.Data.Entities;
 
-namespace Moodle.Core
+namespace Moodle.Data
 {
     public class LoginData
     {
@@ -15,6 +16,7 @@ namespace Moodle.Core
 
     public class Hashing
     {
+        public Hashing() { }
         public static string HashPassword(string password, string username)
         {
             byte[] salt = Encoding.UTF8.GetBytes(username);
@@ -30,15 +32,33 @@ namespace Moodle.Core
             return Convert.ToBase64String(hashBytes);
         }
 
+
+        public static List<User> HashAllUserPasswords(List<User> users)
+        {
+            List<User> hashed = new List<User>();
+            hashed = users;
+            foreach (var user in hashed) 
+            {
+                user.Password = HashPassword(user.Password, user.UserName);
+            }
+            return hashed;
+        }
+
+
         public static bool VerifyPassword(string hashedPassword, string providedPassword, string username)
         {
             
             byte[] salt = Encoding.UTF8.GetBytes(username);
 
             var pbkdf2 = new Rfc2898DeriveBytes(providedPassword, salt, 10000, HashAlgorithmName.SHA256);
-            byte[] newHash = pbkdf2.GetBytes(32); 
+            byte[] newHash = pbkdf2.GetBytes(32);
 
-            return newHash.SequenceEqual(Convert.FromBase64String(hashedPassword)); 
+            var hashBytes = new byte[salt.Length + newHash.Length];
+            Array.Copy(salt, 0, hashBytes, 0, salt.Length);
+            Array.Copy(newHash, 0, hashBytes, salt.Length, newHash.Length);
+
+            //return newHash.SequenceEqual(Convert.FromBase64String(hashedPassword)); 
+            return Convert.ToBase64String(hashBytes) == hashedPassword;
         }
     }
 }

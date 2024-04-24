@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Moodle.Core;
 using Moodle.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -42,10 +41,10 @@ namespace Moodle.API.Controllers
             {
                 
 
-                if (loginData.Password == aktualis_felhasznalo.Password)
+                if (Hashing.VerifyPassword(aktualis_felhasznalo.Password, loginData.Password, aktualis_felhasznalo.UserName))
                 {
 
-                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id });
+                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id , role = aktualis_felhasznalo.Role});
                 }
                 else
                 {
