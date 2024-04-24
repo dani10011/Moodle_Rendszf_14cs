@@ -68,6 +68,53 @@ namespace Moodle.API.Controllers
 
         }
 
+
+        [HttpGet("notincourseid")]
+        public IActionResult GetNotInCoursesByID()
+        {
+            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
+
+            //Aktualis felhasznalo idjanak lekerese
+            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
+            string userJson = System.IO.File.ReadAllText(userData);
+            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
+            int id = currentUser["ID"];
+
+            var myCourses = context.MyCourses.ToList();
+
+            var courses = context.Courses.ToList();
+
+            List<int> courseIDs = new List<int>();
+
+            foreach (var course in myCourses)
+            {
+                if (course.User_Id != id)
+                {
+                    courseIDs.Add(course.Course_Id);
+                }
+            }
+
+            List<Course> uCourses = new List<Course>();
+
+            foreach (int i in courseIDs)
+            {
+                var course = courses.First(x => x.Id == i);
+                uCourses.Add(course);
+            }
+            //var uCourses = courses.Where(c => c.Id.Equals(courseIDs)).ToList();
+
+            var json = JsonConvert.SerializeObject(uCourses, Formatting.Indented);
+
+            return Content(json, "application/json");
+
+        }
+
+
+
+
+
+
+
         [HttpPost("accepted")]
         public async Task<IActionResult> CheckAcceptedDegrees([FromBody] int courseID)
         {

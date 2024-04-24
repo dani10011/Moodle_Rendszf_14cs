@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "9XRRhSPmurPlnHtJ1veJoGH8nWSVQrSO+gm/u5b/X8M=",
+=======
+  "Hash": "xYRq/WK+Wu8MK1FOQSpP562x6bXDQps4l9mvUfCgBPM=",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "Moodle.API\\wwwroot",
       "Source": "Moodle.API",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "bejelentkezeshatter.jfif",
       "AssetKind": "All",
@@ -36,10 +51,17 @@
       "OriginalItemSpec": "wwwroot\\bejelentkezeshatter.jfif"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.css",
       "AssetKind": "All",
@@ -55,10 +77,17 @@
       "OriginalItemSpec": "wwwroot\\frontend.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.html",
       "AssetKind": "All",
@@ -74,10 +103,17 @@
       "OriginalItemSpec": "wwwroot\\frontend.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.js",
       "AssetKind": "All",
@@ -93,10 +129,17 @@
       "OriginalItemSpec": "wwwroot\\frontend.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage_student.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage_student.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "mainPage_student.html",
       "AssetKind": "All",
@@ -112,10 +155,17 @@
       "OriginalItemSpec": "wwwroot\\mainPage_student.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainpage_teacher.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainpage_teacher.html",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "mainpage_teacher.html",
       "AssetKind": "All",
@@ -131,10 +181,17 @@
       "OriginalItemSpec": "wwwroot\\mainpage_teacher.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "minecraft_hirdetes.png",
       "AssetKind": "All",
@@ -150,10 +207,17 @@
       "OriginalItemSpec": "wwwroot\\minecraft_hirdetes.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "minecraft_hirdetes2.png",
       "AssetKind": "All",
@@ -169,10 +233,17 @@
       "OriginalItemSpec": "wwwroot\\minecraft_hirdetes2.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam.png",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam.png",
       "AssetKind": "All",
@@ -188,10 +259,17 @@
       "OriginalItemSpec": "wwwroot\\reklam.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam_masolat.png",
       "AssetKind": "All",
@@ -207,10 +285,17 @@
       "OriginalItemSpec": "wwwroot\\reklam_masolat.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam2.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam2.png",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam2.png",
       "AssetKind": "All",
@@ -226,10 +311,17 @@
       "OriginalItemSpec": "wwwroot\\reklam2.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",
+      "SourceId": "Moodle.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
+>>>>>>> 2978a17953c29d037200712e29ac03d56a4c7d12
       "BasePath": "_content/Moodle.API",
       "RelativePath": "teszt.js",
       "AssetKind": "All",
