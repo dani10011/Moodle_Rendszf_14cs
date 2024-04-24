@@ -42,15 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -59,15 +55,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Moodle.API",
+              "Title": "Moodle.API.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
               "RelativeDocumentMoniker": "Moodle.API\\Moodle.API.csproj",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
               "RelativeToolTip": "Moodle.API\\Moodle.API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-18T03:35:59.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T03:35:59.142Z"
             },
             {
               "$type": "Document",
@@ -79,8 +74,7 @@
               "RelativeToolTip": "Moodle.Core\\Authentication.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T03:30:17.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T03:30:17.588Z"
             },
             {
               "$type": "Document",
@@ -88,9 +82,9 @@
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs*",
-              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs*",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAAAJUAAAAOAAAA",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAuwIsAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T03:30:24.407Z",
               "EditorCaption": ""
@@ -117,8 +111,7 @@
               "RelativeToolTip": "Moodle.Data\\Moodle.Data.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-14T21:26:01.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T21:26:01.506Z"
             },
             {
               "$type": "Document",
@@ -130,8 +123,7 @@
               "RelativeToolTip": "Moodle.Data\\MoodleDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T21:23:25.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T21:23:25.664Z"
             },
             {
               "$type": "Document",
@@ -143,8 +135,7 @@
               "RelativeToolTip": "Moodle.Core\\Moodle.Core.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-14T21:11:31.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T21:11:31.558Z"
             },
             {
               "$type": "Document",
@@ -156,8 +147,7 @@
               "RelativeToolTip": "Moodle.API\\Controllers\\AuthenticationController.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T20:46:37.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T20:46:37.7Z"
             }
           ]
         }

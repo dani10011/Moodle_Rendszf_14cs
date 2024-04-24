@@ -2,10 +2,7 @@ body {
 
   height: 100%;
   padding: 0;
-  background-image: url(bejelentkezeshatter.jfif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #6FA4E5;
   justify-content: center;
   text-align: center;
 }
@@ -48,7 +45,11 @@ body {
   outline: none;
 }
 
-
+#row2{
+  margin: 0%;
+  padding: 0%;
+  padding-bottom: 30%;
+}
 .funkcioGomb .row {
   margin-bottom: 10px;
 }
@@ -218,6 +219,7 @@ body {
 
 #dataDisplay {
   text-align: center;
+  margin-top: 5%;
 }
 
 /*Lista formázása:*/
@@ -304,8 +306,16 @@ body {
 }
 
 #kathi{
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
+}
+#mine{
+  margin-top: 0%;
+  margin-bottom: 0%;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -322,4 +332,20 @@ body {
   top: 8px;
   right: 0%;
   font-size: 16px;
+}
+
+.center {
+  position: absolute;
+  top: 25px;
+  left: 35%;
+  font-size: 16px;
+}
+
+#koszonto{
+  font-size: 20px; 
+  margin-top: 0; 
+  margin-left: 0;
+  font-family:'Press Start 2P', cursive;
+  color: orange;
+
 }
