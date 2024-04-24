@@ -13,6 +13,7 @@ namespace Moodle.Data.Entities
         public string Name { get; set; }
         public string Password { get; set; }
         public int Degree_Id { get; set; }
+        public string Role { get; set; }
 
     }
 }
