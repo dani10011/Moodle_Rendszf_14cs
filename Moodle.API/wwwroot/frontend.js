@@ -33,7 +33,12 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
     const message = await response.text();
     alert(message);
   } else {
-    const message = await response.text();
+      const data = await response.json(); // Parse the JSON response
+      const message = data.message;
+      const userId = data.userId;
+
+      console.log("Login successful:", message);
+
     alert(message);
     window.location.href = 'mainPage_student.html'
   }
