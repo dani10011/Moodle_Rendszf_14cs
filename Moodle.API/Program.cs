@@ -14,12 +14,8 @@ namespace Moodle.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //builder.Services.AddSqlServer<MoodleDbContext>(builder.Configuration.GetConnectionString("DefaultConnection"));
             builder.Services.AddDbContext<MoodleDbContext>(options =>
             options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-            //builder.Services.AddDbContext<MoodleDbContext>();
-
-            //builder.Services.AddSqlServer<MoodleDbContext>;
 
             // Add services to the container.
             builder.Services.AddControllers();
