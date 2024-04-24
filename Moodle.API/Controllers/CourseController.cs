@@ -72,6 +72,7 @@ namespace Moodle.API.Controllers
         [HttpGet("notincourseid")]
         public IActionResult GetNotInCoursesByID()
         {
+
             string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
 
             //Aktualis felhasznalo idjanak lekerese
@@ -88,18 +89,20 @@ namespace Moodle.API.Controllers
 
             foreach (var course in myCourses)
             {
-                if (course.User_Id != id)
+                if (course.User_Id == id)
                 {
                     courseIDs.Add(course.Course_Id);
                 }
             }
 
-            List<Course> uCourses = new List<Course>();
+           
+
+            List<Course> uCourses = courses;
 
             foreach (int i in courseIDs)
             {
                 var course = courses.First(x => x.Id == i);
-                uCourses.Add(course);
+                uCourses.Remove(course);
             }
             //var uCourses = courses.Where(c => c.Id.Equals(courseIDs)).ToList();
 
