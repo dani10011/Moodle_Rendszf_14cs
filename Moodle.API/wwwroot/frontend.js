@@ -13,6 +13,8 @@
         document.getElementById('loginForm').submit();   
 }*/
 
+var currentUserId;
+
 
 async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésére
   var username = document.getElementById("username").value;
@@ -33,19 +35,31 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
     const message = await response.text();
     alert(message);
   } else {
-      const data = await response.json(); // Parse the JSON response
-      const message = data.message;
-      const userId = data.userId;
+    const data = await response.json(); // Parse the JSON response
+    const message = data.message;
+    const userId = data.userId;
+    const role = data.role;
+    console.log(data.role);
 
-      console.log("Login successful:", message);
+    currentUserId = userId;
+    console.log("Id: ", userId);
+    console.log("Login successful:", message);
 
     alert(message);
-    window.location.href = 'mainPage_student.html'
+    
+    if(role = 'tanár'){
+      window.location.href = 'mainPage_teacher.html';
+    }
+    else if(role = 'diák'){
+      window.location.href = 'mainPage_student.html';
+    }
   }
+
 }
 
 function osszLista() {
   const url = "https://localhost:7090/api/Course/allcourses";
+
   fetch(url) //kérés küldése
     .then(response => { //ellenőrzi a választ
       if (!response.ok) {
@@ -61,7 +75,7 @@ function osszLista() {
       data.forEach(item => {
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
-            
+
         li.addEventListener('click', () => {
           hallgatoEsemeny(item.Id);
           const vissza = document.createElement('button');
@@ -70,6 +84,7 @@ function osszLista() {
           dataDisplay.appendChild(vissza);
           vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
             osszLista();
+
           });
         });
 
@@ -110,6 +125,7 @@ function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más f�
           dataDisplay.appendChild(vissza);
           vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
             sajatlista();
+
           });
         });
         ul.appendChild(li);
@@ -359,7 +375,7 @@ function filterFunction() {
 
 
 
-function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok vaalmielyikére kattintunk
+function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok valamielyikére kattintunk
   const div = document.createElement('div');
 
   dataDisplay.innerHTML = '';
@@ -368,7 +384,9 @@ function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok vaalm
   esemenyek.textContent = 'Események';
   esemenyek.id = 'esemenyekLista';
   dataDisplay.appendChild(esemenyek);
-  
+  esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
+      esemenyListazas();
+  });
 
   dataDisplay.appendChild(div);
 
@@ -400,7 +418,7 @@ async function hallgatoListazas(aktualisId) {
       const message = await response.json();
       alert(message);
     } else {
-      
+
       const data = await response.json();
       console.log(data);
       const dataDisplay = document.getElementById("dataDisplay");
@@ -411,7 +429,7 @@ async function hallgatoListazas(aktualisId) {
         const li = document.createElement('li');
         li.textContent = `${item.Name} (${item.UserName})`;
 
-        
+
 
         ul.appendChild(li);
       });
@@ -425,19 +443,86 @@ async function hallgatoListazas(aktualisId) {
 
 
 
-function kurzusFelvetel(){
-  osszLista();
+function kurzusFelvetel() {
+  const url = "https://localhost:7090/api/Course/notincourseid";
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      
+      return response.json();
+    })
+    .then(data => {
+      //console.log(data);
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+      data.forEach(item => {
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
+        li.addEventListener('click', () => {
+            felvetel(item.Id);
+          
+        });
+        ul.appendChild(li);
+      });
+      dataDisplay.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+  
 }
 
-function kurzusLetrehozas(){
+function felvetel(courseId){
 
 }
 
-function esemenyLetrehozas(){
+function kurzusLetrehozas() {
+  const dataDisplay = document.getElementById("dataDisplay");
+  dataDisplay.innerHTML = '';
+
+  // Elkészíti a formot
+  const form = document.createElement("form");
+
+  // Input mezőket csinál
+  const inputName = document.createElement("input");
+  inputName.type = "text";
+  inputCode.classList.add(from_formazo);
+  inputName.placeholder = "Kurzus neve";
+
+  const inputCode = document.createElement("input");
+  inputCode.type = "text";
+  inputCode.classList.add(from_formazo);
+  inputCode.placeholder = "Kurzus kódja";
+
+  const inputCredit = document.createElement("input");
+  inputCredit.type = "text";
+  inputCredit.classList.add(from_formazo);
+  inputCredit.placeholder = "Kredit";
+
+  // Létrehozás gomb
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.textContent = "Kurzus létrehozása";
+
+  // Hozzáadás a form-hoz
+  form.appendChild(inputName);
+  form.appendChild(inputCode);
+  form.appendChild(inputCredit);
+
+  form.appendChild(submitButton);
+
+  dataDisplay.appendChild(form);
+  
+}
+
+function esemenyLetrehozas() {
 
 }
 
-function esemenyListazas(){
+function esemenyListazas() {
 
 }
 
