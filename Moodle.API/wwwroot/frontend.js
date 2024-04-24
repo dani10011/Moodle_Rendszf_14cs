@@ -35,7 +35,7 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
   } else {
     const message = await response.text();
     alert(message);
-    window.location.href = 'mainPage.html'
+    window.location.href = 'mainPage_student.html'
   }
 }
 
@@ -422,6 +422,18 @@ async function hallgatoListazas(aktualisId) {
 
 function kurzusFelvetel(){
   osszLista();
+}
+
+function kurzusLetrehozas(){
+
+}
+
+function esemenyLetrehozas(){
+
+}
+
+function esemenyListazas(){
+
 }
 
 function kijelentkezes() {
