@@ -357,3 +357,24 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
+
+.formClass{
+  margin-bottom: 5%;
+  width: 50%;
+}
+.osszForm{
+  margin-bottom: 40%;
+  padding: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40%;
+  width: 50%;
+}
+input[type="text"],
+    button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;}

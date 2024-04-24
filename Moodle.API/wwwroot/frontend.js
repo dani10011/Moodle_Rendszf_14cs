@@ -47,10 +47,10 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
 
     alert(message);
     
-    if(role = 'tanár'){
+    if(role == 'tanár'){
       window.location.href = 'mainPage_teacher.html';
     }
-    else if(role = 'diák'){
+    else if(role == 'diák'){
       window.location.href = 'mainPage_student.html';
     }
   }
@@ -485,21 +485,22 @@ function kurzusLetrehozas() {
 
   // Elkészíti a formot
   const form = document.createElement("form");
+form.className="osszForm";
 
   // Input mezőket csinál
   const inputName = document.createElement("input");
   inputName.type = "text";
-  inputCode.classList.add(from_formazo);
+  inputName.className="formClass";
   inputName.placeholder = "Kurzus neve";
 
   const inputCode = document.createElement("input");
   inputCode.type = "text";
-  inputCode.classList.add(from_formazo);
+  inputCode.className="formClass";
   inputCode.placeholder = "Kurzus kódja";
 
   const inputCredit = document.createElement("input");
   inputCredit.type = "text";
-  inputCredit.classList.add(from_formazo);
+  inputCredit.className="formClass";
   inputCredit.placeholder = "Kredit";
 
   // Létrehozás gomb
