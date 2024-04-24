@@ -13,8 +13,6 @@
         document.getElementById('loginForm').submit();   
 }*/
 
-var currentUserId;
-
 
 async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésére
   var username = document.getElementById("username").value;
@@ -35,23 +33,19 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
     const message = await response.text();
     alert(message);
   } else {
-    const data = await response.json(); // Parse the JSON response
-    const message = data.message;
-    const userId = data.userId;
+      const data = await response.json(); // Parse the JSON response
+      const message = data.message;
+      const userId = data.userId;
 
-    currentUserId = userId;
-    console.log("Id: ", userId);
-    console.log("Login successful:", message);
+      console.log("Login successful:", message);
 
     alert(message);
     window.location.href = 'mainPage_student.html'
   }
-
 }
 
 function osszLista() {
   const url = "https://localhost:7090/api/Course/allcourses";
-
   fetch(url) //kérés küldése
     .then(response => { //ellenőrzi a választ
       if (!response.ok) {
@@ -67,7 +61,7 @@ function osszLista() {
       data.forEach(item => {
         const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
-
+            
         li.addEventListener('click', () => {
           hallgatoEsemeny(item.Id);
           const vissza = document.createElement('button');
@@ -76,7 +70,6 @@ function osszLista() {
           dataDisplay.appendChild(vissza);
           vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
             osszLista();
-
           });
         });
 
@@ -117,7 +110,6 @@ function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más f�
           dataDisplay.appendChild(vissza);
           vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
             sajatlista();
-
           });
         });
         ul.appendChild(li);
@@ -376,7 +368,7 @@ function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok vaalm
   esemenyek.textContent = 'Események';
   esemenyek.id = 'esemenyekLista';
   dataDisplay.appendChild(esemenyek);
-
+  
 
   dataDisplay.appendChild(div);
 
@@ -408,7 +400,7 @@ async function hallgatoListazas(aktualisId) {
       const message = await response.json();
       alert(message);
     } else {
-
+      
       const data = await response.json();
       console.log(data);
       const dataDisplay = document.getElementById("dataDisplay");
@@ -419,7 +411,7 @@ async function hallgatoListazas(aktualisId) {
         const li = document.createElement('li');
         li.textContent = `${item.Name} (${item.UserName})`;
 
-
+        
 
         ul.appendChild(li);
       });
@@ -433,54 +425,19 @@ async function hallgatoListazas(aktualisId) {
 
 
 
-function kurzusFelvetel() {
-  const url = "https://localhost:7090/api/Course/notincourseid";
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      const dataDisplay = document.getElementById("dataDisplay");
-      dataDisplay.innerHTML = '';
-      const ul = document.createElement('ul');
-      data.forEach(item => {
-        const li = document.createElement('li'); // elemenként egy li
-        li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
-        li.addEventListener('click', () => {
-          hallgatoEsemeny(item.Id);
-          const vissza = document.createElement('button');
-          vissza.textContent = 'Vissza';
-          vissza.id = 'vissza';
-          dataDisplay.appendChild(vissza);
-          vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
-            sajatlista();
-
-          });
-        });
-        ul.appendChild(li);
-      });
-      dataDisplay.appendChild(ul);
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-    });
-  
+function kurzusFelvetel(){
+  osszLista();
 }
 
-function kurzusLetrehozas() {
+function kurzusLetrehozas(){
 
 }
 
-function esemenyLetrehozas() {
+function esemenyLetrehozas(){
 
 }
 
-function esemenyListazas() {
+function esemenyListazas(){
 
 }
 

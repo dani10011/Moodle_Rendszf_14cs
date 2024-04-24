@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\bendi\\source\\repos\\moodle_rendszf_14cs\\moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -90,7 +93,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,12 +108,25 @@
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AQIAANoBAAAAAAAAAAApwNoBAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-04-24T22:47:14.91Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Authentication.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Authentication.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Authentication.cs",
@@ -123,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\AuthenticationController.cs",
@@ -136,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DBInit.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\DBInit.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\DBInit.cs",
@@ -149,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\Program.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Program.cs",
@@ -162,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\User.cs",
@@ -175,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CurrentUser.json",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Jsons\\CurrentUser.json",
               "RelativeDocumentMoniker": "Moodle.Core\\Jsons\\CurrentUser.json",
@@ -188,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
@@ -201,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\TestController.cs",
@@ -214,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "frontend.js",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
               "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\frontend.js",
@@ -227,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Moodle.Data.csproj",
               "DocumentMoniker": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Moodle.Data.csproj",
               "RelativeDocumentMoniker": "Moodle.Data\\Moodle.Data.csproj",
@@ -240,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.json",
@@ -253,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Moodle.API.csproj",
               "DocumentMoniker": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
               "RelativeDocumentMoniker": "Moodle.API\\Moodle.API.csproj",
@@ -266,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Event.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Event.cs",
@@ -279,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MoodleDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\MoodleDbContext.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\MoodleDbContext.cs",
@@ -292,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Degree.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Degree.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Degree.cs",
@@ -305,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Course.cs",
@@ -318,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ApprovedDegree.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\ApprovedDegree.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\ApprovedDegree.cs",
@@ -331,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MyCourse.cs",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\MyCourse.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\MyCourse.cs",
@@ -344,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Moodle.Core.csproj",
               "DocumentMoniker": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
               "RelativeDocumentMoniker": "Moodle.Core\\Moodle.Core.csproj",
@@ -357,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Bendi\\source\\repos\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.Development.json",
