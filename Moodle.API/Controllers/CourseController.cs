@@ -28,7 +28,7 @@ namespace Moodle.API.Controllers
 
         }
 
-        [HttpGet("courseid")]   //saját kurzusokat kilistázza, egy kapott ID alapján
+        [HttpGet("courseid")]   //kurzusokat kilistázza, egy kapott ID alapján
         public IActionResult GetCoursesByID(int id)
         {
 
@@ -80,7 +80,6 @@ namespace Moodle.API.Controllers
                 }
             }
 
-
             List<Course> uCourses = courses;
 
             foreach (int i in courseIDs)
@@ -100,7 +99,7 @@ namespace Moodle.API.Controllers
 
 
 
-
+        /*
         [HttpPost("accepted")]
         public async Task<IActionResult> CheckAcceptedDegrees([FromBody] int courseID)
         {
@@ -135,21 +134,16 @@ namespace Moodle.API.Controllers
             {
                 return BadRequest("Nem megfelelő szakra jár!");
             }
-
+        
         }
-        public class Enrolled
-        {
-            public int id { get; set; }
-        }
+        */
 
 
-
-
-        [HttpPost("enrolled")] 
-        public async Task<IActionResult> Enroll([FromBody] Enrolled Course_Id)
+        [HttpPost("enrolled")] //egy adott kurzusra járó emberek visszaadása, kapott id alapján szűrés
+        public async Task<IActionResult> Enroll(int Course_Id)
         {
             
-            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id.id).ToList();
+            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id).ToList();
             //Console.WriteLine(emberek.Count);
 
             List<User> kurzsra_jaro_emberek = new List<User>();
