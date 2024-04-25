@@ -139,11 +139,11 @@ namespace Moodle.API.Controllers
         */
 
 
-        [HttpPost("enrolled")] //egy adott kurzusra járó emberek visszaadása, kapott id alapján szűrés
-        public async Task<IActionResult> Enroll(int Course_Id)
+        [HttpGet("enrolled")] //egy adott kurzusra járó emberek visszaadása, kapott id alapján szűrés
+        public IActionResult Enroll(int id)
         {
             
-            var emberek = context.MyCourses.Where(x => x.Course_Id == Course_Id).ToList();
+            var emberek = context.MyCourses.Where(x => x.Course_Id == id).ToList();
             //Console.WriteLine(emberek.Count);
 
             List<User> kurzsra_jaro_emberek = new List<User>();
