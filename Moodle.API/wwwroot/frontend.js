@@ -1,4 +1,4 @@
-
+//bejelentkezési funkció
 async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésére
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -17,7 +17,8 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
   if (!response.ok) { //ellenőrzi a login válaszát, ha Ok, átvisz a mainPage-re
     const message = await response.text();
     alert(message);
-  } else {
+  } 
+  else {
     const data = await response.json(); // Parse the JSON response
     const message = data.message;
     const userId = data.userId;
@@ -42,6 +43,10 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
 
 }
 
+
+
+
+//összes kurzus kilistázása
 function osszLista() {
   const url = "https://localhost:7090/api/Course/allcourses";
     const retrievedData = sessionStorage.getItem('currentUserId');
@@ -87,7 +92,9 @@ function osszLista() {
 
 
 
-function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más függvényt hív meg
+
+//saját kurzusok kiiratása
+function sajatlista() { 
     const retrievedData = sessionStorage.getItem('currentUserId');
     var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
   fetch(url)
@@ -128,8 +135,8 @@ function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más f�
 
 
 
-
-async function fetchDataTanszek() { //tanszék szerinti szűrés
+//tanszék szerinti szűrés
+async function fetchDataTanszek() { 
   const url = "https://localhost:7090/api/Course/allcourses";
 
   try {
@@ -199,134 +206,13 @@ async function fetchDataTanszek() { //tanszék szerinti szűrés
   }
 }
 
-/*
-function konkretDepartment(actualDepartment) {
-  const url = "https://localhost:7090/api/Course/allcourses";
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      const dataDisplay = document.getElementById("dataDisplay");
-      dataDisplay.innerHTML = '';
-      const ul = document.createElement('ul');
-
-      //Létrehoz egy listát a megfelelő Departmentel rendelkező kurzusoknak
-      const filteredData = data.filter(item => item.Department === actualDepartment);
-
-      //Ebből listáz ki
-      filteredData.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
-
-        li.addEventListener('click', () => {
-          hallgatoEsemeny(item.Id);
-          const vissza = document.createElement('button');
-          vissza.textContent = 'Vissza';
-          vissza.id = 'vissza';
-          dataDisplay.appendChild(vissza);
-          vissza.addEventListener('click', () => {
-            konkretDepartment(actualDepartment);
-          });
-        });
-
-        ul.appendChild(li);
-      });
-
-      dataDisplay.appendChild(ul);
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-    });
-}
-
-
-*/
 
 
 
 
 
-
-/*async function fetchDataResztvevoListazas(jelenlegiKurzus) {
-  const url = "https://localhost:7090/api/Course/allcourses";
-  
-  
-    var kurzus = jelenlegiKurzus;
-  
-    const response = await fetch('https://localhost:7090/api/Authentication/vmi', {
-      method: 'POST',
-      body: JSON.stringify(loginData),
-      headers: { 'Content-Type': 'application/json' }
-    });
-  
-    if (!response.ok) {
-      const message = await response.text();
-      alert(message);
-    } else {
-      const message = await response.text();
-      alert(message);
-      window.location.href = 'mainPage.html'
-    }
-  
-
-
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-
-    console.log(data);
-
-    const studentList = document.getElementById("studentList");
-    studentList.innerHTML = '';  // Clear any previous options
-
-    // Create options for each course
-    data.forEach(course => {
-      const option = document.createElement("option");
-      option.text = course.name + ' (' + course.code + ')';
-      option.value = course; // Store entire course object in value
-      studentList.appendChild(option);
-    });
-
-    studentList.addEventListener("change", function () {
-      const selectedCourse = this.value; // Get the entire course object
-      const dataDisplay = document.getElementById("dataDisplay");
-      dataDisplay.innerHTML = ''; // Clear previous content
-
-      // Check if a course is selected
-      if (selectedCourse) {
-        const enrolledStudents = selectedCourse.enrolled_students;
-        dataDisplay.textContent = "Enrolled Students:";
-
-        // Display enrolled students (optional)
-        enrolledStudents.forEach(student => {
-          const studentElement = document.createElement("p");
-          studentElement.textContent = student;
-          dataDisplay.appendChild(studentElement);
-        });
-      } else {
-        dataDisplay.textContent = "Please select a course.";
-      }
-    });
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
-}
-*/
-
-
-
-
-
-function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok valamielyikére kattintunk
+//megjeleníti a menüt, miután a kurzusok valamielyikére kattintunk
+function hallgatoEsemeny(id) { 
   const div = document.createElement('div');
 
   dataDisplay.innerHTML = '';
@@ -336,7 +222,7 @@ function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok valam
   esemenyek.id = 'esemenyekLista';
   dataDisplay.appendChild(esemenyek);
   esemenyek.addEventListener('click', () => { //funkcio rendelése a gombhoz
-      esemenyListazas();
+      esemenyListazas(id); //meghívja az esemenyeket
   });
 
   dataDisplay.appendChild(div);
@@ -346,18 +232,20 @@ function hallgatoEsemeny(id) { //megjeleníti a menüt, miután a kurzusok valam
   hallgatok.textContent = 'Hallgatók';
   dataDisplay.appendChild(hallgatok);
   hallgatok.addEventListener('click', () => { //funkcio rendelése a gombhoz
-    hallgatoListazas(id);
+    hallgatoListazas(id); //megívja az esemenyeket
   });
   dataDisplay.appendChild(div);
-
-
 }
 
+
+
+
+
+//halgatók kilistázása egy adott kurzuson
 async function hallgatoListazas(aktualisId) {
   const Enrolled = {
     id: aktualisId
   };
-
   try {
     const response = await fetch('https://localhost:7090/api/Course/enrolled', {
       method: 'POST',
@@ -394,8 +282,14 @@ async function hallgatoListazas(aktualisId) {
 
 
 
+
+
+
+//kurzusfelvétel, csak tanár tudja
 function kurzusFelvetel() {
-  const url = "https://localhost:7090/api/Course/notincourseid";
+
+  const retrievedData = sessionStorage.getItem('currentUserId');
+  const url = "https://localhost:7090/api/Course/notincourseid?id=" + retrievedData;
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -463,18 +357,57 @@ form.className="osszForm";
   form.appendChild(inputName);
   form.appendChild(inputCode);
   form.appendChild(inputCredit);
-
   form.appendChild(submitButton);
-
   dataDisplay.appendChild(form);
   
 }
+
+
+
+
 
 function esemenyLetrehozas() {
 
 }
 
-function esemenyListazas() {
+
+
+
+
+async function esemenyListazas(id) {
+  
+  const Enrolled = {
+    id: aktualisId
+  };
+  try {
+    const response = await fetch('https://localhost:7090/api/Course/event', {
+      method: 'POST',
+      body: JSON.stringify(Enrolled),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (!response.ok) {
+      const message = await response.json();
+      alert(message);
+    } else {
+
+      const data = await response.json();
+      console.log(data);
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.Name}: ${item.Description}`;
+        ul.appendChild(li);
+      });
+
+      dataDisplay.appendChild(ul);
+    }
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
 
 }
 

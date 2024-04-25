@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\wwwroot\\frontend.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\frontend.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -98,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
               "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAADwv2UAAAANAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAADwv2UAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T20:40:30.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Moodle.API.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
               "RelativeDocumentMoniker": "Moodle.API\\Moodle.API.csproj",
@@ -124,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CurrentUser.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Jsons\\CurrentUser.json",
               "RelativeDocumentMoniker": "Moodle.Core\\Jsons\\CurrentUser.json",
@@ -137,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\TestController.cs",
@@ -150,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Program.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Program.cs",
@@ -162,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "DBInit.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\DBInit.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\DBInit.cs",
@@ -174,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Moodle.Data.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Moodle.Data.csproj",
               "RelativeDocumentMoniker": "Moodle.Data\\Moodle.Data.csproj",
@@ -186,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\AuthenticationController.cs",
@@ -198,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.json",
@@ -210,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Event.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Event.cs",
@@ -222,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "MoodleDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\MoodleDbContext.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\MoodleDbContext.cs",
@@ -234,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\User.cs",
@@ -246,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Degree.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Degree.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Degree.cs",
@@ -258,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "ApprovedDegree.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\ApprovedDegree.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\ApprovedDegree.cs",
@@ -270,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "MyCourse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\MyCourse.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\MyCourse.cs",
@@ -282,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "Moodle.Core.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
               "RelativeDocumentMoniker": "Moodle.Core\\Moodle.Core.csproj",
@@ -294,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.Development.json",
@@ -303,40 +299,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-04-10T20:31:56.33Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "9a0ad7ca-9261-48aa-9e1a-d3dcda655b55",
-        "Display": 0,
-        "X": 633,
-        "Y": 180,
-        "Width": 1151,
-        "Height": 568,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frontend.js",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
-              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\frontend.js",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
-              "RelativeToolTip": "Moodle.API\\wwwroot\\frontend.js",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAYwMoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-24T19:57:05.926Z",
-              "EditorCaption": ""
             }
           ]
         }
