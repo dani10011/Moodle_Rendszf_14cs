@@ -186,10 +186,8 @@ namespace Moodle.API.Controllers
             else
             {
                 Console.WriteLine(eventInfo.description);
-                List<Event> events = context.Events.ToList();
-                int kovetkezo_id = events.Count();
-                kovetkezo_id++;
-                context.Events.Add(new Event { Id = kovetkezo_id, Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
+                context.Events.Add(new Event { Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
+                await context.SaveChangesAsync();
                 return Ok(new { message = "Sikeres felvétel!" });
             }
         }

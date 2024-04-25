@@ -414,35 +414,34 @@ async function esemenyForm(course_id){
   // Létrehozás gomb
   const submitButton = document.createElement("button");
   submitButton.type = "submit";
-  submitButton.textContent = "Kurzus létrehozása";
+  submitButton.textContent = "Esemény létrehozása";
   submitButton.addEventListener('click', async () => {
-    
-    var name = document.getElementById(nameId);
-    var description = document.getElementById(descId);
+  var name = document.getElementById("nameId").value;
+  var description = document.getElementById("descId").value;
 
-    const AddEvent = {
-      course_id: course_id,
-      name: name,
-      description: description
-    };
-  
-    const response = await fetch('https://localhost:7090/api/Course/AddEvent', { //elküldi az adatokat, await megállítja a funkciót amíg válaszra vár
-      method: 'POST',
-      body: JSON.stringify(AddEvent),
-      headers: { 'Content-Type': 'application/json' }
-    });
-  
-    if (!response.ok) { //ellenőrzi a választ
-      const message = await response.text();
-      alert(message);
-    } 
-    else {
-      const data = await response.json(); // Parse the JSON response
-      const message = data.message;
-      console.log(message);
-      alert(message);    
-    }
-  })
+  const AddEvent = {
+    course_id: course_id,
+    name: name,
+    description: description
+  };
+  const response = await fetch('https://localhost:7090/api/Course/AddEvent', { 
+    method: 'POST',
+    body: JSON.stringify(AddEvent),
+    headers: { 'Content-Type': 'application/json' }
+  });
+
+  if (!response.ok) {
+    const message = await response.text(); //MEGOL(DANI)!!!!!
+    alert(message);
+  } 
+  else {
+    const data = await response.json();
+    const message = data.message;
+    console.log(message);
+    alert(message);
+    alert("Sikeres lefutás");
+  }
+})
 
   // Hozzáadás a form-hoz
   form.appendChild(inputName);
