@@ -1,21 +1,4 @@
 
-/*function bejelentkezes(){
-  
-        var felhasznalomezo = document.getElementById('felhasznalonev');
-        var felhasznalonev = felhasznalomezo.value;
-        var jelszomezo = document.getElementById('jelszo');
-        var jelszo = jelszomezo.value;
-        
-        console.log(felhasznalonev);
-        console.log(jelszo);
-    
-        // Submit the form
-        document.getElementById('loginForm').submit();   
-}*/
-
-var currentUserId;
-
-
 async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésére
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -146,26 +129,6 @@ function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más f�
 
 
 
-
-/*
-function lekeresteszt(){
-    fetch('/probajson') // Assuming that your API endpoint is located at '/probajson'
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data); // Log the content of the JSON file to the console
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
-
-}*/
-
-
 async function fetchDataTanszek() { //tanszék szerinti szűrés
   const url = "https://localhost:7090/api/Course/allcourses";
 
@@ -236,7 +199,7 @@ async function fetchDataTanszek() { //tanszék szerinti szűrés
   }
 }
 
-
+/*
 function konkretDepartment(actualDepartment) {
   const url = "https://localhost:7090/api/Course/allcourses";
   fetch(url)
@@ -282,16 +245,16 @@ function konkretDepartment(actualDepartment) {
 }
 
 
+*/
 
 
 
 
 
 
-
-async function fetchDataResztvevoListazas(jelenlegiKurzus) {
+/*async function fetchDataResztvevoListazas(jelenlegiKurzus) {
   const url = "https://localhost:7090/api/Course/allcourses";
-  /*
+  
   
     var kurzus = jelenlegiKurzus;
   
@@ -309,7 +272,7 @@ async function fetchDataResztvevoListazas(jelenlegiKurzus) {
       alert(message);
       window.location.href = 'mainPage.html'
     }
-  */
+  
 
 
 
@@ -357,25 +320,9 @@ async function fetchDataResztvevoListazas(jelenlegiKurzus) {
     console.error('There was a problem with the fetch operation:', error);
   }
 }
+*/
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-function filterFunction() {
-  const input = document.getElementById("myInput");
-  const filter = input.value.toUpperCase();
-  const div = document.getElementById("myDropdown");
-  const a = div.getElementsByTagName("a");
-  for (let i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
 
 
 
