@@ -62,17 +62,9 @@ namespace Moodle.API.Controllers
         }
 
 
-        [HttpGet("notincourseid")]  //kilistázza azokat a kurzusokat amin az illető nincs kapott id alapján
-        public IActionResult GetNotInCoursesByID()
+        [HttpGet("notincourseid")]  //kilistázza azokat a kurzusokat amin az illető nincs, kapott id alapján
+        public IActionResult GetNotInCoursesByID(int id)
         {
-
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-
-            //Aktualis felhasznalo idjanak lekerese
-            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-            string userJson = System.IO.File.ReadAllText(userData);
-            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
-            int id = currentUser["ID"];
 
             var myCourses = context.MyCourses.ToList();
 
@@ -88,7 +80,6 @@ namespace Moodle.API.Controllers
                 }
             }
 
-           
 
             List<Course> uCourses = courses;
 
@@ -104,7 +95,6 @@ namespace Moodle.API.Controllers
             return Content(json, "application/json");
 
         }
-
 
 
 
@@ -152,7 +142,10 @@ namespace Moodle.API.Controllers
             public int id { get; set; }
         }
 
-        [HttpPost("enrolled")] // Change to match the Javascript request
+
+
+
+        [HttpPost("enrolled")] 
         public async Task<IActionResult> Enroll([FromBody] Enrolled Course_Id)
         {
             
@@ -172,5 +165,19 @@ namespace Moodle.API.Controllers
 
             return Content(json, "application/json");
         }
+
+
+
+
+        [HttpGet("event")] //visszaad egy specifikus kurzus id-hez tartozó eseményeket
+        public IActionResult GetEventsById(int id)
+        {
+            var esemenyek = context.Events.Where(x =>x.Course_Id == id).ToList();
+
+            var json = JsonConvert.SerializeObject(esemenyek, Formatting.Indented);
+
+            return Content(json, "application/json");
+        }
+
     }
 }
