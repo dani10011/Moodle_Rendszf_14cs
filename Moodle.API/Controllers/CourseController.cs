@@ -28,7 +28,7 @@ namespace Moodle.API.Controllers
 
         }
 
-        [HttpGet("courseid")]   //kurzusokat kilistázza, egy kapott ID alapján
+        [HttpGet("courseid")]   //kurzusokat kilistázza egy adott emberhez, egy kapott ID alapján
         public IActionResult GetCoursesByID(int id)
         {
 
@@ -172,6 +172,23 @@ namespace Moodle.API.Controllers
 
             return Content(json, "application/json");
         }
+
+
+
+
+        [HttpPost("AddEvent")]
+        public async Task<IActionResult> AddEvent([FromBody] AddEvent eventInfo)
+        {
+            List<Event> events = context.Events.ToList();
+            int kovetkezo_id = events.Count();
+            kovetkezo_id++;
+            context.Events.Add(new Event { Id = kovetkezo_id, Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
+            return Ok(new { message = "Sikeres felvétel!"});
+        }
+
+
+
+
 
     }
 }
