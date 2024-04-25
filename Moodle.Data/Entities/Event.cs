@@ -13,4 +13,11 @@ namespace Moodle.Data.Entities
         public string Name { get; set; }
         public string Description { get; set; }
     }
+
+    public class AddEvent
+    {
+        public int course_id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+    }
 }
