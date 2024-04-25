@@ -243,41 +243,29 @@ function hallgatoEsemeny(id) {
 
 //halgatók kilistázása egy adott kurzuson
 async function hallgatoListazas(aktualisId) {
-  const Enrolled = {
-    id: aktualisId
-  };
-  try {
-    const response = await fetch('https://localhost:7090/api/Course/enrolled', {
-      method: 'POST',
-      body: JSON.stringify(Enrolled),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    if (!response.ok) {
-      const message = await response.json();
-      alert(message);
-    } else {
-
-      const data = await response.json();
-      console.log(data);
+  var id = aktualisId;
+    var url = "https://localhost:7090/api/Course/enrolled?id=" + id;
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
       const dataDisplay = document.getElementById("dataDisplay");
       dataDisplay.innerHTML = '';
       const ul = document.createElement('ul');
-
       data.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.Name} (${item.UserName})`;
-
-
-
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.Name} (${item.Username})`;
         ul.appendChild(li);
       });
-
       dataDisplay.appendChild(ul);
-    }
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
 }
 
 
@@ -374,42 +362,35 @@ function esemenyLetrehozas() {
 
 
 
-async function esemenyListazas(id) {
-  
-  const Enrolled = {
-    id: aktualisId
-  };
-  try {
-    const response = await fetch('https://localhost:7090/api/Course/event', {
-      method: 'POST',
-      body: JSON.stringify(Enrolled),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    if (!response.ok) {
-      const message = await response.json();
-      alert(message);
-    } else {
-
-      const data = await response.json();
-      console.log(data);
+async function esemenyListazas(aktualisId) {
+  var id = aktualisId;
+    var url = "https://localhost:7090/api/Course/event?id=" + id;
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
       const dataDisplay = document.getElementById("dataDisplay");
       dataDisplay.innerHTML = '';
       const ul = document.createElement('ul');
-
       data.forEach(item => {
-        const li = document.createElement('li');
+        const li = document.createElement('li'); // elemenként egy li
         li.textContent = `${item.Name}: ${item.Description}`;
         ul.appendChild(li);
       });
-
       dataDisplay.appendChild(ul);
-    }
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
-
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
 }
+
+
+
+
 
 function kijelentkezes() {
   window.location.href = 'frontend.html';
