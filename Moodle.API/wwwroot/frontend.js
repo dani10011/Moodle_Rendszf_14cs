@@ -39,10 +39,12 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
     const message = data.message;
     const userId = data.userId;
     const role = data.role;
-    console.log(data.role);
-
+    //const token = data.token;
+    
+    sessionStorage.setItem('currentUserId', userId);
+      
     currentUserId = userId;
-    console.log("Id: ", userId);
+    console.log("Id: ", currentUserId);
     console.log("Login successful:", message);
 
     alert(message);
@@ -59,7 +61,8 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
 
 function osszLista() {
   const url = "https://localhost:7090/api/Course/allcourses";
-
+    const retrievedData = sessionStorage.getItem('currentUserId');
+    console.log(retrievedData);
   fetch(url) //kérés küldése
     .then(response => { //ellenőrzi a választ
       if (!response.ok) {
@@ -102,7 +105,8 @@ function osszLista() {
 
 
 function sajatlista() { //lényegében ugyanaz, mint az összlista, csak más függvényt hív meg
-    const url = "https://localhost:7090/api/Course/courseid?id=" + currentUserId;
+    const retrievedData = sessionStorage.getItem('currentUserId');
+    var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
   fetch(url)
     .then(response => {
       if (!response.ok) {

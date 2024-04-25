@@ -62,7 +62,7 @@ namespace Moodle.API.Controllers
         }
 
 
-        [HttpGet("notincourseid")]
+        [HttpGet("notincourseid")]  //kilistázza azokat a kurzusokat amin az illető nincs kapott id alapján
         public IActionResult GetNotInCoursesByID()
         {
 
