@@ -78,25 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs*",
-              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs*",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAIwI0AAAAQAAAA",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAUwI0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T20:40:30.731Z",
               "EditorCaption": ""
@@ -124,7 +116,8 @@
               "RelativeToolTip": "Moodle.Core\\Jsons\\CurrentUser.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-11T02:22:28.724Z"
+              "WhenOpened": "2024-04-11T02:22:28.724Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -136,7 +129,8 @@
               "RelativeToolTip": "Moodle.API\\Controllers\\TestController.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAYwB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:31:54.7Z"
+              "WhenOpened": "2024-04-10T20:31:54.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -148,7 +142,8 @@
               "RelativeToolTip": "Moodle.API\\Program.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAAABoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:31:54.21Z"
+              "WhenOpened": "2024-04-10T20:31:54.21Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -160,7 +155,8 @@
               "RelativeToolTip": "Moodle.Data\\DBInit.cs",
               "ViewState": "AQIAALwAAAAAAAAAAAAgwB0BAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:52:57.255Z"
+              "WhenOpened": "2024-04-15T22:52:57.255Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -184,7 +180,8 @@
               "RelativeToolTip": "Moodle.API\\Controllers\\AuthenticationController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAgwCIAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:31:54.21Z"
+              "WhenOpened": "2024-04-10T20:31:54.21Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -196,7 +193,8 @@
               "RelativeToolTip": "Moodle.API\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-17T23:04:05.102Z"
+              "WhenOpened": "2024-04-17T23:04:05.102Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -208,7 +206,8 @@
               "RelativeToolTip": "Moodle.Data\\Entities\\Event.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwAsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:20.717Z"
+              "WhenOpened": "2024-04-15T22:56:20.717Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -220,7 +219,8 @@
               "RelativeToolTip": "Moodle.Data\\MoodleDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T07:37:06.28Z"
+              "WhenOpened": "2024-04-15T07:37:06.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -232,7 +232,8 @@
               "RelativeToolTip": "Moodle.Data\\Entities\\User.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAEBVwA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:12.864Z"
+              "WhenOpened": "2024-04-15T22:56:12.864Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -244,7 +245,8 @@
               "RelativeToolTip": "Moodle.Data\\Entities\\Degree.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:25.81Z"
+              "WhenOpened": "2024-04-15T22:56:25.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -256,7 +258,8 @@
               "RelativeToolTip": "Moodle.Data\\Entities\\ApprovedDegree.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:41.563Z"
+              "WhenOpened": "2024-04-15T22:56:41.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -268,7 +271,8 @@
               "RelativeToolTip": "Moodle.Data\\Entities\\MyCourse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwAwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:17.602Z"
+              "WhenOpened": "2024-04-15T22:56:17.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -292,7 +296,8 @@
               "RelativeToolTip": "Moodle.API\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-10T20:31:56.33Z"
+              "WhenOpened": "2024-04-10T20:31:56.33Z",
+              "EditorCaption": ""
             }
           ]
         }
