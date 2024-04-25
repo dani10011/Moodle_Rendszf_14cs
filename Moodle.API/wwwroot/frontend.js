@@ -426,20 +426,20 @@ async function esemenyForm(course_id){
       description: description
     };
   
-    const response = await fetch('https://localhost:7090/api/Authentication/AddEvent', { //elküldi az adatokat, await megállítja a funkciót amíg válaszra vár
+    const response = await fetch('https://localhost:7090/api/Course/AddEvent', { //elküldi az adatokat, await megállítja a funkciót amíg válaszra vár
       method: 'POST',
       body: JSON.stringify(AddEvent),
       headers: { 'Content-Type': 'application/json' }
     });
   
-    if (!response.ok) { //ellenőrzi a login válaszát
+    if (!response.ok) { //ellenőrzi a választ
       const message = await response.text();
       alert(message);
     } 
     else {
       const data = await response.json(); // Parse the JSON response
       const message = data.message;
-
+      console.log(message);
       alert(message);    
     }
   })

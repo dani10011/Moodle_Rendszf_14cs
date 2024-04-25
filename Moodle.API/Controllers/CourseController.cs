@@ -179,11 +179,19 @@ namespace Moodle.API.Controllers
         [HttpPost("AddEvent")]
         public async Task<IActionResult> AddEvent([FromBody] AddEvent eventInfo)
         {
-            List<Event> events = context.Events.ToList();
-            int kovetkezo_id = events.Count();
-            kovetkezo_id++;
-            context.Events.Add(new Event { Id = kovetkezo_id, Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
-            return Ok(new { message = "Sikeres felvétel!"});
+            if (eventInfo == null)
+            {
+                return BadRequest("Invalid request body");
+            }
+            else
+            {
+                Console.WriteLine(eventInfo.description);
+                List<Event> events = context.Events.ToList();
+                int kovetkezo_id = events.Count();
+                kovetkezo_id++;
+                context.Events.Add(new Event { Id = kovetkezo_id, Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
+                return Ok(new { message = "Sikeres felvétel!" });
+            }
         }
 
 
