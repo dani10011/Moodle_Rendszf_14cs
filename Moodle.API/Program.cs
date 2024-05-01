@@ -1,16 +1,20 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.WebSockets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.WebSockets;
 using Moodle.Data;
 
 namespace Moodle.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +24,12 @@ namespace Moodle.API
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddScoped<DBInit>();
-            
+
+
+            builder.Services.AddWebSockets(options =>
+            {
+                options.KeepAliveInterval = TimeSpan.FromMinutes(5); // Set keep-alive interval
+            });
 
             var app = builder.Build();
 
@@ -33,11 +42,8 @@ namespace Moodle.API
             using (var scope = app.Services.CreateScope())
             {
                 var dbInit = scope.ServiceProvider.GetRequiredService<DBInit>();
-                //dbInit.Wipe().Wait();
                 dbInit.Init().Wait();
             }
-
-            app.Services.CreateScope().ServiceProvider.GetService<MoodleDbContext>();
 
             app.UseHttpsRedirection();
 
@@ -51,6 +57,22 @@ namespace Moodle.API
             {
                 endpoints.MapControllers();
             });
+
+            // Start WebSocket server in a background task
+            
+            try
+            {
+                Task.Run(async () =>
+                {
+                    var webSocketServer = new WebSocketServer("127.0.0.1", 8000);
+                    await webSocketServer.Run();
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error starting WebSocket server: {ex.Message}");
+            }
+            
 
             app.Run();
         }
