@@ -1107,22 +1107,6 @@
           }
         }
       },
-      "Moodle.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.29",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.29",
-          "Moodle.Data": "1.0.0",
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "bin/placeholder/Moodle.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Moodle.Core.dll": {}
-        }
-      },
       "Moodle.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2957,11 +2941,6 @@
         "version.txt"
       ]
     },
-    "Moodle.Core/1.0.0": {
-      "type": "project",
-      "path": "../Moodle.Core/Moodle.Core.csproj",
-      "msbuildProject": "../Moodle.Core/Moodle.Core.csproj"
-    },
     "Moodle.Data/1.0.0": {
       "type": "project",
       "path": "../Moodle.Data/Moodle.Data.csproj",
@@ -2972,26 +2951,30 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.29",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.29",
-      "Moodle.Core >= 1.0.0",
       "Moodle.Data >= 1.0.0",
       "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bendi\\.nuget\\packages\\": {}
+    "C:\\Users\\okros\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
+      "projectUniqueName": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Moodle.API.csproj",
       "projectName": "Moodle.API",
-      "projectPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
-      "packagesPath": "C:\\Users\\Bendi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\obj\\",
+      "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Moodle.API.csproj",
+      "packagesPath": "C:\\Users\\okros\\.nuget\\packages\\",
+      "outputPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Bendi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\okros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2999,17 +2982,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj": {
-              "projectPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj"
-            },
-            "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Moodle.Data.csproj": {
-              "projectPath": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.Data\\Moodle.Data.csproj"
+            "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Moodle.Data.csproj": {
+              "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Moodle.Data.csproj"
             }
           }
         }

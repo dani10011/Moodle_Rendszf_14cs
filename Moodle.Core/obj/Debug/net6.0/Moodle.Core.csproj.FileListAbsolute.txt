@@ -43,3 +43,6 @@ C:\Users\Bendi\Source\Repos\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moo
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\bin\Debug\net6.0\Moodle.Data.dll
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\bin\Debug\net6.0\Moodle.Data.pdb
 C:\Users\User\Desktop\Git\Moodle_Rendszf_14cs\Moodle.Core\obj\Debug\net6.0\Moodle.C.DE592F3B.Up2Date
+D:\Egyetem\Negyedik_felev\RendszerF\Moodle_Rendszerf_14\Moodle.Core\bin\Debug\net6.0\Moodle.Data.dll
+D:\Egyetem\Negyedik_felev\RendszerF\Moodle_Rendszerf_14\Moodle.Core\bin\Debug\net6.0\Moodle.Data.pdb
+D:\Egyetem\Negyedik_felev\RendszerF\Moodle_Rendszerf_14\Moodle.Core\obj\Debug\net6.0\Moodle.C.DE592F3B.Up2Date

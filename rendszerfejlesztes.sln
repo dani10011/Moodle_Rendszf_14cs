@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moodle.API", "Moodle.API\Moodle.API.csproj", "{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moodle.Core", "Moodle.Core\Moodle.Core.csproj", "{6571946A-9163-4155-82B4-E484982165E5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moodle.Data", "Moodle.Data\Moodle.Data.csproj", "{120C32BF-18AC-48AF-BFE9-2D0D91605760}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6571946A-9163-4155-82B4-E484982165E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6571946A-9163-4155-82B4-E484982165E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6571946A-9163-4155-82B4-E484982165E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6571946A-9163-4155-82B4-E484982165E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{120C32BF-18AC-48AF-BFE9-2D0D91605760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{120C32BF-18AC-48AF-BFE9-2D0D91605760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{120C32BF-18AC-48AF-BFE9-2D0D91605760}.Release|Any CPU.ActiveCfg = Release|Any CPU
