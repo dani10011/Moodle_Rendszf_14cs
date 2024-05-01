@@ -1,10 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Moodle.Data;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Text.Json;
-using Newtonsoft.Json.Linq;
 using Moodle.Data.Entities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
