@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\frontend.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.js",
-      "PackagePath": "staticwebassets\\frontend.js"
-    },
-    {
       "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\login.js",
       "PackagePath": "staticwebassets\\login.js"
     },
@@ -47,6 +43,18 @@
     {
       "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
       "PackagePath": "staticwebassets\\reklam_masolat.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\shared.js",
+      "PackagePath": "staticwebassets\\shared.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\student.js",
+      "PackagePath": "staticwebassets\\student.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teacher.js",
+      "PackagePath": "staticwebassets\\teacher.js"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",

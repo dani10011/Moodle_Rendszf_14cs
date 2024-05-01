@@ -99,44 +99,7 @@ namespace Moodle.API.Controllers
 
 
 
-        /*
-        [HttpPost("accepted")]
-        public async Task<IActionResult> CheckAcceptedDegrees([FromBody] int courseID)
-        {
-            string projectRoot = Directory.GetParent(Environment.CurrentDirectory).FullName; // Get project root directory
-
-            //Aktualis felhasznalo idjanak lekerese
-            string userData = Path.Combine(projectRoot, "Moodle.Core/Jsons/CurrentUser.json");
-            string userJson = System.IO.File.ReadAllText(userData);
-            dynamic currentUser = JsonConvert.DeserializeObject(userJson);
-            int id = currentUser["ID"];
-
-            var users = context.Users.ToList();
-
-            User user = users.Where(u => u.Id == id).FirstOrDefault();
-
-            List<MyCourse> courses = context.MyCourses.Where(c => c.Course_Id.Equals(courseID)).ToList();
-
-            bool ok = false;
-            foreach (var course in courses)
-            {
-                if (user.Degree_Id == courseID)
-                { 
-                    ok = true; 
-                    break; 
-                }
-            }
-            if (ok)
-            {
-                return Ok("Sikeres feliratkozás!");
-            }
-            else
-            {
-                return BadRequest("Nem megfelelő szakra jár!");
-            }
         
-        }
-        */
 
 
         [HttpGet("enrolled")] //egy adott kurzusra járó emberek visszaadása, kapott id alapján szűrés
@@ -147,11 +110,15 @@ namespace Moodle.API.Controllers
             //Console.WriteLine(emberek.Count);
 
             List<User> kurzsra_jaro_emberek = new List<User>();
-            //Console.WriteLine(Course_Id.id);
+            //Console.WriteLine(Cour.id);
             foreach (var ember in emberek)
             {
+                
                 var szemely = context.Users.First(x => x.Id == ember.User_Id);
-                kurzsra_jaro_emberek.Add(szemely);
+                if (szemely.Role != "tanár") // tanárok kiszűrése
+                {   
+                    kurzsra_jaro_emberek.Add(szemely);
+                }
             }
             //Console.WriteLine(kurzsra_jaro_emberek.Count);
 
@@ -188,11 +155,78 @@ namespace Moodle.API.Controllers
                 Console.WriteLine(eventInfo.description);
                 context.Events.Add(new Event { Course_Id = eventInfo.course_id, Name = eventInfo.name, Description = eventInfo.description });
                 await context.SaveChangesAsync();
-                return Ok(new { message = "Sikeres felvétel!" });
+                return Ok(new { message = "Sikeres felvitel!" });
             }
         }
 
 
+        //új kurzus hozzáadása (tanár)
+        [HttpPost("AddCourse")]
+        public async Task<IActionResult> AddCourse([FromBody] AddCourse courseInfo)
+        {
+            if (courseInfo == null)
+            {
+                return BadRequest("Invalid request body");
+            }
+
+            var newCourse = new Course
+            { Code = courseInfo.code, Name = courseInfo.name, Credit = courseInfo.credit, Department = courseInfo.department};
+
+            context.Courses.Add(newCourse);
+            await context.SaveChangesAsync();
+
+            
+            var newCourseId = newCourse.Id;
+
+            context.MyCourses.Add(new MyCourse { Course_Id = newCourseId, User_Id = courseInfo.userId });
+            await context.SaveChangesAsync();
+
+            return Ok(new { message = "Sikeres felvitel!"});
+        }
+
+
+        //kurzus felvétele ()
+        [HttpPost("NewCourse")]
+        public async Task<IActionResult> NewCourse([FromBody] NewCourse nCourse)
+        {
+            if (nCourse == null)
+            {
+                return BadRequest("Invalid request body");
+            }
+
+            var allApproved = context.Approved_Degrees.ToList();
+            List<int> accepted = new List<int>();
+
+
+            foreach (var c in allApproved)
+            {
+                if (c.Course_Id == nCourse.course_id)
+                {
+                    accepted.Add(c.Degree_Id);
+                }
+            }
+
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Id == nCourse.user_id);
+            bool approve = false;
+
+            foreach (var c in accepted)
+            {
+                if (c == user.Degree_Id) { approve = true; }
+
+            }
+
+            if (approve == false) 
+            {
+                return Ok(new { message = "Ehhez a tárgyhoz nem megfelelő a kar, amire jársz." });
+            }
+            else
+            {
+                context.MyCourses.Add(new MyCourse { Course_Id = nCourse.course_id, User_Id = nCourse.user_id });
+                await context.SaveChangesAsync();
+
+                return Ok(new { message = "Sikeres felvétel!" });
+            }
+        }
 
 
 
