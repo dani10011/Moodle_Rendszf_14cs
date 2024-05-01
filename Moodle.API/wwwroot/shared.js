@@ -89,7 +89,11 @@ function osszLista() {
   
   
   //tanszék szerinti szűrés
-  async function fetchDataTanszek() {
+  function konkretDepartment(selectedDepartment) {
+    fetchDataTanszek(selectedDepartment); // Adott tanszék kurzusainak frissítése
+  }
+  
+  async function fetchDataTanszek(selectedDepartment = null) {
     const url = "https://localhost:7090/api/Course/allcourses";
   
     try {
@@ -103,7 +107,6 @@ function osszLista() {
   
       const departmentList = document.getElementById("departmentList");
       departmentList.innerHTML = '';
-  
   
       const uniqueDepartments = new Set();
   
@@ -158,10 +161,6 @@ function osszLista() {
       console.error('There was a problem with the fetch operation:', error);
     }
   }
-  
-  
-  
-  
   
   
   //megjeleníti a menüt, miután a kurzusok valamielyikére kattintunk

@@ -14,4 +14,13 @@ namespace Moodle.Data.Entities
         public int Credit {  get; set; }
         public string Department { get; set; }
     }
+
+    public class AddCourse
+    {
+        public string code { get; set; }
+        public string name { get; set; }
+        public int credit { get; set;}
+        public string department { get; set; }
+        public int userId { get; set; }            
+    }
 }
