@@ -18,59 +18,55 @@ async function kurzusLetrehozas() {
   const inputDepartment = createInput("text", "inputDepartment", "formTexts", "Tanszék");
 
   // Label for accepted degrees
-  const karFelirat = document.createElement("label");
-  karFelirat.textContent = "Elfogadott karok:";
-  karFelirat.style.fontSize = "18px";
-  karFelirat.style.paddingBottom = "1%";
+  const felirat = document.createElement("label");
+  felirat.textContent = "Elfogadott karok:";
+  felirat.style.fontSize = "18px";
+  felirat.style.paddingBottom = "1%";
 
-  const karFeliratDiv = document.createElement("div");
+  const feliratDiv = document.createElement("div");
 
   //CHECKBOXOK BEOLVASÁSA 
   const url = "https://localhost:7090/api/Course/AllDegrees";
 
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-
-    console.log(data); 
-
-    const departmentList = document.getElementById("departmentList");
-    departmentList.innerHTML = '';
-
-    degreeList = new Set();
-  
-    
-    data.forEach(item => { //összes degreet hozzáadjuk
-      degreeList.add(item.Name);
-    });
-    
-    for (const degree of degreeList) {
-      for (const degree of degreeList) {
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = `degree-${degree.Id}`;
-        checkbox.value = degree.Name;
-      
-        const checkboxLabel = document.createElement("label");
-        checkboxLabel.textContent = degree.Name;
-        checkboxLabel.htmlFor = checkbox.id; // fix: use checkbox.id instead of checkbox.Id
-      
-        checkboxLabel.appendChild(checkbox); // append checkbox to label
-        karFeliratDiv.appendChild(checkboxLabel); // append label to div
-      }
-    }
-
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
+try {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
   }
-  // Container for checkboxes
-  
+  const data = await response.json();
 
-  // Create checkboxes for each degree
+  console.log(data); 
 
+  const departmentList = document.getElementById("departmentList");
+  departmentList.innerHTML = '';
+
+  degreeList = new Set();
+
+  data.forEach(item => { //összes degreet hozzáadjuk
+    degreeList.add(item.Name);
+  });
+
+  for (const degree of degreeList) {
+    if(degree != "Tanár"){
+    const item = data.find(item => item.Name === degree);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = `degree-${item.Id}`;
+    checkbox.value = item.Name;
+
+    const checkboxLabel = document.createElement("label");
+    checkboxLabel.textContent = item.Name;
+    checkboxLabel.htmlFor = checkbox.id;
+    checkboxLabel.style.display = "block"; // add this line to make each label appear on a new line
+
+    checkboxLabel.appendChild(checkbox); // append checkbox to label
+    feliratDiv.appendChild(checkboxLabel); // append label to div
+    }
+  }
+
+} catch (error) {
+  console.error('There was a problem with the fetch operation:', error);
+}
 
 
   // Submit button
@@ -103,7 +99,7 @@ async function kurzusLetrehozas() {
       userId: retrievedData,
       selectedDegrees: selectedDegrees
     };
-
+      
     // ... rest of the fetch logic for submitting data ...
   });
 
@@ -112,8 +108,8 @@ async function kurzusLetrehozas() {
   form.appendChild(inputCode);
   form.appendChild(inputCredit);
   form.appendChild(inputDepartment);
-  form.appendChild(karFelirat);
-  form.appendChild(karFeliratDiv);
+  form.appendChild(felirat);
+  form.appendChild(feliratDiv);
   form.appendChild(submitButton);
 
   dataDisplay.appendChild(form);
