@@ -45,11 +45,12 @@ body {
   outline: none;
 }
 
-#row2{
+#row2 {
   margin: 0%;
   padding: 0%;
   padding-bottom: 30%;
 }
+
 .funkcioGomb .row {
   margin-bottom: 10px;
 }
@@ -305,7 +306,7 @@ body {
   margin-bottom: 25%;
 }
 
-#kathi{
+#kathi {
   margin-top: 5%;
   margin-bottom: 10%;
   margin-left: auto;
@@ -313,7 +314,8 @@ body {
   width: 70%;
   height: 70%;
 }
-#mine{
+
+#mine {
   margin-top: 0%;
   margin-bottom: 0%;
   margin-left: auto;
@@ -341,16 +343,16 @@ body {
   font-size: 16px;
 }
 
-#koszonto{
-  font-size: 20px; 
-  margin-top: 0; 
+#koszonto {
+  font-size: 20px;
+  margin-top: 0;
   margin-left: 0;
-  font-family:'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', cursive;
   color: orange;
 
 }
 
-.formKurzus{
+.formKurzus {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -358,11 +360,12 @@ body {
   width: 300px;
 }
 
-.formClass{
+/*.formClass{
   margin-bottom: 5%;
   width: 50%;
-}
-.osszForm{
+}*/
+
+.osszForm {
   margin-bottom: 40%;
   padding: auto;
 
@@ -371,10 +374,23 @@ body {
   margin-bottom: 40%;
   width: 50%;
 }
-input[type="text"],
-    button {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;}
+
+.formTexts {
+  width: 100%;
+  margin-bottom: 5%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #4CAF50;
+  color: white;
+}

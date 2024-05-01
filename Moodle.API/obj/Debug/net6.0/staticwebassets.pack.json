@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\frontend.js"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\login.js",
+      "PackagePath": "staticwebassets\\login.js"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage_student.html",
       "PackagePath": "staticwebassets\\mainPage_student.html"
     },
