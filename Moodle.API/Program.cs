@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.WebSockets;
 using Moodle.Data;
+using Moodle.API.Middlewares;
 
 namespace Moodle.API
 {
@@ -52,6 +53,8 @@ namespace Moodle.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<TokenExtractorMiddleware>(builder.Configuration);
 
             app.UseEndpoints(endpoints =>
             {
