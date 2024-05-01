@@ -41,17 +41,79 @@
                                     <div class="col-auto">
                                         <div class="row bejelentkezo">
                                             <label style="text-align: center; font-family: 'Garamond', serif;"
-                                                for="username">Felhasználónév:</label><br>
+                                                   for="username">Felhasználónév:</label><br>
                                             <input type="text" id="username" name="username" class="username">
                                         </div>
                                         <div class="row bejelentkezo">
                                             <label style="text-align: center; font-family: 'Garamond', serif;"
-                                                for="password">Jelszó:</label><br>
+                                                   for="password">Jelszó:</label><br>
                                             <input type="password" id="password" name="password" class="password">
                                         </div>
                                         <div id="buttonDiv">
                                             <input type="button" value="BEJELENTKEZÉS" class="gomb" onclick="bejelentkezes()">
                                         </div>
+
+
+
+
+
+
+
+
+                                        <input type="text" id="messageInput" placeholder="Type a message..."> <button type="button" onclick="sendMessage(event)">Send</button> <div id="output" style="height: 300px; overflow-y: scroll;"> <p>Received: Hello World!</p> </div>
+                                        <script>const socket = new WebSocket('ws://localhost:8000'); socket.onopen = function (event) { console.log('WebSocket connection opened.'); }; socket.onmessage = function (event) { const output = document.getElementById('output'); const newMessage = document.createElement('p'); newMessage.textContent = 'Received: ' + event.data; output.appendChild(newMessage); output.scrollTop = output.scrollHeight; }; socket.onerror = function (error) { console.error('WebSocket error:', error); }; socket.onclose = function (event) { console.log('WebSocket connection closed:', event); socket.removeEventListener('message', onMessage); socket.removeEventListener('error', onError); }; function sendMessage(event) { event.preventDefault(); const input = document.getElementById('messageInput'); const message = input.value; socket.send(message); input.value = ''; } // Add a delay before sending the message setTimeout(sendMessage, 1000);</script>
+
+
+
+
+
+
+
+                                        <!--<input type="text" id="messageInput" placeholder="Type a message...">
+                                        <button type="button" onclick="sendMessage(event)">Send</button>
+                                        <div id="output"></div>
+
+                                        <script>
+                                            const socket = new WebSocket('ws://localhost:8000');
+
+                                            socket.onopen = function (event) {
+                                                console.log('WebSocket connection opened.');
+                                            };
+
+                                            socket.onmessage = function (event) {
+                                                const output = document.getElementById('output');
+                                                const newMessage = document.createElement('p');
+                                                newMessage.textContent = 'Received: ' + event.data;
+                                                output.appendChild(newMessage);
+                                            };
+
+                                            socket.onerror = function (error) {
+                                                console.error('WebSocket error:', error);
+                                            };
+
+                                            socket.onclose = function (event) {
+                                                console.log('WebSocket connection closed:', event);
+                                                socket.removeEventListener('message', onMessage);
+                                                socket.removeEventListener('error', onError);
+                                            };
+
+                                            function sendMessage(event) {
+                                                //event.preventDefault();
+                                                const input = document.getElementById('messageInput');
+                                                const message = input.value;
+                                                socket.send(message);
+                                                input.value = '';
+                                            }
+
+                                            // Add a delay before sending the message
+                                            setTimeout(sendMessage, 1000);
+                                        </script>-->
+
+
+
+
+
+
 
                                     </div>
                                 </div>
