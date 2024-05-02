@@ -28,10 +28,33 @@ async function kurzusLetrehozas() {
   //CHECKBOXOK BEOLVASÁSA 
   const url = "https://localhost:7090/api/Course/AllDegrees";
 
-try {
-  const response = await fetch(url);
+    try {
+
+
+        const token = sessionStorage.getItem('accessToken');
+        const options = {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'application/json'
+            }
+        };
+
+        const response = await fetch(url, options);
   if (!response.ok) {
-    throw new Error('Network response was not ok');
+      if (response.headers.has('Token-Expired')) {
+          // Token expired, handle logout
+          console.error('Token expired, please log in again.');
+
+          sessionStorage.removeItem('accessToken');
+          sessionStorage.removeItem('currentUserId');
+
+          window.location.href = 'frontend.html';
+      } else if (!response.headers.has('accessToken')) {
+          window.location.href = 'frontend.html';
+      } else {
+          throw new Error('Network response was not ok');
+      }
   }
   const data = await response.json();
 
@@ -134,13 +157,35 @@ function createInput(type, id, className, placeholder) {
 async function esemenyLetrehozas() {
   const retrievedData = sessionStorage.getItem('currentUserId');
   var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
+
+    const token = sessionStorage.getItem('accessToken');
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }
+    };
+
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                if (response.headers.has('Token-Expired')) {
+                    // Token expired, handle logout
+                    console.error('Token expired, please log in again.');
+
+                    sessionStorage.removeItem('accessToken');
+                    sessionStorage.removeItem('currentUserId');
+
+                    window.location.href = 'frontend.html';
+                } else if (!response.headers.has('accessToken')) {
+                    window.location.href = 'frontend.html';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }
+            return response.json();
+        })
     .then(data => {
       const dataDisplay = document.getElementById("dataDisplay");
       dataDisplay.innerHTML = '';
