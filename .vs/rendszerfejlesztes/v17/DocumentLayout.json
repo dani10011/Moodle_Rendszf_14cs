@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\moodle.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\entities\\approveddegree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6571946A-9163-4155-82B4-E484982165E5}|Moodle.Core\\Moodle.Core.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.core\\jsons\\currentuser.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6571946A-9163-4155-82B4-E484982165E5}|Moodle.Core\\Moodle.Core.csproj|solutionrelative:moodle.core\\jsons\\currentuser.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6571946A-9163-4155-82B4-E484982165E5}|Moodle.Core\\Moodle.Core.csproj|c:\\users\\user\\desktop\\git\\moodle_rendszf_14cs\\moodle.core\\moodle.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6571946A-9163-4155-82B4-E484982165E5}|Moodle.Core\\Moodle.Core.csproj|solutionrelative:moodle.core\\moodle.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "teacher.js",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teacher.js",
               "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\teacher.js",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teacher.js",
               "RelativeToolTip": "Moodle.API\\wwwroot\\teacher.js",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAAAHAAAAAXAAAA",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAAAGcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-05-01T22:48:10.25Z",
               "EditorCaption": ""
@@ -124,13 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Course.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Course.cs",
               "RelativeToolTip": "Moodle.Data\\Entities\\Course.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA1wBgAAAAuAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wBMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T17:24:39.621Z",
               "EditorCaption": ""
@@ -143,27 +135,27 @@
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\ApprovedDegree.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\ApprovedDegree.cs",
               "RelativeToolTip": "Moodle.Data\\Entities\\ApprovedDegree.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T22:56:41.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Event.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Event.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Event.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Event.cs",
               "RelativeToolTip": "Moodle.Data\\Entities\\Event.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAZAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T22:56:20.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.Development.json",
@@ -200,20 +192,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Degree.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Degree.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Degree.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\Degree.cs",
               "RelativeToolTip": "Moodle.Data\\Entities\\Degree.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T22:56:25.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Moodle.Data.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Moodle.Data.csproj",
               "RelativeDocumentMoniker": "Moodle.Data\\Moodle.Data.csproj",
@@ -232,7 +224,7 @@
               "RelativeDocumentMoniker": "Moodle.Data\\Entities\\MyCourse.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\Entities\\MyCourse.cs",
               "RelativeToolTip": "Moodle.Data\\Entities\\MyCourse.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAswBEAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswA0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T22:56:17.602Z",
               "EditorCaption": ""
@@ -264,19 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CurrentUser.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Jsons\\CurrentUser.json",
-              "RelativeDocumentMoniker": "Moodle.Core\\Jsons\\CurrentUser.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Jsons\\CurrentUser.json",
-              "RelativeToolTip": "Moodle.Core\\Jsons\\CurrentUser.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-11T02:22:28.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Moodle.API.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Moodle.API.csproj",
               "RelativeDocumentMoniker": "Moodle.API\\Moodle.API.csproj",
@@ -289,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Moodle.API\\Controllers\\AuthenticationController.cs",
@@ -301,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\appsettings.json",
               "RelativeDocumentMoniker": "Moodle.API\\appsettings.json",
@@ -313,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "MoodleDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Data\\MoodleDbContext.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\MoodleDbContext.cs",
@@ -322,19 +302,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T07:37:06.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Moodle.Core.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
-              "RelativeDocumentMoniker": "Moodle.Core\\Moodle.Core.csproj",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.Core\\Moodle.Core.csproj",
-              "RelativeToolTip": "Moodle.Core\\Moodle.Core.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-10T23:52:45.624Z",
-              "EditorCaption": ""
             }
           ]
         }

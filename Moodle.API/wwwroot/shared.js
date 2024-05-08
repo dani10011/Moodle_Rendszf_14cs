@@ -4,11 +4,33 @@ function osszLista() {
     const url = "https://localhost:7090/api/Course/allcourses";
     const retrievedData = sessionStorage.getItem('currentUserId');
     console.log(retrievedData);
-    fetch(url) //kérés küldése
-      .then(response => { //ellenőrzi a választ
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+
+    const token = sessionStorage.getItem('accessToken');
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
         }
+    };
+
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                if (response.headers.has('Token-Expired')) {
+                    // Token expired, handle logout
+                    console.error('Token expired, please log in again.');
+
+                    sessionStorage.removeItem('accessToken');
+                    sessionStorage.removeItem('currentUserId');
+
+                    window.location.href = 'frontend.html';
+                } else if (!response.headers.has('accessToken')) {
+                    window.location.href = 'frontend.html';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }
         return response.json(); //jsonné alakítja a választ, majd továbbadja a következő then-nek
       })
       .then(data => {
@@ -48,12 +70,34 @@ function osszLista() {
   
   //saját kurzusok kiiratása
   function sajatlista() {
-    const retrievedData = sessionStorage.getItem('currentUserId');
-    var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
-    fetch(url)
+      const retrievedData = sessionStorage.getItem('currentUserId');
+      var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
+
+      const token = sessionStorage.getItem('accessToken');
+      const options = {
+          method: 'GET',
+          headers: {
+              'Authorization': 'Bearer ' + token,
+              'Content-Type': 'application/json'
+          }
+      };
+
+    fetch(url, options)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+            if (response.headers.has('Token-Expired')) {
+                // Token expired, handle logout
+                console.error('Token expired, please log in again.');
+
+                sessionStorage.removeItem('accessToken');
+                sessionStorage.removeItem('currentUserId');
+
+                window.location.href = 'frontend.html';
+            } else if (!response.headers.has('accessToken')) {
+                window.location.href = 'frontend.html';
+            } else {
+                throw new Error('Network response was not ok');
+            }
         }
         return response.json();
       })
@@ -96,11 +140,13 @@ function osszLista() {
     const url = "https://localhost:7090/api/Course/allcourses";
   
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
   
       console.log(data); //idáig megkapjuk az összes kurzust
   
@@ -196,13 +242,35 @@ function osszLista() {
   async function hallgatoListazas(aktualisId) {
     var id = aktualisId;
     var url = "https://localhost:7090/api/Course/enrolled?id=" + id;
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+
+      const token = sessionStorage.getItem('accessToken');
+      const options = {
+          method: 'GET',
+          headers: {
+              'Authorization': 'Bearer ' + token,
+              'Content-Type': 'application/json'
+          }
+      };
+
+      fetch(url, options)
+          .then(response => {
+              if (!response.ok) {
+                  if (response.headers.has('Token-Expired')) {
+                      // Token expired, handle logout
+                      console.error('Token expired, please log in again.');
+
+                      sessionStorage.removeItem('accessToken');
+                      sessionStorage.removeItem('currentUserId');
+
+                      window.location.href = 'frontend.html';
+                  } else if (!response.headers.has('accessToken')) {
+                      window.location.href = 'frontend.html';
+                  } else {
+                      throw new Error('Network response was not ok');
+                  }
+              }
+              return response.json();
+          })
       .then(data => {
         const dataDisplay = document.getElementById("dataDisplay");
         dataDisplay.innerHTML = '';
@@ -228,13 +296,35 @@ function osszLista() {
 async function esemenyListazas(aktualisId) {
     var id = aktualisId;
     var url = "https://localhost:7090/api/Course/event?id=" + id;
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+
+    const token = sessionStorage.getItem('accessToken');
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
         }
-        return response.json();
-      })
+    };
+
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                if (response.headers.has('Token-Expired')) {
+                    // Token expired, handle logout
+                    console.error('Token expired, please log in again.');
+
+                    sessionStorage.removeItem('accessToken');
+                    sessionStorage.removeItem('currentUserId');
+
+                    window.location.href = 'frontend.html';
+                } else if (!response.headers.has('accessToken')) {
+                    window.location.href = 'frontend.html';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }
+            return response.json();
+        })
       .then(data => {
         const dataDisplay = document.getElementById("dataDisplay");
         dataDisplay.innerHTML = '';
@@ -255,6 +345,8 @@ async function esemenyListazas(aktualisId) {
   
   
   
-  function kijelentkezes() {
+function kijelentkezes() {
+    sessionStorage.removeItem('accessToken');
+    sessionStorage.removeItem('currentUserId');
     window.location.href = 'frontend.html';
   }

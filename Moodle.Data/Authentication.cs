@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using Moodle.Data.Entities;
 
 namespace Moodle.Data
@@ -59,6 +55,19 @@ namespace Moodle.Data
 
             //return newHash.SequenceEqual(Convert.FromBase64String(hashedPassword)); 
             return Convert.ToBase64String(hashBytes) == hashedPassword;
+        }
+    }
+    public class Token
+    {
+        public static void TokenGenerator()
+        {
+            var randomNumberGenerator = RandomNumberGenerator.Create();
+            byte[] secretKey = new byte[32]; // Replace 32 with desired key length (in bytes)
+            randomNumberGenerator.GetBytes(secretKey);
+            string secretKeyString = Convert.ToBase64String(secretKey);
+
+            Console.WriteLine("Your secret key: " + secretKeyString);
+            
         }
     }
 }

@@ -3,12 +3,33 @@ function kurzusFelvetel() {
 
     const retrievedData = sessionStorage.getItem('currentUserId');
     const url = "https://localhost:7090/api/Course/notincourseid?id=" + retrievedData;
-    fetch(url)
+
+    const token = sessionStorage.getItem('accessToken');
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+        }
+    };
+
+    fetch(url, options)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+                if (response.headers.has('Token-Expired')) {
+                    // Token expired, handle logout
+                    console.error('Token expired, please log in again.');
 
+                    sessionStorage.removeItem('accessToken');
+                    sessionStorage.removeItem('currentUserId');
+
+                    window.location.href = 'frontend.html';
+                } else if (!response.headers.has('accessToken')) {
+                    window.location.href = 'frontend.html';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }
             return response.json();
         })
         .then(data => {
