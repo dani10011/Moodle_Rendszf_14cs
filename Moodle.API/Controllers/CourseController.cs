@@ -168,20 +168,24 @@ namespace Moodle.API.Controllers
             {
                 return BadRequest("Invalid request body");
             }
+            else { 
+                var newCourse = new Course
+                { Code = courseInfo.code, Name = courseInfo.name, Credit = courseInfo.credit, Department = courseInfo.department };
+                context.Courses.Add(newCourse);
+                await context.SaveChangesAsync();
 
-            var newCourse = new Course
-            { Code = courseInfo.code, Name = courseInfo.name, Credit = courseInfo.credit, Department = courseInfo.department };
+                var newCourseId = newCourse.Id;
+            
+                for(int i=0; i < courseInfo.selectedDegrees.Length; i++){
+                   context.Approved_Degrees.Add(new ApprovedDegree { Course_Id = newCourseId, Degree_Id = courseInfo.selectedDegrees[i] });
+                    await context.SaveChangesAsync();
+                }
+           
+                context.MyCourses.Add(new MyCourse { Course_Id = newCourseId, User_Id = courseInfo.userId });
+                await context.SaveChangesAsync();
 
-            context.Courses.Add(newCourse);
-            await context.SaveChangesAsync();
-
-
-            var newCourseId = newCourse.Id;
-
-            context.MyCourses.Add(new MyCourse { Course_Id = newCourseId, User_Id = courseInfo.userId });
-            await context.SaveChangesAsync();
-
-            return Ok(new { message = "Sikeres felvitel!" });
+                return Ok(new { message = "Sikeres felvitel!" });
+            }
         }
 
 

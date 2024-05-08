@@ -28,6 +28,8 @@ async function kurzusLetrehozas() {
   //CHECKBOXOK BEOLVASÁSA 
   const url = "https://localhost:7090/api/Course/AllDegrees";
 
+  degreeList = new Set();
+  degreeIdList = new Set();
 try {
   const response = await fetch(url);
   if (!response.ok) {
@@ -40,14 +42,18 @@ try {
   const departmentList = document.getElementById("departmentList");
   departmentList.innerHTML = '';
 
-  degreeList = new Set();
+  
 
   data.forEach(item => { //összes degreet hozzáadjuk
+    if(item.Name != "Tanár"){
+      console.log(item.Name);
     degreeList.add(item.Name);
+    degreeIdList.add(item.Id);
+    }
   });
 
   for (const degree of degreeList) {
-    if(degree != "Tanár"){
+
     const item = data.find(item => item.Name === degree);
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -61,7 +67,7 @@ try {
 
     checkboxLabel.appendChild(checkbox); // append checkbox to label
     feliratDiv.appendChild(checkboxLabel); // append label to div
-    }
+    
   }
 
 } catch (error) {
@@ -84,12 +90,16 @@ try {
 
     // Get selected degrees
     const selectedDegrees = [];
-    for (const degree of degrees) {
-      const checkbox = document.getElementById(`degree-${degree.Id}`);
+      for (const degree of degreeIdList) {
+          const checkbox = document.getElementById(`degree-${degree}`);
+          console.log(degree);
       if (checkbox.checked) {
-        selectedDegrees.push(degree.Id);
+        console.log(degree + ": "+checkbox);
+        selectedDegrees.push(degree);
+        
       }
-    }
+      
+    }console.log("NAGY SIKER: ");
 
     const AddCourse = {
       name: name,
@@ -99,11 +109,30 @@ try {
       userId: retrievedData,
       selectedDegrees: selectedDegrees
     };
-      
-    // ... rest of the fetch logic for submitting data ...
+    try {
+      const response = await fetch('https://localhost:7090/api/Course/AddCourse', {
+        method: 'POST',
+        body: JSON.stringify(AddCourse),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if (!response.ok) {
+        const message = await response.text();
+        alert(message);
+      } else {
+        const data = await response.json();
+        const message = data.message;
+        alert(message);
+        console.log(message);
+      }
+    } catch (error) {
+      console.error('Error occurred:', error);
+      alert('Hiba történt a szerverrel való kommunikáció során.');
+    }
+    
   });
 
-  // Add elements to the form
+  // Elemek hozzáadása a formhoz
   form.appendChild(inputName);
   form.appendChild(inputCode);
   form.appendChild(inputCredit);

@@ -21,6 +21,7 @@ namespace Moodle.Data.Entities
         public string name { get; set; }
         public int credit { get; set;}
         public string department { get; set; }
-        public int userId { get; set; }            
+        public int userId { get; set; }     
+        public int[] selectedDegrees { get; set; }       
     }
 }
