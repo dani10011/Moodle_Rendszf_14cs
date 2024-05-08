@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5HyUGMLD4zOeuvA733lLMsLbFetA39B0dYLTq+DGFOE=",
+  "Hash": "1ydGjY5jRkGZfYdl/TpBImEJeNLw5okcBVK0AKIHx4k=",
   "Source": "Moodle.API",
   "BasePath": "_content/Moodle.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Moodle.API\\wwwroot",
       "Source": "Moodle.API",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "bejelentkezeshatter.jfif",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\bejelentkezeshatter.jfif"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\frontend.css",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\frontend.css"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\frontend.html",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "frontend.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\frontend.html"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\login.js",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\login.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "login.js",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\login.js"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\mainPage_student.html",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage_student.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "mainPage_student.html",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\mainPage_student.html"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\mainpage_teacher.html",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainpage_teacher.html",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "mainpage_teacher.html",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\mainpage_teacher.html"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "minecraft_hirdetes.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\minecraft_hirdetes.png"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "minecraft_hirdetes2.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\minecraft_hirdetes2.png"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\reklam.png",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\reklam.png"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\reklam_masolat.png",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam_masolat.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\reklam_masolat.png"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\reklam2.png",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam2.png",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "reklam2.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\reklam2.png"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\shared.js",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\shared.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "shared.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\shared.js"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\student.js",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\student.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "student.js",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\student.js"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\teacher.js",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teacher.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "teacher.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\teacher.js"
     },
     {
-      "Identity": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\teszt.js",
+      "Identity": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",
       "SourceId": "Moodle.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Bendi\\Source\\Repos\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\",
       "BasePath": "_content/Moodle.API",
       "RelativePath": "teszt.js",
       "AssetKind": "All",

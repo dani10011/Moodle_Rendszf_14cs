@@ -1,5 +1,9 @@
 
-
+function ujKurzusUzenet(event) {
+    //event.preventDefault();
+    const message = "Új tárgy került felvételre!"
+    socket.send(message);
+}
 
 
 async function kurzusLetrehozas() {
@@ -124,6 +128,7 @@ try {
         const message = data.message;
         alert(message);
         console.log(message);
+        ujKurzusUzenet(event)
       }
     } catch (error) {
       console.error('Error occurred:', error);
