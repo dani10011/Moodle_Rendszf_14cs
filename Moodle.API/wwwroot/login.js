@@ -23,9 +23,11 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       const message = data.message;
       const userId = data.userId;
       const role = data.role;
-      //const token = data.token;
+      const token = data.token;
   
-      sessionStorage.setItem('currentUserId', userId);
+        sessionStorage.setItem('currentUserId', userId);
+        sessionStorage.setItem('accessToken', token);
+        console.log("Access Token: ", token);
   
       currentUserId = userId;
       console.log("Id: ", currentUserId);
@@ -34,7 +36,7 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       uzenetMegjelenites(message);
       //alert(message);
   
-  
+      
       setTimeout(function () {
         if (role == 'tanár') {
           window.location.href = 'mainPage_teacher.html';

@@ -1,6 +1,4 @@
-﻿
-using System.IO;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
 namespace Moodle.API.Controllers
