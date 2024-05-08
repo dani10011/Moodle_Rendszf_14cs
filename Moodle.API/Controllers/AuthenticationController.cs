@@ -47,7 +47,7 @@ namespace Moodle.API.Controllers
                     //Sikeres bejelentkezés -> token generálás
                     var accessToken = GenerateAccessToken(aktualis_felhasznalo);  // Call a new method to generate access token
 
-                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id, role = aktualis_felhasznalo.Role, token = accessToken });
+                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id, role = aktualis_felhasznalo.Role, name = aktualis_felhasznalo.Name, token = accessToken });
                 }
                 else
                 {

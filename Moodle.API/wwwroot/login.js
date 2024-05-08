@@ -22,15 +22,19 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       const data = await response.json();
       const message = data.message;
       const userId = data.userId;
+      const userName = data.name;
       const role = data.role;
       const token = data.token;
   
         sessionStorage.setItem('currentUserId', userId);
+        sessionStorage.setItem('currentUserName', userName);
         sessionStorage.setItem('accessToken', token);
         console.log("Access Token: ", token);
   
       currentUserId = userId;
+      currentUserName = userName;
       console.log("Id: ", currentUserId);
+      console.log("Id: ", currentUserName);
       console.log("Login successful:", message);
   
       uzenetMegjelenites(message);

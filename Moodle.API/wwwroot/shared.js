@@ -1,3 +1,9 @@
+//jelenlegi felhasználó nevének visszaadása
+function getCurrentUserName() {
+  const retrievedData = sessionStorage.getItem('currentUserName');
+  console.log(retrievedData);
+  return retrievedData;
+}
 
 //összes kurzus kilistázása
 function osszLista() {

@@ -1,3 +1,5 @@
+
+
 //kurzus felvétele (csak diák tudja)
 function kurzusFelvetel() {
 

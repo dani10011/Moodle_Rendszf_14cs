@@ -32,6 +32,11 @@
                         style="font-size: 60px; margin-top: 0; margin-left: 0;font-family:'Press Start 2P', cursive;color: orange;">
                         Kurzus kezelő
                     </h1>
+                    <div><p id="felhasznalo_neve"><span id = "felhasznalonev"></span></p></div>
+                    <script>
+                      var nev = getCurrentUserName();
+                      document.getElementById("felhasznalonev").textContent=nev;
+                     </script> <!--Ide kell rakni a scriptet, hogy ne null-nak tekintse a "felhasznalonev"-t-->
                     <div class="row"><select class="funkcioGomb" id="departmentList"></select></div>
                     <div class="row">
                         <button class="funkcioGomb" type="button" onclick="sajatlista()">
