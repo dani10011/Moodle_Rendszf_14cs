@@ -27,19 +27,86 @@
         <Table id="tablazat1">
           <tr>
             <td style="text-align: left; width: 30%; background-color: rgb(230, 230, 230);">
-              <div id="gombok">
-                <h1 id="mainCim"
-                  style="font-size: 60px; margin-top: 0; margin-left: 0;font-family:'Press Start 2P', cursive;color: orange;">
-                  Kurzus kezelő</h1>
-                <div class="row"><select class="funkcioGomb" id="departmentList"></select></div>
-                <div class="row"><button class="funkcioGomb" type="button" onclick="sajatlista()">Saját kurzusok
-                    listázása</button></div>
-                <div class="row"><button class="funkcioGomb" type="button" onclick="kurzusLetrehozas()">Új kurzus létrehozása</button></div>
-                <div class="row"><button class="funkcioGomb" type="button" onclick="esemenyLetrehozas()">Esemény létrehozása / törlése</button></div>
-                <div class="row"><img id="kathi" src="reklam2.png" alt="Kathi Béla"></div>
-                
+                <div id="gombok">
+                    <h1 id="mainCim"
+                        style="font-size: 60px; margin-top: 0; margin-left: 0;font-family:'Press Start 2P', cursive;color: orange;">
+                        Kurzus kezelő
+                    </h1>
+                    <div class="row"><select class="funkcioGomb" id="departmentList"></select></div>
+                    <div class="row">
+                        <button class="funkcioGomb" type="button" onclick="sajatlista()">
+                            Saját kurzusok
+                            listázása
+                        </button>
+                    </div>
+                    <div class="row"><button class="funkcioGomb" type="button" onclick="kurzusLetrehozas()">Új kurzus létrehozása</button></div>
+                    <div class="row"><button class="funkcioGomb" type="button" onclick="esemenyLetrehozas()">Esemény létrehozása / törlése</button></div>
+                    <div class="row"><img id="kathi" src="reklam2.png" alt="Kathi Béla"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <input type="text" id="messageInput" placeholder="Type a message...">
+                    <button type="button" onclick="sendMessage(event)">Send</button>
+                    <div id="output" style="height: 300px; overflow-y: scroll;">
+                        <p>Received: Hello World!</p>
+                    </div>
+
+
+                    <script>
+                        const socket = new WebSocket('ws://localhost:8000');
+                        socket.onopen = function (event) {
+                            console.log('WebSocket connection opened.');
+                        };
+
+                        socket.onmessage = function (event) {
+                            const output = document.getElementById('output');
+                            const newMessage = document.createElement('p');
+                            newMessage.textContent = 'Received: ' + event.data;
+                            output.appendChild(newMessage);
+                            output.scrollTop = output.scrollHeight;
+                        };
+
+                        socket.onerror = function (error) {
+                            console.error('WebSocket error:', error);
+                        };
+
+                        socket.onclose = function (event) {
+                            console.log('WebSocket connection closed:', event);
+                            socket.removeEventListener('message', onMessage);
+                            socket.removeEventListener('error', onError);
+                        };
+
+                        function sendMessage(event) {
+                            event.preventDefault();
+                            const input = document.getElementById('messageInput');
+                            const message = input.value; socket.send(message); input.value = '';
+                        }
+                        // Add a delay before sending the message setTimeout(sendMessage, 1000);
+                    </script>
+
+
+
+
+
+
+
+
+
+
+
+
                     <!-- <div class="row"><select class="funkcioGomb" id="studentList"></select></div> -->
-              </div>
+                </div>
             </td>
             <td>
               <div id="dataDisplay" class="dataDisplay"></div>

@@ -59,23 +59,15 @@
 
 
 
-
-                                        <input type="text" id="messageInput" placeholder="Type a message..."> <button type="button" onclick="sendMessage(event)">Send</button> <div id="output" style="height: 300px; overflow-y: scroll;"> <p>Received: Hello World!</p> </div>
-                                        <script>const socket = new WebSocket('ws://localhost:8000'); socket.onopen = function (event) { console.log('WebSocket connection opened.'); }; socket.onmessage = function (event) { const output = document.getElementById('output'); const newMessage = document.createElement('p'); newMessage.textContent = 'Received: ' + event.data; output.appendChild(newMessage); output.scrollTop = output.scrollHeight; }; socket.onerror = function (error) { console.error('WebSocket error:', error); }; socket.onclose = function (event) { console.log('WebSocket connection closed:', event); socket.removeEventListener('message', onMessage); socket.removeEventListener('error', onError); }; function sendMessage(event) { event.preventDefault(); const input = document.getElementById('messageInput'); const message = input.value; socket.send(message); input.value = ''; } // Add a delay before sending the message setTimeout(sendMessage, 1000);</script>
-
-
-
-
-
-
-
                                         <!--<input type="text" id="messageInput" placeholder="Type a message...">
                                         <button type="button" onclick="sendMessage(event)">Send</button>
-                                        <div id="output"></div>
+                                        <div id="output" style="height: 300px; overflow-y: scroll;">
+                                            <p>Received: Hello World!</p>
+                                        </div>
+
 
                                         <script>
                                             const socket = new WebSocket('ws://localhost:8000');
-
                                             socket.onopen = function (event) {
                                                 console.log('WebSocket connection opened.');
                                             };
@@ -85,6 +77,7 @@
                                                 const newMessage = document.createElement('p');
                                                 newMessage.textContent = 'Received: ' + event.data;
                                                 output.appendChild(newMessage);
+                                                output.scrollTop = output.scrollHeight;
                                             };
 
                                             socket.onerror = function (error) {
@@ -98,18 +91,12 @@
                                             };
 
                                             function sendMessage(event) {
-                                                //event.preventDefault();
+                                                event.preventDefault();
                                                 const input = document.getElementById('messageInput');
-                                                const message = input.value;
-                                                socket.send(message);
-                                                input.value = '';
+                                                const message = input.value; socket.send(message); input.value = '';
                                             }
-
-                                            // Add a delay before sending the message
-                                            setTimeout(sendMessage, 1000);
+                                            // Add a delay before sending the message setTimeout(sendMessage, 1000);
                                         </script>-->
-
-
 
 
 
