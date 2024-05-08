@@ -28,6 +28,7 @@ namespace Moodle.API.Middlewares
                 {
                     accessToken = parts[1];
                     //await Console.Out.WriteLineAsync();
+                    await Console.Out.WriteLineAsync("Access token: " + accessToken);
                 }
             }
             

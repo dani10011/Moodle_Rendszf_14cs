@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KfBYAwft9BplYWjELHLGC+8v/xUyE34zbHXlYkPbO6OaMzupcnpIrxnssRnfplBVdTWkA0mSn/k036eX4nEGZg==",
+  "dgSpecHash": "Wr5wCROL22JEobcEVxQ2U+MAUJm4vng3Db6yWyT4KpVX1DetoOjngimDkcfli4wr17Ssl1q7pktRTI5cxu0acQ==",
   "success": true,
-  "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Moodle.API.csproj",
+  "projectFilePath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.API\\Moodle.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\okros\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\okros\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",

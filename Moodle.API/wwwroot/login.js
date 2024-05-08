@@ -36,7 +36,7 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       uzenetMegjelenites(message);
       //alert(message);
   
-  
+      
       setTimeout(function () {
         if (role == 'tanár') {
           window.location.href = 'mainPage_teacher.html';

@@ -57,4 +57,17 @@ namespace Moodle.Data
             return Convert.ToBase64String(hashBytes) == hashedPassword;
         }
     }
+    public class Token
+    {
+        public static void TokenGenerator()
+        {
+            var randomNumberGenerator = RandomNumberGenerator.Create();
+            byte[] secretKey = new byte[32]; // Replace 32 with desired key length (in bytes)
+            randomNumberGenerator.GetBytes(secretKey);
+            string secretKeyString = Convert.ToBase64String(secretKey);
+
+            Console.WriteLine("Your secret key: " + secretKeyString);
+            
+        }
+    }
 }
