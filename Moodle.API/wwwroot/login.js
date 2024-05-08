@@ -53,7 +53,6 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
   
   //megjeleníti/időzíti a felugró üzenetet
   function uzenetMegjelenites(message) {
-    // Create a custom popup element
     const popup = document.createElement('div');
     popup.textContent = message;
     popup.style.position = 'fixed';
