@@ -55,10 +55,11 @@
 
 
 
+                    <input type="text" id="usernameInput" placeholder="Your username...">
                     <input type="text" id="messageInput" placeholder="Type a message...">
                     <button type="button" onclick="sendMessage(event)">Send</button>
                     <div id="output" style="height: 300px; overflow-y: scroll;">
-                        <p>Received: Hello World!</p>
+                        <p>Sikeresen csatlakozott a chat-hez!</p>
                     </div>
 
 
@@ -71,7 +72,7 @@
                         socket.onmessage = function (event) {
                             const output = document.getElementById('output');
                             const newMessage = document.createElement('p');
-                            newMessage.textContent = 'Received: ' + event.data;
+                            newMessage.textContent = event.data;
                             output.appendChild(newMessage);
                             output.scrollTop = output.scrollHeight;
                         };
@@ -88,10 +89,17 @@
 
                         function sendMessage(event) {
                             event.preventDefault();
-                            const input = document.getElementById('messageInput');
-                            const message = input.value; socket.send(message); input.value = '';
+                            const usernameInput = document.getElementById('usernameInput');
+                            const messageInput = document.getElementById('messageInput');
+                            const username = usernameInput.value;
+                            const message = messageInput.value;
+                            if (username && message) {
+                                socket.send(username + ': ' + message);
+                                messageInput.value = '';
+                            } else {
+                                alert('Please enter both username and message.');
+                            }
                         }
-                        // Add a delay before sending the message setTimeout(sendMessage, 1000);
                     </script>
 
 

@@ -62,15 +62,30 @@ namespace Moodle.API
                 {
                     // Extract the message from the buffer
                     string message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                    Console.WriteLine($"Received: {message}");
 
-                    // Broadcast the message to all connected clients
-                    foreach (var client in _clients.Values)
+                    // Split the message into username and message content
+                    string[] parts = message.Split(new char[] { ':' }, 2);
+                    if (parts.Length == 2)
                     {
-                        if (client.State == WebSocketState.Open)
+                        string username = parts[0].Trim();
+                        string messageContent = parts[1].Trim();
+
+                        // Log the received message with the username
+                        Console.WriteLine($"Received from {username}: {messageContent}");
+
+                        // Broadcast the message to all connected clients
+                        foreach (var client in _clients.Values)
                         {
-                            await client.SendAsync(Encoding.UTF8.GetBytes(message), WebSocketMessageType.Text, true, CancellationToken.None);
+                            if (client.State == WebSocketState.Open)
+                            {
+                                await client.SendAsync(Encoding.UTF8.GetBytes($"{username}: {messageContent}"), WebSocketMessageType.Text, true, CancellationToken.None);
+                            }
                         }
+                    }
+                    else
+                    {
+                        // Handle messages without a username properly
+                        Console.WriteLine("Received message without username.");
                     }
                 }
                 else if (result.MessageType == WebSocketMessageType.Close)
