@@ -4,7 +4,7 @@ Rendszerfejlesztés Moodle feladat 14-es csoport (Kovács L. Bendegúz, Ökrös 
 
 - ViAron04 = Virágh Áron (B7FY4E)
 - Dániel Ökrös = Dániel Ökrös (CT3QB5)
-- KLB = Kovács L. Bendegúz (H8UOA6)
+- KLB/BenTheGoose69 = Kovács L. Bendegúz (H8UOA6)
 	
 	
 ## Első használathoz szűz Windowson:
@@ -43,3 +43,8 @@ Felhasználónév: AR4K1S
 
 Jelszó: LisanAlGaib
 
+## Leadandók demonstrációja:
+1. leadandó: Api végpontok lehetővé teszik a kliens végpont kommunikációjat (c# és html)
+2. leadandó: Adatbázis kezelése ORM használatával
+3. leadandó: Tanár diák szerep létezése, JWT token létezése (1 perc alatt lejár)
+4. leadandó: Websocket komminkáció chat ablakkal megoldva
