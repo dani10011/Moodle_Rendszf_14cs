@@ -219,13 +219,13 @@ body {
 
 
 #dataDisplay {
+  padding-top: 5%;
   text-align: center;
-  margin-top: 5%;
 }
 
 /*Lista formázása:*/
 .dataDisplay ul {
-  padding-bottom: 30%;
+  padding-bottom: 60%;
   list-style-type: none;
   margin: auto;
 }

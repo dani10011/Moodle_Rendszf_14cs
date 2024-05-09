@@ -95,6 +95,7 @@ async function felvetel(courseId) {
 function kurzusLeadas(){
     const retrievedData = sessionStorage.getItem('currentUserId');
     var felhId =retrievedData;
+    //
   var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
 
   const token = sessionStorage.getItem('accessToken');
@@ -134,10 +135,10 @@ function kurzusLeadas(){
         li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
         li.addEventListener('click', () => {
           //hallgatoEsemeny(item.Id);
-
+          //console.log("Fel ID: ",felhId);
           var aktualisId = item.Id;
-          var url = "https://localhost:7090/api/Course/LeaveCourse?id=" + aktualisId +"?user_id" + felhId;
-
+          var url = "https://localhost:7090/api/Course/LeaveCourse?id=" + aktualisId +"&user_id=" + felhId;
+          console.log(url);
           const token = sessionStorage.getItem('accessToken');
           const options = {
             method: 'GET',
@@ -149,7 +150,7 @@ function kurzusLeadas(){
           fetch(url, options)
             .then(response => {
               if (!response.ok) {
-                if (response.headers.has('Token-Expired')) {
+                /*if (response.headers.has('Token-Expired')) {
                   // Token expired, handle logout
                   console.error('Token expired, please log in again.');
 
@@ -161,7 +162,7 @@ function kurzusLeadas(){
                   window.location.href = 'frontend.html';
                 } else {
                   throw new Error('Network response was not ok');
-                }
+                }*/
                 throw new Error('Network response was not ok');
               }
               //console.log(response);

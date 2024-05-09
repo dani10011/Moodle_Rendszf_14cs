@@ -28,11 +28,13 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
   
         sessionStorage.setItem('currentUserId', userId);
         sessionStorage.setItem('currentUserName', userName);
+        sessionStorage.setItem('currentUserRole', role);
         sessionStorage.setItem('accessToken', token);
         console.log("Access Token: ", token);
   
       currentUserId = userId;
       currentUserName = userName;
+      currentUserRole = role;
       console.log("Id: ", currentUserId);
       console.log("Id: ", currentUserName);
       console.log("Login successful:", message);

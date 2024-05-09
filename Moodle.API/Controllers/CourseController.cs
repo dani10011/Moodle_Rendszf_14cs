@@ -204,7 +204,7 @@ namespace Moodle.API.Controllers
         [HttpGet("LeaveCourse")] //Egy diák kilép egy adott id alapján egy kurzusról
         public IActionResult DeleteCourseById(int id, int user_id)
         {
-            var kurzus = context.MyCourses.SingleOrDefault(predicate => predicate.Id == id && predicate.User_Id == user_id);
+            var kurzus = context.MyCourses.SingleOrDefault(predicate => predicate.Course_Id == id && predicate.User_Id == user_id);
             context.MyCourses.Remove(kurzus);
             context.SaveChangesAsync();
             return Ok("Sikeresen kilépett a kurzusról");

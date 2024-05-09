@@ -1,6 +1,7 @@
 ﻿
 const socket = new WebSocket('ws://localhost:8000');
-var allapot = " "
+var allapot = getCurrentUserRole();
+console.log(allapot);
 var nev = getCurrentUserName() + " (" + allapot +")";
 socket.onopen = function (event) {
     console.log('WebSocket connection opened.');

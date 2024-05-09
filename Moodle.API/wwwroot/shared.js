@@ -5,6 +5,14 @@ function getCurrentUserName() {
   return retrievedData;
 }
 
+//jelenlegi felhasználó szerepkörének visszaadása
+function getCurrentUserRole() {
+  const retrievedData = sessionStorage.getItem('currentUserRole');
+  console.log(retrievedData);
+  return retrievedData;
+}
+
+
 //összes kurzus kilistázása
 function osszLista() {
     const url = "https://localhost:7090/api/Course/allcourses";
@@ -287,6 +295,13 @@ function osszLista() {
           ul.appendChild(li);
         });
         dataDisplay.appendChild(ul);
+        const vissza = document.createElement('button');
+              vissza.textContent = 'Vissza';
+              vissza.id = 'vissza';
+              dataDisplay.appendChild(vissza);
+              vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+                osszLista();
+              });
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -341,6 +356,13 @@ async function esemenyListazas(aktualisId) {
           ul.appendChild(li);
         });
         dataDisplay.appendChild(ul);
+        const vissza = document.createElement('button');
+              vissza.textContent = 'Vissza';
+              vissza.id = 'vissza';
+              dataDisplay.appendChild(vissza);
+              vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+                osszLista();
+              });
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
