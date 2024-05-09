@@ -142,7 +142,7 @@ namespace Moodle.API.Controllers
 
 
 
-        [HttpPost("AddEvent")]
+        [HttpPost("AddEvent")] //felvesz egy eseményt, megadott event információk alapján
         public async Task<IActionResult> AddEvent([FromBody] AddEvent eventInfo)
         {
             if (eventInfo == null)
@@ -171,8 +171,8 @@ namespace Moodle.API.Controllers
         }
 
 
-        //új kurzus hozzáadása (tanár)
-        [HttpPost("AddCourse")]
+        
+        [HttpPost("AddCourse")] //új kurzus hozzáadása (tanár)
         public async Task<IActionResult> AddCourse([FromBody] AddCourse courseInfo)
         {
             if (courseInfo == null)
@@ -210,8 +210,8 @@ namespace Moodle.API.Controllers
         }
 
 
-        //kurzus felvétele ()
-        [HttpPost("NewCourse")]
+        
+        [HttpPost("NewCourse")] //kurzus felvétele diákoknak
         public async Task<IActionResult> NewCourse([FromBody] NewCourse nCourse)
         {
             if (nCourse == null)
@@ -253,8 +253,8 @@ namespace Moodle.API.Controllers
             }
         }
 
-        //összes degree elküldése a kliensnek
-        [HttpGet("AllDegrees")]
+        
+        [HttpGet("AllDegrees")] //összes degree elküldése a kliensnek
         public IActionResult AllDegrees()
         {
             var degrees = context.Degrees.ToList();
