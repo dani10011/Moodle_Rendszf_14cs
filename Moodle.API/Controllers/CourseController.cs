@@ -142,7 +142,6 @@ namespace Moodle.API.Controllers
 
 
 
-
         [HttpPost("AddEvent")]
         public async Task<IActionResult> AddEvent([FromBody] AddEvent eventInfo)
         {
@@ -157,6 +156,16 @@ namespace Moodle.API.Controllers
                 await context.SaveChangesAsync();
                 return Ok(new { message = "Sikeres felvitel!" });
             }
+        }
+
+
+        [HttpGet("DeleteEvent")] //kitöröl egy adott id alapján egy event-et
+        public IActionResult DeleteEventById(int id)
+        {
+
+            var esemeny = context.Events.SingleOrDefault(predicate => predicate.Course_Id == id);
+            context.Events.Remove(esemeny);
+            return Ok("Esemény sikeresen törölve");
         }
 
 
@@ -186,6 +195,15 @@ namespace Moodle.API.Controllers
 
                 return Ok(new { message = "Sikeres felvitel!" });
             }
+        }
+
+        [HttpGet("DeleteCourse")] //kitöröl egy adott id alapján egy kurzust
+        public IActionResult DeleteCourseById(int id)
+        {
+
+            var kurzus = context.Courses.SingleOrDefault(predicate => predicate.Id == id);
+            context.Courses.Remove(kurzus);
+            return Ok("Esemény sikeresen törölve");
         }
 
 
