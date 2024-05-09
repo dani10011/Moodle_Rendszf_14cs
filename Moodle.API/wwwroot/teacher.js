@@ -286,7 +286,7 @@ async function esemenyTorles() {
                   fetch(url, options)
                     .then(response => {
                       if (!response.ok) {
-                        /*if (response.headers.has('Token-Expired')) {
+                        if (response.headers.has('Token-Expired')) {
                           // Token expired, handle logout
                           console.error('Token expired, please log in again.');
 
@@ -298,11 +298,13 @@ async function esemenyTorles() {
                           window.location.href = 'frontend.html';
                         } else {
                           throw new Error('Network response was not ok');
-                        }*/
+                        }
                         throw new Error('Network response was not ok');
                       }
+                      //console.log(response);
+                      alert("Sikeres törlés!");
+                      osszLista();
                       return response.json();
-                      alert(message);
                     })
                 })
                 ul.appendChild(li);

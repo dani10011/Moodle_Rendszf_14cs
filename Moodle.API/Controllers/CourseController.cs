@@ -162,10 +162,12 @@ namespace Moodle.API.Controllers
         [HttpGet("DeleteEvent")] //kitöröl egy adott id alapján egy event-et
         public IActionResult DeleteEventById(int id)
         {
-
+            Console.WriteLine(id);
             var esemeny = context.Events.SingleOrDefault(predicate => predicate.Course_Id == id);
             context.Events.Remove(esemeny);
-            return Ok("Esemény sikeresen törölve");
+            context.SaveChangesAsync();
+            Console.WriteLine("sikeres törlés");
+            return Ok(new { message = "Sikeres felvitel!" });
         }
 
 
@@ -203,6 +205,7 @@ namespace Moodle.API.Controllers
 
             var kurzus = context.Courses.SingleOrDefault(predicate => predicate.Id == id);
             context.Courses.Remove(kurzus);
+            context.SaveChangesAsync();
             return Ok("Esemény sikeresen törölve");
         }
 
