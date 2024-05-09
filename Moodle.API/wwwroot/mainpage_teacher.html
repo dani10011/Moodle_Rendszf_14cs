@@ -55,48 +55,8 @@
                     <input type="text" id="messageInput" placeholder="Type a message...">
                     <button type="button" onclick="sendMessage(event)">Send</button>
                     <div id="output" style="height: 300px; overflow-y: scroll;">
-                        <p>Sikeresen csatlakozott a chat-hez!</p>
+                        <p></p>
                     </div>
-
-
-                    <script>
-                        const socket = new WebSocket('ws://localhost:8000');
-                        var nev = getCurrentUserName() + " (Oktató)";
-                        socket.onopen = function (event) {
-                            console.log('WebSocket connection opened.');
-                        };
-
-                        socket.onmessage = function (event) {
-                            const output = document.getElementById('output');
-                            const newMessage = document.createElement('p');
-                            newMessage.textContent = event.data;
-                            output.appendChild(newMessage);
-                            output.scrollTop = output.scrollHeight;
-                        };
-
-                        socket.onerror = function (error) {
-                            console.error('WebSocket error:', error);
-                        };
-
-                        socket.onclose = function (event) {
-                            console.log('WebSocket connection closed:', event);
-                            socket.removeEventListener('message', onMessage);
-                            socket.removeEventListener('error', onError);
-                        };
-
-                        function sendMessage(event) {
-                            event.preventDefault();
-                            const messageInput = document.getElementById('messageInput');
-                            const username = nev;
-                            const message = messageInput.value;
-                            if (username && message) {
-                                socket.send(username + ': ' + message);
-                                messageInput.value = '';
-                            } else {
-                                alert('Please enter both username and message.');
-                            }
-                        }
-                    </script>
 
 
                     <!-- <div class="row"><select class="funkcioGomb" id="studentList"></select></div> -->
@@ -115,6 +75,7 @@
 
       </div>
     </div>
+<script src="websocket.js"></script>
 </body>
 
 </html>

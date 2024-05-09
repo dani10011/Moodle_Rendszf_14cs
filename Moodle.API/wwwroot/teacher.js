@@ -43,8 +43,8 @@ async function kurzusLetrehozas() {
 
     console.log(data);
 
-    const departmentList = document.getElementById("departmentList");
-    departmentList.innerHTML = '';
+    //const departmentList = document.getElementById("departmentList");
+    //departmentList.innerHTML = '';
 
 
 
