@@ -199,6 +199,20 @@ namespace Moodle.API.Controllers
             }
         }
 
+
+
+        [HttpGet("LeaveCourse")] //Egy diák kilép egy adott id alapján egy kurzusról
+        public IActionResult DeleteCourseById(int id, int user_id)
+        {
+            var kurzus = context.MyCourses.SingleOrDefault(predicate => predicate.Id == id && predicate.User_Id == user_id);
+            context.MyCourses.Remove(kurzus);
+            context.SaveChangesAsync();
+            return Ok("Sikeresen kilépett a kurzusról");
+        }
+
+
+
+
         [HttpGet("DeleteCourse")] //kitöröl egy adott id alapján egy kurzust
         public IActionResult DeleteCourseById(int id)
         {
