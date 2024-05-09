@@ -53,11 +53,6 @@
 
 
 
-
-
-
-
-                    <input type="text" id="usernameInput" placeholder="Your username...">
                     <input type="text" id="messageInput" placeholder="Type a message...">
                     <button type="button" onclick="sendMessage(event)">Send</button>
                     <div id="output" style="height: 300px; overflow-y: scroll;">
@@ -67,6 +62,7 @@
 
                     <script>
                         const socket = new WebSocket('ws://localhost:8000');
+                        var nev = getCurrentUserName() + " (Hallgató)";
                         socket.onopen = function (event) {
                             console.log('WebSocket connection opened.');
                         };
@@ -91,9 +87,8 @@
 
                         function sendMessage(event) {
                             event.preventDefault();
-                            const usernameInput = document.getElementById('usernameInput');
                             const messageInput = document.getElementById('messageInput');
-                            const username = usernameInput.value;
+                            const username = nev;
                             const message = messageInput.value;
                             if (username && message) {
                                 socket.send(username + ': ' + message);
@@ -103,10 +98,6 @@
                             }
                         }
                     </script>
-
-
-
-
 
 
                     <!-- <div class="row"><select class="funkcioGomb" id="studentList"></select></div> -->
