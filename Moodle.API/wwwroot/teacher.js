@@ -1,8 +1,8 @@
 
 function ujKurzusUzenet(event) {
-    //event.preventDefault();
-    const message = "Új tárgy került felvételre!"
-    socket.send(message);
+  //event.preventDefault();
+  const message = "Új tárgy került felvételre!"
+  socket.send(message);
 }
 
 
@@ -34,49 +34,49 @@ async function kurzusLetrehozas() {
 
   degreeList = new Set();
   degreeIdList = new Set();
-try {
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  const data = await response.json();
-
-  console.log(data); 
-
-  const departmentList = document.getElementById("departmentList");
-  departmentList.innerHTML = '';
-
-  
-
-  data.forEach(item => { //összes degreet hozzáadjuk
-    if(item.Name != "Tanár"){
-      console.log(item.Name);
-    degreeList.add(item.Name);
-    degreeIdList.add(item.Id);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
     }
-  });
+    const data = await response.json();
 
-  for (const degree of degreeList) {
+    console.log(data);
 
-    const item = data.find(item => item.Name === degree);
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.id = `degree-${item.Id}`;
-    checkbox.value = item.Name;
+    const departmentList = document.getElementById("departmentList");
+    departmentList.innerHTML = '';
 
-    const checkboxLabel = document.createElement("label");
-    checkboxLabel.textContent = item.Name;
-    checkboxLabel.htmlFor = checkbox.id;
-    checkboxLabel.style.display = "block"; // add this line to make each label appear on a new line
 
-    checkboxLabel.appendChild(checkbox); // append checkbox to label
-    feliratDiv.appendChild(checkboxLabel); // append label to div
-    
+
+    data.forEach(item => { //összes degreet hozzáadjuk
+      if (item.Name != "Tanár") {
+        console.log(item.Name);
+        degreeList.add(item.Name);
+        degreeIdList.add(item.Id);
+      }
+    });
+
+    for (const degree of degreeList) {
+
+      const item = data.find(item => item.Name === degree);
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = `degree-${item.Id}`;
+      checkbox.value = item.Name;
+
+      const checkboxLabel = document.createElement("label");
+      checkboxLabel.textContent = item.Name;
+      checkboxLabel.htmlFor = checkbox.id;
+      checkboxLabel.style.display = "block"; // add this line to make each label appear on a new line
+
+      checkboxLabel.appendChild(checkbox); // append checkbox to label
+      feliratDiv.appendChild(checkboxLabel); // append label to div
+
+    }
+
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
   }
-
-} catch (error) {
-  console.error('There was a problem with the fetch operation:', error);
-}
 
 
   // Submit button
@@ -94,16 +94,16 @@ try {
 
     // Get selected degrees
     const selectedDegrees = [];
-      for (const degree of degreeIdList) {
-          const checkbox = document.getElementById(`degree-${degree}`);
-          console.log(degree);
+    for (const degree of degreeIdList) {
+      const checkbox = document.getElementById(`degree-${degree}`);
+      console.log(degree);
       if (checkbox.checked) {
-        console.log(degree + ": "+checkbox);
+        console.log(degree + ": " + checkbox);
         selectedDegrees.push(degree);
-        
+
       }
-      
-    }console.log("NAGY SIKER: ");
+
+    } console.log("NAGY SIKER: ");
 
     const AddCourse = {
       name: name,
@@ -134,7 +134,7 @@ try {
       console.error('Error occurred:', error);
       alert('Hiba történt a szerverrel való kommunikáció során.');
     }
-    
+
   });
 
   // Elemek hozzáadása a formhoz
@@ -148,6 +148,12 @@ try {
 
   dataDisplay.appendChild(form);
 }
+
+
+async function kurzusTorles() {
+
+}
+
 
 // Helper function to create input elements
 function createInput(type, id, className, placeholder) {
@@ -196,7 +202,135 @@ async function esemenyLetrehozas() {
 }
 
 
+async function esemenyTorles() {
+  const retrievedData = sessionStorage.getItem('currentUserId');
+  var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
 
+  const token = sessionStorage.getItem('accessToken');
+  const options = {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer ' + token,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        if (response.headers.has('Token-Expired')) {
+          // Token expired, handle logout
+          console.error('Token expired, please log in again.');
+
+          sessionStorage.removeItem('accessToken');
+          sessionStorage.removeItem('currentUserId');
+
+          window.location.href = 'frontend.html';
+        } else if (!response.headers.has('accessToken')) {
+          window.location.href = 'frontend.html';
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }
+      return response.json();
+    })
+    .then(data => {
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+      data.forEach(item => {
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
+        li.addEventListener('click', () => {
+          //hallgatoEsemeny(item.Id);
+
+          var aktualisId = item.Id
+          var url = "https://localhost:7090/api/Course/event?id=" + aktualisId;
+
+          const token = sessionStorage.getItem('accessToken');
+          const options = {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Content-Type': 'application/json'
+            }
+          };
+
+          fetch(url, options)
+            .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              const dataDisplay = document.getElementById("dataDisplay");
+              dataDisplay.innerHTML = '';
+              const ul = document.createElement('ul');
+              data.forEach(item => {
+                const li = document.createElement('li'); // elemenként egy li
+                li.textContent = `${item.Name}: ${item.Description}`;
+                li.addEventListener('click', () => {
+
+                  var aktualisId = item.Id;
+                  var url = "https://localhost:7090/api/Course/DeleteEvent?id=" + aktualisId;
+
+                  const token = sessionStorage.getItem('accessToken');
+                  const options = {
+                    method: 'GET',
+                    headers: {
+                      'Authorization': 'Bearer ' + token,
+                      'Content-Type': 'application/json'
+                    }
+                  };
+                  fetch(url, options)
+                    .then(response => {
+                      if (!response.ok) {
+                        /*if (response.headers.has('Token-Expired')) {
+                          // Token expired, handle logout
+                          console.error('Token expired, please log in again.');
+
+                          sessionStorage.removeItem('accessToken');
+                          sessionStorage.removeItem('currentUserId');
+
+                          window.location.href = 'frontend.html';
+                        } else if (!response.headers.has('accessToken')) {
+                          window.location.href = 'frontend.html';
+                        } else {
+                          throw new Error('Network response was not ok');
+                        }*/
+                        throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                      alert(message);
+                    })
+                })
+                ul.appendChild(li);
+              });
+              dataDisplay.appendChild(ul);
+            })
+            .catch(error => {
+              console.error('There was a problem with the fetch operation:', error);
+            });
+
+          const vissza = document.createElement('button');
+          vissza.textContent = 'Vissza';
+          vissza.id = 'vissza';
+          dataDisplay.appendChild(vissza);
+          vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+            dataDisplay.innerHTML="";
+            esemenyTorles();
+
+          });
+        });
+        ul.appendChild(li);
+      });
+      dataDisplay.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
 
 
 
