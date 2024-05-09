@@ -81,7 +81,8 @@ async function felvetel(courseId) {
             const data = await response.json();
             const message = data.message;
             alert(message);
-            console.log(message);
+            //console.log(message);
+            osszLista();
         }
     } catch (error) {
         console.error('Error occurred:', error);

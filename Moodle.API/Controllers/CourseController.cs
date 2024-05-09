@@ -163,7 +163,7 @@ namespace Moodle.API.Controllers
         public IActionResult DeleteEventById(int id)
         {
             Console.WriteLine(id);
-            var esemeny = context.Events.SingleOrDefault(predicate => predicate.Course_Id == id);
+            var esemeny = context.Events.SingleOrDefault(predicate => predicate.Id == id);
             context.Events.Remove(esemeny);
             context.SaveChangesAsync();
             Console.WriteLine("sikeres törlés");
@@ -219,6 +219,11 @@ namespace Moodle.API.Controllers
 
             var kurzus = context.Courses.SingleOrDefault(predicate => predicate.Id == id);
             context.Courses.Remove(kurzus);
+            var mycourses = context.MyCourses.Where(p => p.Course_Id == id).ToList();
+            foreach(var course in mycourses)
+            {
+                context.MyCourses.Remove(course);
+            }
             context.SaveChangesAsync();
             return Ok("Esemény sikeresen törölve");
         }
