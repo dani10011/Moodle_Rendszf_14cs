@@ -35,6 +35,7 @@ namespace Moodle.API
             using (var scope = app.Services.CreateScope())
             {
                 var dbInit = scope.ServiceProvider.GetRequiredService<DBInit>();
+                //dbInit.Wipe().Wait();
                 dbInit.Init().Wait();
             }
 

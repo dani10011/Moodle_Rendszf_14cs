@@ -407,3 +407,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 FoodOrder.Client/.idea
+/.vs/rendszerfejlesztes/DesignTimeBuild/.dtbcache.v2
