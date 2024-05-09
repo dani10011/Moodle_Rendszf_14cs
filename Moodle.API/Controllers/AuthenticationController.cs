@@ -24,7 +24,7 @@ namespace Moodle.API.Controllers
         
         
 
-        [HttpPost("login")] // Change to match the Javascript request
+        [HttpPost("login")] //bejelentkezési függvény
         public async Task<IActionResult> Login([FromBody] LoginData loginData)
         {
             if (loginData == null)
@@ -61,22 +61,22 @@ namespace Moodle.API.Controllers
 
         private string GenerateAccessToken(User user)
         {
-            // Configure claims for the access token
+            // konfiguráljuk a tokent
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),  // User ID claim
                 new Claim(ClaimTypes.Role, user.Role),  // User role claim
-                // You can add other relevant claims here (e.g., username, email)
+                // továbbiak beállítása itt
                 };
 
-            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["Jwt:SecretKey"])); // Retrieve secret key from configuration
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["Jwt:SecretKey"])); // titkos kulcs visszaszerzése
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var tokenDescriptor = new JwtSecurityToken(
                 issuer: configuration["Jwt:Issuer"],
                 audience: configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddSeconds(30), // Set short expiration time (e.g., 15 minutes)
+                expires: DateTime.UtcNow.AddSeconds(30), // beaállítható meddig legyen aktív
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
