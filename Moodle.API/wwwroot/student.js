@@ -90,3 +90,98 @@ async function felvetel(courseId) {
     }
 
 }
+
+
+function kurzusLeadas(){
+    const retrievedData = sessionStorage.getItem('currentUserId');
+    var felhId =retrievedData;
+  var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
+
+  const token = sessionStorage.getItem('accessToken');
+  const options = {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer ' + token,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        if (response.headers.has('Token-Expired')) {
+          // Token expired, handle logout
+          console.error('Token expired, please log in again.');
+
+          sessionStorage.removeItem('accessToken');
+          sessionStorage.removeItem('currentUserId');
+
+          window.location.href = 'frontend.html';
+        } else if (!response.headers.has('accessToken')) {
+          window.location.href = 'frontend.html';
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }
+      return response.json();
+    })
+    .then(data => {
+      const dataDisplay = document.getElementById("dataDisplay");
+      dataDisplay.innerHTML = '';
+      const ul = document.createElement('ul');
+      data.forEach(item => {
+        const li = document.createElement('li'); // elemenként egy li
+        li.textContent = `${item.Name} (${item.Code}, ${item.Department}), kredit: ${item.Credit}`;
+        li.addEventListener('click', () => {
+          //hallgatoEsemeny(item.Id);
+
+          var aktualisId = item.Id;
+          var url = "https://localhost:7090/api/Course/LeaveCourse?id=" + aktualisId +"?user_id" + felhId;
+
+          const token = sessionStorage.getItem('accessToken');
+          const options = {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer ' + token,
+              'Content-Type': 'application/json'
+            }
+          };
+          fetch(url, options)
+            .then(response => {
+              if (!response.ok) {
+                if (response.headers.has('Token-Expired')) {
+                  // Token expired, handle logout
+                  console.error('Token expired, please log in again.');
+
+                  sessionStorage.removeItem('accessToken');
+                  sessionStorage.removeItem('currentUserId');
+
+                  window.location.href = 'frontend.html';
+                } else if (!response.headers.has('accessToken')) {
+                  window.location.href = 'frontend.html';
+                } else {
+                  throw new Error('Network response was not ok');
+                }
+                throw new Error('Network response was not ok');
+              }
+              //console.log(response);
+              alert("Sikeres törlés!");
+              osszLista();
+              return response.json();
+            })
+          const vissza = document.createElement('button');
+          vissza.textContent = 'Vissza';
+          vissza.id = 'vissza';
+          dataDisplay.appendChild(vissza);
+          vissza.addEventListener('click', () => { //funkcio rendelése a gombhoz
+            kurzusLeadas();
+          });
+        });
+        ul.appendChild(li);
+      });
+      dataDisplay.appendChild(ul);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}

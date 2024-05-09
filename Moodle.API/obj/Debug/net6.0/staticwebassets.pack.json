@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\teszt.js"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\websocket.js",
+      "PackagePath": "staticwebassets\\websocket.js"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Moodle.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
