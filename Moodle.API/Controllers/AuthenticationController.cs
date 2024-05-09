@@ -76,7 +76,7 @@ namespace Moodle.API.Controllers
                 issuer: configuration["Jwt:Issuer"],
                 audience: configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(3), // beaállítható meddig legyen aktív
+                expires: DateTime.UtcNow.AddMinutes(10), // beaállítható meddig legyen aktív
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);

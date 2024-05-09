@@ -1,67 +1,63 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\bejelentkezeshatter.jfif",
       "PackagePath": "staticwebassets\\bejelentkezeshatter.jfif"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.css",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\frontend.css",
       "PackagePath": "staticwebassets\\frontend.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\frontend.html",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\frontend.html",
       "PackagePath": "staticwebassets\\frontend.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\login.js",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\login.js",
       "PackagePath": "staticwebassets\\login.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainPage_student.html",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\mainPage_student.html",
       "PackagePath": "staticwebassets\\mainPage_student.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\mainpage_teacher.html",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\mainpage_teacher.html",
       "PackagePath": "staticwebassets\\mainpage_teacher.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\minecraft_hirdetes.png",
       "PackagePath": "staticwebassets\\minecraft_hirdetes.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\minecraft_hirdetes2.png",
       "PackagePath": "staticwebassets\\minecraft_hirdetes2.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam.png",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\reklam.png",
       "PackagePath": "staticwebassets\\reklam.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam2.png",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\reklam2.png",
       "PackagePath": "staticwebassets\\reklam2.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\reklam_masolat.png",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\reklam_masolat.png",
       "PackagePath": "staticwebassets\\reklam_masolat.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\shared.js",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\shared.js",
       "PackagePath": "staticwebassets\\shared.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\student.js",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\student.js",
       "PackagePath": "staticwebassets\\student.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teacher.js",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\teacher.js",
       "PackagePath": "staticwebassets\\teacher.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\teszt.js",
-      "PackagePath": "staticwebassets\\teszt.js"
-    },
-    {
-      "Id": "C:\\Users\\User\\Desktop\\Git\\Moodle_Rendszf_14cs\\Moodle.API\\wwwroot\\websocket.js",
+      "Id": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\websocket.js",
       "PackagePath": "staticwebassets\\websocket.js"
     },
     {
