@@ -1,89 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\",
+  "WorkspaceRootPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\middlewares\\tokenextractormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\middlewares\\tokenextractormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\wwwroot\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\wwwroot\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\wwwroot\\student.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\student.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\dbinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\dbinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\middlewares\\tokenextractormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\middlewares\\tokenextractormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\wwwroot\\student.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\student.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\wwwroot\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\wwwroot\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\wwwroot\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.data\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\moodledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\approveddegree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\approveddegree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\degree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\degree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\mycourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\mycourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Local\\Temp\\.vsdbgsrc\\461ba173aca95858836dd388b47ec1c7be639dd3cabb80925615663e0a66eb0d\\CourseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14_auth\\moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BDA4523-CA41-44BF-A3DB-A5EA98A8D468}|Moodle.API\\Moodle.API.csproj|solutionrelative:moodle.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|d:\\egyetem\\negyedik_felev\\rendszerf\\moodle_rendszerf_14\\moodle.data\\moodle.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{120C32BF-18AC-48AF-BFE9-2D0D91605760}|Moodle.Data\\Moodle.Data.csproj|solutionrelative:moodle.data\\moodle.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Egyetem\\Negyedik_felev\\RendszerF\\Auth fos\\CourseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -93,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -112,261 +76,163 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DBInit.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\DBInit.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\DBInit.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\DBInit.cs",
-              "RelativeToolTip": "Moodle.Data\\DBInit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAANcAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T23:47:06.539Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "teacher.js",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\teacher.js",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\teacher.js",
               "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\teacher.js",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\teacher.js",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\teacher.js",
               "RelativeToolTip": "Moodle.API\\wwwroot\\teacher.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALsAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-01T22:48:10.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "student.js",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\student.js",
-              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\student.js",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\student.js",
-              "RelativeToolTip": "Moodle.API\\wwwroot\\student.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-02T00:10:13.122Z",
+              "WhenOpened": "2024-05-08T22:57:50.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "shared.js",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\shared.js",
-              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\shared.js",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\shared.js",
-              "RelativeToolTip": "Moodle.API\\wwwroot\\shared.js",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAwEoAAAAAAAAA",
+              "Title": "student.js",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\student.js",
+              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\student.js",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\student.js",
+              "RelativeToolTip": "Moodle.API\\wwwroot\\student.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-01T23:51:39.122Z",
+              "WhenOpened": "2024-05-08T22:57:38.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "login.js",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\login.js",
+              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\login.js",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\login.js",
+              "RelativeToolTip": "Moodle.API\\wwwroot\\login.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-01T20:11:46.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "shared.js",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\shared.js",
+              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\shared.js",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\wwwroot\\shared.js",
+              "RelativeToolTip": "Moodle.API\\wwwroot\\shared.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQBAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-01T20:11:26.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TokenExtractorMiddleware.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
-              "RelativeDocumentMoniker": "Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs*",
-              "RelativeToolTip": "Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs*",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwB4AAABIAAAA",
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Moodle.API\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Moodle.API\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAcwCoAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T23:33:38.282Z",
+              "WhenOpened": "2024-05-01T19:46:06.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "login.js",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\login.js",
-              "RelativeDocumentMoniker": "Moodle.API\\wwwroot\\login.js",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\wwwroot\\login.js",
-              "RelativeToolTip": "Moodle.API\\wwwroot\\login.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-01T23:19:25.228Z",
+              "Title": "TokenExtractorMiddleware.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
+              "RelativeDocumentMoniker": "Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
+              "RelativeToolTip": "Moodle.API\\Middlewares\\TokenExtractorMiddleware.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAiwEwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T21:00:47.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Authentication.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Authentication.cs",
+              "RelativeDocumentMoniker": "Moodle.Data\\Authentication.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Authentication.cs",
+              "RelativeToolTip": "Moodle.Data\\Authentication.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:56:52.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Program.cs",
+              "RelativeDocumentMoniker": "Moodle.API\\Program.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Program.cs",
+              "RelativeToolTip": "Moodle.API\\Program.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAiwEcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T20:31:54.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "MoodleDbContext.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\MoodleDbContext.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\MoodleDbContext.cs",
               "RelativeDocumentMoniker": "Moodle.Data\\MoodleDbContext.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\MoodleDbContext.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\MoodleDbContext.cs",
               "RelativeToolTip": "Moodle.Data\\MoodleDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T07:37:06.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Authentication.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Authentication.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Authentication.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Authentication.cs",
-              "RelativeToolTip": "Moodle.Data\\Authentication.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T23:42:03.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Moodle.API\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "Moodle.API\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:31:54.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAN4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:40:30.731Z"
+              "WhenOpened": "2024-05-09T02:39:56.955Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Program.cs",
-              "RelativeDocumentMoniker": "Moodle.API\\Program.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\Program.cs",
-              "RelativeToolTip": "Moodle.API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Moodle.API\\Controllers\\CourseController.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Moodle.API\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T20:31:54.21Z"
+              "WhenOpened": "2024-05-01T20:29:07.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Moodle.API\\appsettings.json",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.API\\appsettings.json",
+              "RelativeToolTip": "Moodle.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-01T20:01:44.53Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "WebSocketServer.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\WebSocketServer.cs",
-              "RelativeDocumentMoniker": "Moodle.API\\WebSocketServer.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\WebSocketServer.cs",
-              "RelativeToolTip": "Moodle.API\\WebSocketServer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T23:09:44.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApprovedDegree.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\ApprovedDegree.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\ApprovedDegree.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\ApprovedDegree.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\ApprovedDegree.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:41.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Course.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Course.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Course.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Course.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T17:24:39.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Degree.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Degree.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Degree.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Degree.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\Degree.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:25.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Event.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Event.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\Event.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\Event.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\Event.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:20.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MyCourse.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\MyCourse.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\MyCourse.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\MyCourse.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\MyCourse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:17.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Moodle.Data\\Entities\\User.cs",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\Entities\\User.cs",
-              "RelativeToolTip": "Moodle.Data\\Entities\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:56:12.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Moodle.API\\appsettings.json",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.API\\appsettings.json",
-              "RelativeToolTip": "Moodle.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-17T23:04:05.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Moodle.Data.csproj",
-              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj",
-              "RelativeDocumentMoniker": "Moodle.Data\\Moodle.Data.csproj",
-              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj",
-              "RelativeToolTip": "Moodle.Data\\Moodle.Data.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-18T03:37:56.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": "CourseController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\AppData\\Local\\Temp\\.vsdbgsrc\\461ba173aca95858836dd388b47ec1c7be639dd3cabb80925615663e0a66eb0d\\CourseController.cs",
-              "ToolTip": "C:\\Users\\User\\AppData\\Local\\Temp\\.vsdbgsrc\\461ba173aca95858836dd388b47ec1c7be639dd3cabb80925615663e0a66eb0d\\CourseController.cs [Read Only]",
-              "ViewState": "AQIAADgAAAAAAAAAAAAawEYAAAADAAAA",
+              "DocumentMoniker": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Auth fos\\CourseController.cs",
+              "RelativeDocumentMoniker": "..\\Auth fos\\CourseController.cs",
+              "ToolTip": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Auth fos\\CourseController.cs",
+              "RelativeToolTip": "..\\Auth fos\\CourseController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T21:11:06.917Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2024-05-01T20:46:56.09Z"
             }
           ]
         }

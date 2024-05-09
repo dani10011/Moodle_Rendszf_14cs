@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj": {}
+    "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Moodle.Data.csproj": {}
   },
   "projects": {
-    "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj": {
+    "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Moodle.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj",
+        "projectUniqueName": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Moodle.Data.csproj",
         "projectName": "Moodle.Data",
-        "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14\\Moodle.Data\\Moodle.Data.csproj",
+        "projectPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\Moodle.Data.csproj",
         "packagesPath": "C:\\Users\\okros\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_Rendszerf_14\\Moodle.Data\\obj\\",
+        "outputPath": "D:\\Egyetem\\Negyedik_felev\\RendszerF\\Moodle_rendszerf_14_Auth\\Moodle.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,15 +1,41 @@
+async function obtainNewAccessToken() {
+    try {
+        const refreshToken = sessionStorage.getItem('refreshToken');
 
+        // Send refresh token to dedicated refresh token endpoint
+        const response = await fetch('https://localhost:7090/api/Authentication/refreshtoken', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ refreshToken })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            return data.accessToken; // Access token returned from refresh token endpoint
+        } else {
+            throw new Error('Failed to obtain new access token');
+        }
+    } catch (error) {
+        console.error('Error obtaining new access token:', error.message);
+        // Handle refresh token errors (e.g., invalid token, expired refresh token)
+    }
+}
 //összes kurzus kilistázása
 function osszLista() {
     const url = "https://localhost:7090/api/Course/allcourses";
     const retrievedData = sessionStorage.getItem('currentUserId');
     console.log(retrievedData);
 
+
     const token = sessionStorage.getItem('accessToken');
+    const refreshtoken = sessionStorage.getItem('refreshtoken');
     const options = {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token,
+            'Refresh': 'Refresh ' + refreshtoken,
             'Content-Type': 'application/json'
         }
     };
@@ -31,8 +57,8 @@ function osszLista() {
                     throw new Error('Network response was not ok');
                 }
             }
-        return response.json(); //jsonné alakítja a választ, majd továbbadja a következő then-nek
-      })
+            return response.json();
+        })
       .then(data => {
         console.log(data); // Logolja a Json file tartalmát a konzolra (TESZTELÉSHEZ)
         const dataDisplay = document.getElementById("dataDisplay");
@@ -74,33 +100,53 @@ function osszLista() {
       var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
 
       const token = sessionStorage.getItem('accessToken');
+      const refreshtoken = sessionStorage.getItem('refreshtoken');
       const options = {
           method: 'GET',
           headers: {
               'Authorization': 'Bearer ' + token,
+              'Refresh': 'Refresh ' + refreshtoken,
               'Content-Type': 'application/json'
           }
       };
 
-    fetch(url, options)
-      .then(response => {
-        if (!response.ok) {
-            if (response.headers.has('Token-Expired')) {
-                // Token expired, handle logout
-                console.error('Token expired, please log in again.');
+      fetch(url, options)
+          .then(response => {
+              if (!response.ok) {
+                  if (response.headers.has('X-New-Token-Required')) {
+                      console.log('Access token expired. Obtaining new access token...');
 
-                sessionStorage.removeItem('accessToken');
-                sessionStorage.removeItem('currentUserId');
+                      const newAccessToken = await obtainNewAccessToken();
+                      sessionStorage.setItem('accessToken', newAccessToken);
 
-                window.location.href = 'frontend.html';
-            } else if (!response.headers.has('accessToken')) {
-                window.location.href = 'frontend.html';
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        }
-        return response.json();
-      })
+                      // Update Authorization header with new token
+                      options.headers.Authorization = `Bearer ${newAccessToken}`;
+
+                      const newResponse = await fetch(url, options);
+
+                      if (newResponse.ok) {
+                          return newResponse.json(); // Process successful response after retry
+                      } else {
+                          throw new Error('API call failed even after refreshing token');
+                      }
+                  }
+                  else if (response.headers.has('Token-Expired')) {
+                      // Token expired, handle logout
+                      console.error('Token expired, please log in again.');
+
+                      sessionStorage.removeItem('accessToken');
+                      sessionStorage.removeItem('currentUserId');
+                      sessionStorage.removeItem('refreshtoken');
+
+                      window.location.href = 'frontend.html';
+                  } else if (!response.headers.has('accessToken')) {
+                      window.location.href = 'frontend.html';
+                  } else {
+                      throw new Error('Network response was not ok');
+                  }
+              }
+              return response.json(); //jsonné alakítja a választ, majd továbbadja a következő then-nek
+          })
       .then(data => {
         const dataDisplay = document.getElementById("dataDisplay");
         dataDisplay.innerHTML = '';
@@ -244,10 +290,12 @@ function osszLista() {
     var url = "https://localhost:7090/api/Course/enrolled?id=" + id;
 
       const token = sessionStorage.getItem('accessToken');
+      const refreshtoken = sessionStorage.getItem('refreshtoken');
       const options = {
           method: 'GET',
           headers: {
               'Authorization': 'Bearer ' + token,
+              'Refresh': 'Refresh ' + refreshtoken,
               'Content-Type': 'application/json'
           }
       };
@@ -298,10 +346,12 @@ async function esemenyListazas(aktualisId) {
     var url = "https://localhost:7090/api/Course/event?id=" + id;
 
     const token = sessionStorage.getItem('accessToken');
+    const refreshtoken = sessionStorage.getItem('refreshtoken');
     const options = {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token,
+            'Refresh': 'Refresh ' + refreshtoken,
             'Content-Type': 'application/json'
         }
     };

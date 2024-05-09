@@ -1,5 +1,10 @@
-﻿using System.Security.Cryptography;
+﻿using System.ComponentModel.DataAnnotations;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using Moodle.Data.Entities;
 
 namespace Moodle.Data
@@ -59,7 +64,13 @@ namespace Moodle.Data
     }
     public class Token
     {
-        public static void TokenGenerator()
+        private readonly IConfiguration configuration;
+
+        public Token(IConfiguration _configuration)
+        {
+            configuration = _configuration;
+        }
+        public static string TokenGenerator()
         {
             var randomNumberGenerator = RandomNumberGenerator.Create();
             byte[] secretKey = new byte[32]; // Replace 32 with desired key length (in bytes)
@@ -67,7 +78,52 @@ namespace Moodle.Data
             string secretKeyString = Convert.ToBase64String(secretKey);
 
             Console.WriteLine("Your secret key: " + secretKeyString);
+
+            return secretKeyString;
             
         }
+
+        public string GenerateAccessToken(User user)
+        {
+            // Configure claims for the access token
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),  // User ID claim
+                new Claim(ClaimTypes.Role, user.Role),  // User role claim
+                // You can add other relevant claims here (e.g., username, email)
+                };
+
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration["Jwt:SecretKey"])); // Retrieve secret key from configuration
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var tokenDescriptor = new JwtSecurityToken(
+                issuer: configuration["Jwt:Issuer"],
+                audience: configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddSeconds(30), // Set short expiration time (e.g., 15 minutes)
+                signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
+        }
+
+        public string GenerateRefreshToken()
+        {
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(TokenGenerator())); // Retrieve secret key from configuration
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var tokenDescriptor = new JwtSecurityToken(
+                issuer: configuration["Jwt:Issuer"],
+                audience: configuration["Jwt:Audience"],
+                expires: DateTime.UtcNow.AddMinutes(2), // Set short expiration time (e.g., 15 minutes)
+                signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
+        }
+    }
+
+    public class RefreshTokenRequest
+    {
+        [Required]
+        public string RefreshToken { get; set; }
     }
 }

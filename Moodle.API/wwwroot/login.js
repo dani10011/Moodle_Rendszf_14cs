@@ -23,10 +23,12 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       const message = data.message;
       const userId = data.userId;
       const role = data.role;
-      const token = data.token;
+        const token = data.token;
+        const refreshtoken = data.refreshtoken;
   
         sessionStorage.setItem('currentUserId', userId);
         sessionStorage.setItem('accessToken', token);
+        sessionStorage.setItem('refreshToken', refreshtoken);
         console.log("Access Token: ", token);
   
       currentUserId = userId;

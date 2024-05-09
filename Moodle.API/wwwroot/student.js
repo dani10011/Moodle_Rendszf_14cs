@@ -1,3 +1,28 @@
+async function obtainNewAccessToken() {
+    try {
+        const refreshToken = sessionStorage.getItem('refreshToken');
+
+        // Send refresh token to dedicated refresh token endpoint
+        const response = await fetch('https://localhost:7090/api/Authentication/refreshtoken', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ refreshToken })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            return data.accessToken; // Access token returned from refresh token endpoint
+        } else {
+            throw new Error('Failed to obtain new access token');
+        }
+    } catch (error) {
+        console.error('Error obtaining new access token:', error.message);
+        // Handle refresh token errors (e.g., invalid token, expired refresh token)
+    }
+}
+
 //kurzus felvétele (csak diák tudja)
 function kurzusFelvetel() {
 
@@ -5,10 +30,12 @@ function kurzusFelvetel() {
     const url = "https://localhost:7090/api/Course/notincourseid?id=" + retrievedData;
 
     const token = sessionStorage.getItem('accessToken');
+    const refreshtoken = sessionStorage.getItem('refreshtoken');
     const options = {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token,
+            'Refresh': 'Refresh ' + refreshtoken,
             'Content-Type': 'application/json'
         }
     };

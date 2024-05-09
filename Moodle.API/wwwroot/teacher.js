@@ -1,7 +1,4 @@
 
-
-
-
 async function kurzusLetrehozas() {
   const retrievedData = sessionStorage.getItem('currentUserId');
   const dataDisplay = document.getElementById("dataDisplay");
@@ -32,10 +29,12 @@ async function kurzusLetrehozas() {
 
 
         const token = sessionStorage.getItem('accessToken');
+        const refreshtoken = sessionStorage.getItem('refreshtoken');
         const options = {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + token,
+                'Refresh': 'Refresh ' + refreshtoken,
                 'Content-Type': 'application/json'
             }
         };
@@ -159,10 +158,12 @@ async function esemenyLetrehozas() {
   var url = "https://localhost:7090/api/Course/courseid?id=" + retrievedData;
 
     const token = sessionStorage.getItem('accessToken');
+    const refreshtoken = sessionStorage.getItem('refreshtoken');
     const options = {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token,
+            'Refresh': 'Refresh ' + refreshtoken,
             'Content-Type': 'application/json'
         }
     };
