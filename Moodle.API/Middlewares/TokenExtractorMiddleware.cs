@@ -41,7 +41,7 @@ namespace Moodle.API.Middlewares
                 {
                     var authorizationHeader = context.Request.Headers["Refresh"];
                     var parts = authorizationHeader.FirstOrDefault().Split(' ');
-                    if (parts.Length == 2 && parts[0] == "Refresh")
+                    if (parts.Length == 2 && parts[0] == "Refr")
                     {
                         refreshToken = parts[1];
                         //await Console.Out.WriteLineAsync();

@@ -43,11 +43,11 @@ namespace Moodle.API.Controllers
                 if (Hashing.VerifyPassword(aktualis_felhasznalo.Password, loginData.Password, aktualis_felhasznalo.UserName))
                 {
                     //Sikeres bejelentkezés -> token generálás 
-                    Token token = new Token(configuration);
-                    var accessToken = token.GenerateAccessToken(aktualis_felhasznalo);  // Call a new method to generate access token
-                    var refreshToken = token.GenerateRefreshToken();
+                    Token _token = new Token(configuration);
+                    var accessToken = _token.GenerateAccessToken(aktualis_felhasznalo);  // Call a new method to generate access token
+                    var _refreshToken = _token.GenerateRefreshToken();
 
-                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id, role = aktualis_felhasznalo.Role, token = accessToken, refreshtoken = refreshToken });
+                    return Ok(new { message = "Login successful!", userId = aktualis_felhasznalo.Id, role = aktualis_felhasznalo.Role, token = accessToken, refreshtoken = _refreshToken });
                 }
                 else
                 {

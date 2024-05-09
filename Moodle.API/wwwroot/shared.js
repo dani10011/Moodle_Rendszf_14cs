@@ -34,8 +34,9 @@ function osszLista() {
     const options = {
         method: 'GET',
         headers: {
+            'Refresh': 'Refr ' + refreshtoken,
             'Authorization': 'Bearer ' + token,
-            'Refresh': 'Refresh ' + refreshtoken,
+            
             'Content-Type': 'application/json'
         }
     };
@@ -104,8 +105,9 @@ function osszLista() {
       const options = {
           method: 'GET',
           headers: {
+              'Refresh': 'Refr ' + refreshtoken,
               'Authorization': 'Bearer ' + token,
-              'Refresh': 'Refresh ' + refreshtoken,
+              
               'Content-Type': 'application/json'
           }
       };

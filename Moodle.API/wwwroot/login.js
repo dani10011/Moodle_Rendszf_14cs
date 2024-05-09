@@ -25,7 +25,7 @@ async function bejelentkezes() { //aszinkron: várhat egy művelet befejezésér
       const role = data.role;
         const token = data.token;
         const refreshtoken = data.refreshtoken;
-  
+        console.log("Refr: " + refreshtoken);
         sessionStorage.setItem('currentUserId', userId);
         sessionStorage.setItem('accessToken', token);
         sessionStorage.setItem('refreshToken', refreshtoken);
